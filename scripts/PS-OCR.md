@@ -3,11 +3,14 @@
 
 ## 一、安装：
 1. **下载**：下载最新版本 `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](), 解压此文件；
+
 2. **安装**：将 `PS-OCR-package` 文件夹复制到下方对应的插件文件夹：
-> WINDOWS : `C:\Program Files\Adobe\Adobe Photoshop 版本号\Plug-ins\Generator`;
+> WINDOWS : `C:\Program Files\Adobe\Adobe Photoshop 版本号\Plug-ins\Generator`
 
 > MAC : `/Applications/Adobe\ Photoshop\ CC\ 版本号/Plug-ins/Generator/`
+
 3. **配置**：在Photoshop中，依次打开菜单: `编辑 > 首选项 > 增效工具`，或者使用快捷键 `CTRL+K` 打开受选项对话框，选择 `增效工具` 项。勾选 `启动生成器` ,确定后重新启动Photoshop；
+
 ## 二、使用：
 1. **全图识别**：打开一个需要识别文字的文件，依次打开菜单：`文件 > 生成 > PS-OCR` ，插件会识别画面中的文字，并在对应的位置创建对应大小的文字对象。
 2. **局部识别：** 如果你只想识别图像中部分文字，只需要用任意选区工具，选取目标区域，再使用`PS-OCR`插件；
