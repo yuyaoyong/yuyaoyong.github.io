@@ -2,7 +2,7 @@
 **PS-OCR** is a plugin that provides text recognition to the PS.
 
 ## 一、安装：
-1. **下载**：下载最新版本 `PS-OCR`: [http://yuyaoyong.com/PS-OCR.zip](http://yuyaoyong.com/PS-OCR.zip), 解压此文件；
+1. **下载**：下载最新版本 `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](https://yuyaoyong.com/PS-OCR.zip), 解压此文件；
 
 2. **安装**：右键单击`install.jsx`，选择打开方式为Photoshop，按提示将 `PS-OCR-package` 文件夹放入插件文件夹中：
 >- WINDOWS : `\Program Files\Adobe\Adobe Photoshop 版本号\Plug-ins\Generator`
@@ -21,7 +21,7 @@ Translated from Google
 
 ---
 ## 1、Install：
-1. **Download:**  Download the lastest version `PS-OCR`: [http://yuyaoyong.com/PS-OCR.zip](http://yuyaoyong.com/PS-OCR.zip), Unzip it；
+1. **Download:**  Download the lastest version `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](https://yuyaoyong.com/PS-OCR.zip), Unzip it；
 2. **Install:** Right-click `install.jsx`, select open with Photoshop, and follow the prompts to put the `PS-OCR-package` folder into the plugin folder:
 > - WINDOWS : `\Program Files\Adobe\Adobe Photoshop {{version}} \Plug-ins\Generator`;
 > - MAC : `/Applications/Adobe\ Photoshop\ CC\ {{version}} /Plug-ins/Generator/`
