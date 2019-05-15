@@ -2,12 +2,11 @@
 **PS-OCR** is a plugin that provides text recognition to the PS.
 
 ## 一、安装：
-1. **下载**：下载最新版本 `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](), 解压此文件；
+1. **下载**：下载最新版本 `PS-OCR`: [http://yuyaoyong.com/PS-OCR.zip](http://yuyaoyong.com/PS-OCR.zip), 解压此文件；
 
-2. **安装**：将 `PS-OCR-package` 文件夹复制到下方对应的插件文件夹：
-> WINDOWS : `C:\Program Files\Adobe\Adobe Photoshop 版本号\Plug-ins\Generator`
-
-> MAC : `/Applications/Adobe\ Photoshop\ CC\ 版本号/Plug-ins/Generator/`
+2. **安装**：右键单击`install.jsx`，选择打开方式为Photoshop，按提示将 `PS-OCR-package` 文件夹放入插件文件夹中：
+>- WINDOWS : `\Program Files\Adobe\Adobe Photoshop 版本号\Plug-ins\Generator`
+>- MAC : `/Applications/Adobe\ Photoshop\ CC\ 版本号/Plug-ins/Generator/`
 
 3. **配置**：在Photoshop中，依次打开菜单: `编辑 > 首选项 > 增效工具`，或者使用快捷键 `CTRL+K` 打开受选项对话框，选择 `增效工具` 项。勾选 `启动生成器` ,确定后重新启动Photoshop；
 
@@ -22,12 +21,11 @@ Translated from Google
 
 ---
 ## 1、Install：
-1. **Download:**  Download the lastest version `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](), Unzip it；
-2. **Install:** Copy the `PS-OCR-package` folder into the "Generator" folder：
-> WINDOWS : `C:\Program Files\Adobe\Adobe Photoshop {{version}} \Plug-ins\Generator`;
-
-> MAC : `/Applications/Adobe\ Photoshop\ CC\ {{version}} /Plug-ins/Generator/`
-3. **Config:**  Click the menus in turn: `Edit > Preferences > Plug-ins`, or use the shortcut `CTRL+K` to open the Options dialog and select the 'Plug-in' item. Check the 'Generator' , restart Photoshop after confirming;
+1. **Download:**  Download the lastest version `PS-OCR`: [http://yuyaoyong.com/PS-OCR.zip](http://yuyaoyong.com/PS-OCR.zip), Unzip it；
+2. **Install:** Right-click `install.jsx`, select open with Photoshop, and follow the prompts to put the `PS-OCR-package` folder into the plugin folder:
+> - WINDOWS : `\Program Files\Adobe\Adobe Photoshop {{version}} \Plug-ins\Generator`;
+> - MAC : `/Applications/Adobe\ Photoshop\ CC\ {{version}} /Plug-ins/Generator/`
+3. **Config:**  Click the menus in turn: `Edit > Preferences > Plug-ins`, or use the shortcut `CTRL+K` to open the Options dialog and select the 'Plug-ins' item. Check the 'Enable Generator' , restart Photoshop after confirming;
 ## 2、Use：
 1. **Whole picture OCR:**：Open a target file，click the menus in turn：`file > Generator > PS-OCR` ，The plugin recognizes the text in the image and creates a text object of the corresponding size at the corresponding location.
 2. **Partial OCR：** If you only want to identify some of the text in the image, just use any selection tool, select the target area, and use the `PS-OCR` plugin.
