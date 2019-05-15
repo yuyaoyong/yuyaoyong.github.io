@@ -1,5 +1,4 @@
-- Photoshop脚本/插件作品
- - [PS-OCR (插件)](scripts/PS-OCR.md)
+- [PS-OCR](scripts/PS-OCR.md)
 
 ---
 
