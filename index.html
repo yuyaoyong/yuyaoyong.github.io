@@ -28,7 +28,7 @@
         window.$docsify = {
             // GENERAL
             // -----------------------------------------------------------------
-            name: '余耀勇',
+            name: '余耀勇 个人网站',
             //repo       : 'https://github.com/jhildenbiddle/docsify-themeable',
             //coverpage: 'coverpage.md',
             homepage: 'scripts/PS-OCR.md',
@@ -53,7 +53,7 @@
                 placeholder: '搜索...'
             },
             plugins: [
-                function (hook) {
+                function(hook) {
                     var footer = [
                         '<hr/>',
                         '<footer>',
@@ -61,7 +61,7 @@
                         '</footer>'
                     ].join('')
 
-                    hook.afterEach(function (html) {
+                    hook.afterEach(function(html) {
                         return html + footer
                     })
                 }
