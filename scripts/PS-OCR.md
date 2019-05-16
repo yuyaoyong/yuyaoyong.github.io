@@ -1,6 +1,9 @@
 ## **PS-OCR** 是一个可以给PS提供文字识别功能的插件。
 **PS-OCR** is a plugin that provides text recognition to the PS.
 
+---
+![使用演示](../imgs/PS-OCR-使用演示.gif)
+
 ## 一、安装：
 1. **下载**：下载最新版本 `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](https://yuyaoyong.com/PS-OCR.zip), 解压此文件；
 
@@ -16,7 +19,7 @@
 ## 二、使用：
 1. **全图识别**：打开一个需要识别文字的文件，依次打开菜单：`文件 > 生成 > PS-OCR` ，插件会识别画面中的文字，并在对应的位置创建对应大小的文字对象。
 2. **局部识别：** 如果你只想识别图像中部分文字，只需要用任意选区工具，选取目标区域，再使用`PS-OCR`插件；
-![使用演示](../imgs/PS-OCR-使用演示.gif)
+
 ## 三、定义快捷键：
 依次打开菜单: `编辑 > 键盘快捷键（Alt + Ctrl + Shift + K）` ，在对话框中依次找到 `文件 > 生成 > PS-OCR`，为其指定快捷键既可，比如 `Ctrl + Shift + O`；
 ![快捷键演示](../imgs/PS-OCR-快捷键演示.gif)
