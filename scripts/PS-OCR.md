@@ -4,6 +4,9 @@
 ---
 ![使用演示](../imgs/PS-OCR-使用演示.gif)
 
+## 软件支持：
+目前已适配版本：Photoshop CC 2018、2019，其他版本只在适配中；
+
 ## 一、安装：
 1. **下载**：下载最新版本 `PS-OCR`: [https://yuyaoyong.com/PS-OCR.zip](https://yuyaoyong.com/PS-OCR.zip), 解压此文件；
 
