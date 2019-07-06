@@ -1,5 +1,6 @@
 ## **Typer** 是一个可以给Photoshop提供文字类扩展功能的插件，包括 *文字识别* 和 *翻译* 等。
-**Typer** is a plug-in that provides Photoshop with text-related extensions, including text recognition and translation.
+**Typer** is a plug-in that provides Photoshop with text-related extensions, including text recognition and translation.  
+
 ```**注：原 PS-OCR 已合并到此插件中```
 
 ---
