@@ -1,5 +1,4 @@
-- [PS-OCR](scripts/PS-OCR.md)
-- [PS-Translator](scripts/PS-Translator.md)
+- [Typer](scripts/Typer.md)
 
 ---
 
