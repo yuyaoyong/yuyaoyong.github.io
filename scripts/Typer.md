@@ -1,5 +1,5 @@
-## **Typer** 是一个可以给Photoshop提供文字类扩展功能的插件，包括 *文字识别* 和 *翻译* 等。
-**Typer** is a plug-in that provides Photoshop with text-related extensions, including text recognition and translation.  
+## **Typer** 是一个可以给Photoshop提供文字类扩展功能的插件，包括 *文字识别*、*翻译* 和 *文字消除*等。
+**Typer** is a plug-in that provides Photoshop with text-related extensions, including text recognition 、elimination and translation.  
 
 ```**注：原 PS-OCR 已合并到此插件中```
 
@@ -23,11 +23,13 @@ Photoshop CC 2015.5及以上；
 
 ## 二、使用：
 ### Typer_文字识别
-> 1. **全图识别**：打开一个需要识别文字的文件，依次打开菜单：`文件 > 生成 > Typer` ，插件会识别画面中的文字，并在对应的位置创建对应大小的文字对象。
-> 2. **局部识别：** 如果你只想识别图像中部分文字，只需要用任意选区工具，选取目标区域，再使用`Typer`插件；
+> 1. **全图识别**：打开一个需要识别文字的文件，依次打开菜单：`文件 > 生成 > Typer_文字识别` ，插件会识别画面中的文字，并在对应的位置创建对应大小的文字对象。
+> 2. **局部识别：** 如果你只想识别图像中部分文字，只需要用任意选区工具，选取目标区域，再使用`Typer_文字识别`；
 ### Typer_翻译
 > 1. 在 `Typer_首选项` 中选择翻译的目标语言；
 > 2. 选中需要识别的文字图层，执行 `Typer_翻译`。
+### Typer_文字消除（BETA）
+> 1. 打开一个需要识别文字的图片文件，依次打开菜单：`文件 > 生成 > Typer_文字消除（BETA）`。
 
 ## 三、定义快捷键：
 依次打开菜单: `编辑 > 键盘快捷键（Alt + Ctrl + Shift + K）` ，在对话框中依次找到 `文件 > 生成 > Typer_文字识别`，为其指定快捷键既可，比如 `Ctrl + Shift + O`；
@@ -49,5 +51,8 @@ Translated from Google
 ### Typer_Translator
 > 1. Select the target language for translation in `Typer_Preferences`；
 > 2. Select the text layers you want to recognize and execute the `Typer_Translator`.
+### Typer_RemoveText（BETA）
+> 1. Open a target file，click the menus in turn：`file > Generator > Typer_RemoveText（BETA）`。
+
 ## 3、shortcuts:：
 Click the menus in turn: `Edit > Keyboard Shortcuts（Alt + Ctrl + Shift + K）` ，In the dialog box, go to `File > Generator > Typer_OCR` and specify a shortcut key for it, such as `Ctrl + Shift + O`;
