@@ -16,20 +16,22 @@ Photoshop CC 2015.5及以上；
 >- WINDOWS : `\Program Files\Adobe\Adobe Photoshop 版本号\Plug-ins\Generator`
 >- MAC : `/Applications/Adobe\ Photoshop\ CC\ 版本号/Plug-ins/Generator/`
 
-![安装演示](../imgs/Typer-安装演示.gif)
+![安装演示](imgs/Typer-安装演示.gif)
 
 3. **配置**：在Photoshop中，依次打开菜单: `编辑 > 首选项 > 增效工具`，或者使用快捷键 `CTRL+K` 打开受选项对话框，选择 `增效工具` 项。勾选 `启动生成器` ,确定后重新启动Photoshop；
-![配置演示](../imgs/Typer-配置演示.gif)
+![配置演示](imgs/Typer-配置演示.gif)
 
 ## 二、使用：
 ### Typer_文字识别
 > 1. **全图识别**：打开一个需要识别文字的文件，依次打开菜单：`文件 > 生成 > Typer_文字识别` ，插件会识别画面中的文字，并在对应的位置创建对应大小的文字对象。
 > 2. **局部识别：** 如果你只想识别图像中部分文字，只需要用任意选区工具，选取目标区域，再使用`Typer_文字识别`；
+![使用演示](imgs/Typer-使用演示.gif)
 ### Typer_翻译
 > 1. 在 `Typer_首选项` 中选择翻译的目标语言；
 > 2. 选中需要识别的文字图层，执行 `Typer_翻译`。
 ### Typer_文字消除（BETA）
 > 1. 打开一个需要识别文字的图片文件，依次打开菜单：`文件 > 生成 > Typer_文字消除（BETA）`。
+![文字消除演示](imgs/Typer-文字消除演示.gif)
 
 ## 三、定义快捷键：
 依次打开菜单: `编辑 > 键盘快捷键（Alt + Ctrl + Shift + K）` ，在对话框中依次找到 `文件 > 生成 > Typer_文字识别`，为其指定快捷键既可，比如 `Ctrl + Shift + O`；
