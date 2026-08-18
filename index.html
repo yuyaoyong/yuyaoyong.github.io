@@ -25,7 +25,7 @@ SOFTWARE.
 -->
 <html lang="zh-CN"><head>
 <meta charset="UTF-8">
-<meta name="pfs-storage-scope" content="pub_ea8507e0e9dc">
+<meta name="pfs-storage-scope" content="r0d9cjnv02">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PFS — Personal Financial Simulation</title>
 <script id="embeddedFinanceData" type="application/json">{}</script>
@@ -508,14 +508,7 @@ canvas{width:100%;height:100%;display:block}
       <div><h3 id="presetModalTitle">预设模板</h3><p>选择一个常见场景，快速创建一套可直接修改的预测数据。</p></div>
       <button class="btn" type="button" onclick="closePresetModal()">关闭</button>
     </div>
-    <div class="preset-grid">
-      <button class="preset-card" type="button" onclick="createVersionFromPreset('personal')"><span class="preset-card-title"><span>个人日常</span><span class="go">›</span></span><span class="preset-card-desc">工资、住房、生活费和日常固定支出</span><span class="preset-card-meta">适合个人月度现金预测</span></button>
-      <button class="preset-card" type="button" onclick="createVersionFromPreset('debt')"><span class="preset-card-title"><span>负债还款</span><span class="go">›</span></span><span class="preset-card-desc">收入、生活支出和每月还款，观察债务下降</span><span class="preset-card-meta">适合贷款或欠款规划</span></button>
-      <button class="preset-card" type="button" onclick="createVersionFromPreset('freelance')"><span class="preset-card-title"><span>自由职业</span><span class="go">›</span></span><span class="preset-card-desc">不固定收入搭配稳定生活支出</span><span class="preset-card-meta">适合项目制、接单型收入</span></button>
-      <button class="preset-card" type="button" onclick="createVersionFromPreset('business')"><span class="preset-card-title"><span>小生意</span><span class="go">›</span></span><span class="preset-card-desc">回款、采购、工资、房租和营销费用</span><span class="preset-card-meta">适合个体经营和小公司</span></button>
-      <button class="preset-card" type="button" onclick="createVersionFromPreset('cash')"><span class="preset-card-title"><span>纯现金预测</span><span class="go">›</span></span><span class="preset-card-desc">只关注收入和支出，不使用负债变化</span><span class="preset-card-meta">最简单的现金流结构</span></button>
-      <button class="preset-card" type="button" onclick="createVersionFromPreset('blank')"><span class="preset-card-title"><span>空白模板</span><span class="go">›</span></span><span class="preset-card-desc">只保留当前现金、负债和安全现金线</span><span class="preset-card-meta">从零开始自己建立</span></button>
-    </div>
+    <div class="preset-grid" id="presetGrid"></div>
     <div class="preset-foot"><span class="preset-foot-note">模板会创建为新的数据版本，不会覆盖当前数据。</span></div>
   </div>
 </div>
@@ -650,7 +643,7 @@ function applyI18n(root=document.body){
 function setLanguage(lang){
   if(!['zh','en','ja'].includes(lang))return;
   currentLanguage=lang;localStorage.setItem(LANGUAGE_KEY,lang);
-  render();applyI18n(document.body);
+  render();renderPresetGrid();applyI18n(document.body);
   if(metadataViewMode==='doc'&&document.getElementById('metadataModal')?.classList.contains('show')) setMetadataView('doc');
 }
 const i18nObserver=new MutationObserver(records=>{for(const r of records){for(const n of r.addedNodes){if(n.nodeType===1)applyI18n(n);else if(n.nodeType===3&&n.parentElement)translateElementText(n.parentElement)}}});
@@ -1246,6 +1239,7 @@ function simulate(days){
  * ======================================================= */
 function openPresetModal(){
   closeVersionMenu();
+  renderPresetGrid();
   document.getElementById('presetModal')?.classList.add('show');
   document.getElementById('presetTrigger')?.classList.add('open');
 }
@@ -1258,68 +1252,128 @@ function presetDate(dayOffset=0){
   base.setDate(base.getDate()+dayOffset);
   return localISO(base);
 }
-function buildPresetData(key){
-  const d=emptyData();
-  const groups={};
-  const addGroup=name=>{
-    const g={id:newGroupId(d.groups),name};
-    d.groups.push(g);groups[name]=g.id;return g.id;
-  };
-  const addEvent=(name,amount,start,groupName,recurrence,affectsDebt=false)=>{
-    const e={id:newEventId(d.events),name,amount,start};
-    if(groupName&&groups[groupName])e.groupId=groups[groupName];
-    if(recurrence)e.recurrence=recurrence;
-    if(affectsDebt)e.affectsDebt=true;
-    d.events.push(e);return e;
-  };
-  const monthly=day=>({frequency:'monthly',interval:1,dayOfMonth:day});
-  const asOfDay=new Date((workspace.asOf||todayISO())+'T00:00:00').getDate();
-  const start=presetDate(0);
 
-  if(key==='blank'){
-    d.openingCash=0;d.openingDebt=0;d.cashSafetyThreshold=0;
-    return {name:'空白模板',data:d};
+/* Presets are language-neutral blueprints. Localized names are resolved only
+   when the user creates a version; after creation they become normal user data. */
+const PRESET_TEXT={
+  zh:{
+    personal:{title:'个人日常',desc:'工资、住房、生活和日常固定支出',meta:'适合个人基础收支预测'},
+    family:{title:'家庭预算',desc:'双收入、房贷、日常生活、教育与保险',meta:'适合家庭共同财务规划'},
+    debt:{title:'负债还款',desc:'正常还款与额外还款并行，观察债务下降',meta:'适合贷款或欠款规划'},
+    freelance:{title:'自由职业',desc:'固定合作、项目回款与周期性支出并存',meta:'适合项目制、接单型收入'},
+    business:{title:'小生意',desc:'回款、采购、工资、房租、营销和经营贷款',meta:'适合个体经营和小公司'},
+    cash:{title:'纯现金预测',desc:'只关注收入和支出，不使用负债变化',meta:'最简单的现金预测结构'},
+    blank:{title:'空白模板',desc:'只保留当前现金、负债和安全现金线',meta:'从零开始自己建立'},
+    groupIncome:'收入',groupHousing:'住房',groupLiving:'生活',groupHousehold:'家庭支出',groupChildren:'教育',groupInsurance:'保险',groupDebt:'还款',groupProjects:'项目收入',groupWork:'工作支出',groupSales:'销售回款',groupPurchasing:'采购',groupOperating:'经营费用',groupExpenses:'支出',
+    salary:'工资',salaryPrimary:'主要工资',salarySecondary:'第二份收入',rent:'住房支出',living:'生活费',utilities:'水电通讯',plannedPurchase:'计划性支出',mortgage:'房贷还款',groceries:'日常采购',education:'教育支出',insurance:'保险费',monthlyIncome:'每月收入',essentialLiving:'基本生活支出',loanPayment:'贷款还款',extraDebtPayment:'额外还款',retainerIncome:'固定合作收入',projectPayment:'项目回款',workTools:'软件与工具',quarterlyTax:'季度税费',salesReceipts:'销售回款',purchasePayment:'采购付款',payroll:'工资',businessRent:'房租',marketing:'营销费用',businessLoan:'经营贷款还款',monthlyExpense:'每月支出'
+  },
+  en:{
+    personal:{title:'Personal Basics',desc:'Salary, housing, living costs and recurring bills',meta:'For everyday personal forecasting'},
+    family:{title:'Household Budget',desc:'Two incomes, mortgage, household, education and insurance',meta:'For shared household planning'},
+    debt:{title:'Debt Payoff',desc:'Regular and extra repayments to track debt reduction',meta:'For loans and debt planning'},
+    freelance:{title:'Freelance',desc:'Retainers, project payments and recurring work costs',meta:'For project-based and variable income'},
+    business:{title:'Small Business',desc:'Receipts, purchasing, payroll, rent, marketing and business debt',meta:'For sole traders and small businesses'},
+    cash:{title:'Cash Only',desc:'Track income and expenses without debt changes',meta:'The simplest cash forecast'},
+    blank:{title:'Blank',desc:'Keep only current cash, debt and cash safety threshold',meta:'Start from scratch'},
+    groupIncome:'Income',groupHousing:'Housing',groupLiving:'Living',groupHousehold:'Household',groupChildren:'Education',groupInsurance:'Insurance',groupDebt:'Debt Repayment',groupProjects:'Project Income',groupWork:'Work Costs',groupSales:'Sales Receipts',groupPurchasing:'Purchasing',groupOperating:'Operating Costs',groupExpenses:'Expenses',
+    salary:'Salary',salaryPrimary:'Primary Salary',salarySecondary:'Second Income',rent:'Housing Cost',living:'Living Costs',utilities:'Utilities & Telecom',plannedPurchase:'Planned Purchase',mortgage:'Mortgage Repayment',groceries:'Groceries',education:'Education',insurance:'Insurance Premium',monthlyIncome:'Monthly Income',essentialLiving:'Essential Living Costs',loanPayment:'Loan Repayment',extraDebtPayment:'Extra Debt Payment',retainerIncome:'Retainer Income',projectPayment:'Project Payment',workTools:'Software & Tools',quarterlyTax:'Quarterly Tax',salesReceipts:'Sales Receipts',purchasePayment:'Supplier Payment',payroll:'Payroll',businessRent:'Rent',marketing:'Marketing',businessLoan:'Business Loan Repayment',monthlyExpense:'Monthly Expenses'
+  },
+  ja:{
+    personal:{title:'個人生活',desc:'給与、住居費、生活費、日常の固定支出',meta:'個人の基本的な資金予測向け'},
+    family:{title:'家計予算',desc:'二つの収入、住宅ローン、生活費、教育、保険',meta:'家族の共同資金計画向け'},
+    debt:{title:'負債返済',desc:'通常返済と追加返済で負債の減少を確認',meta:'ローン・負債計画向け'},
+    freelance:{title:'フリーランス',desc:'継続契約、案件入金、定期的な仕事支出',meta:'案件・変動収入向け'},
+    business:{title:'小規模事業',desc:'入金、仕入、給与、家賃、広告、事業ローン',meta:'個人事業・小規模企業向け'},
+    cash:{title:'現金のみ',desc:'負債変動を使わず収入と支出だけを追跡',meta:'最もシンプルな現金予測'},
+    blank:{title:'空白',desc:'現在の現金、負債、安全現金ラインのみ保持',meta:'ゼロから作成'},
+    groupIncome:'収入',groupHousing:'住居',groupLiving:'生活',groupHousehold:'家計支出',groupChildren:'教育',groupInsurance:'保険',groupDebt:'返済',groupProjects:'案件収入',groupWork:'仕事支出',groupSales:'売上入金',groupPurchasing:'仕入',groupOperating:'運営費',groupExpenses:'支出',
+    salary:'給与',salaryPrimary:'主な給与',salarySecondary:'第二の収入',rent:'住居費',living:'生活費',utilities:'水道光熱・通信',plannedPurchase:'予定支出',mortgage:'住宅ローン返済',groceries:'食費・日用品',education:'教育費',insurance:'保険料',monthlyIncome:'毎月収入',essentialLiving:'基本生活費',loanPayment:'ローン返済',extraDebtPayment:'追加返済',retainerIncome:'継続契約収入',projectPayment:'案件入金',workTools:'ソフト・ツール',quarterlyTax:'四半期税金',salesReceipts:'売上入金',purchasePayment:'仕入支払',payroll:'給与',businessRent:'家賃',marketing:'広告費',businessLoan:'事業ローン返済',monthlyExpense:'毎月支出'
   }
-  if(key==='personal'){
-    d.openingCash=20000;d.openingDebt=0;d.cashSafetyThreshold=5000;
-    addGroup('收入');addGroup('固定支出');addGroup('生活');
-    addEvent('工资',10000,start,'收入',monthly(10));
-    addEvent('住房支出',-3000,start,'固定支出',monthly(5));
-    addEvent('生活费',-3000,start,'生活',monthly(asOfDay));
-    addEvent('水电通讯',-500,start,'固定支出',monthly(15));
-    return {name:'个人日常',data:d};
+};
+function presetText(key,field){
+  const lang=PRESET_TEXT[currentLanguage]||PRESET_TEXT.zh;
+  const fallback=PRESET_TEXT.zh;
+  const value=lang[key]??fallback[key]??key;
+  return field&&value&&typeof value==='object'?(value[field]??fallback[key]?.[field]??key):value;
+}
+const PRESET_DEFINITIONS={
+  personal:{openingCash:20000,openingDebt:0,cashSafetyThreshold:5000,groups:['groupIncome','groupHousing','groupLiving'],events:[
+    {name:'salary',amount:12000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
+    {name:'rent',amount:-3500,group:'groupHousing',repeat:{frequency:'monthly',dayOfMonth:5}},
+    {name:'living',amount:-2800,group:'groupLiving',repeat:{frequency:'monthly',dayOfMonth:'asOf'}},
+    {name:'utilities',amount:-600,group:'groupHousing',repeat:{frequency:'monthly',dayOfMonth:15}},
+    {name:'plannedPurchase',amount:-3000,group:'groupLiving',offset:45}
+  ]},
+  family:{openingCash:40000,openingDebt:180000,cashSafetyThreshold:15000,groups:['groupIncome','groupHousing','groupHousehold','groupChildren','groupInsurance'],events:[
+    {name:'salaryPrimary',amount:15000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
+    {name:'salarySecondary',amount:8000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:20}},
+    {name:'mortgage',amount:-4500,group:'groupHousing',repeat:{frequency:'monthly',dayOfMonth:5},affectsDebt:true},
+    {name:'groceries',amount:-1200,group:'groupHousehold',repeat:{frequency:'weekly',weekday:6}},
+    {name:'utilities',amount:-800,group:'groupHousehold',repeat:{frequency:'monthly',dayOfMonth:15}},
+    {name:'education',amount:-1500,group:'groupChildren',repeat:{frequency:'monthly',dayOfMonth:1}},
+    {name:'insurance',amount:-6000,group:'groupInsurance',offset:90,repeat:{frequency:'yearly'}}
+  ]},
+  debt:{openingCash:15000,openingDebt:100000,cashSafetyThreshold:8000,groups:['groupIncome','groupLiving','groupDebt'],events:[
+    {name:'monthlyIncome',amount:12000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
+    {name:'essentialLiving',amount:-4500,group:'groupLiving',repeat:{frequency:'monthly',dayOfMonth:'asOf'}},
+    {name:'loanPayment',amount:-4000,group:'groupDebt',repeat:{frequency:'monthly',dayOfMonth:20},affectsDebt:true},
+    {name:'extraDebtPayment',amount:-10000,group:'groupDebt',offset:60,affectsDebt:true}
+  ]},
+  freelance:{openingCash:25000,openingDebt:0,cashSafetyThreshold:12000,groups:['groupProjects','groupLiving','groupWork'],events:[
+    {name:'retainerIncome',amount:6000,group:'groupProjects',repeat:{frequency:'monthly',dayOfMonth:15}},
+    {name:'projectPayment',amount:12000,group:'groupProjects',offset:30},
+    {name:'living',amount:-5000,group:'groupLiving',repeat:{frequency:'monthly',dayOfMonth:'asOf'}},
+    {name:'workTools',amount:-500,group:'groupWork',repeat:{frequency:'monthly',dayOfMonth:5}},
+    {name:'quarterlyTax',amount:-6000,group:'groupWork',offset:75,repeat:{frequency:'monthly',interval:3}}
+  ]},
+  business:{openingCash:80000,openingDebt:30000,cashSafetyThreshold:30000,groups:['groupSales','groupPurchasing','groupOperating','groupDebt'],events:[
+    {name:'salesReceipts',amount:15000,group:'groupSales',repeat:{frequency:'weekly',weekday:5}},
+    {name:'purchasePayment',amount:-30000,group:'groupPurchasing',repeat:{frequency:'monthly',dayOfMonth:5}},
+    {name:'payroll',amount:-20000,group:'groupOperating',repeat:{frequency:'monthly',dayOfMonth:15}},
+    {name:'businessRent',amount:-8000,group:'groupOperating',repeat:{frequency:'monthly',dayOfMonth:1}},
+    {name:'marketing',amount:-2000,group:'groupOperating',repeat:{frequency:'weekly',weekday:1}},
+    {name:'businessLoan',amount:-5000,group:'groupDebt',repeat:{frequency:'monthly',dayOfMonth:20},affectsDebt:true}
+  ]},
+  cash:{openingCash:10000,openingDebt:0,cashSafetyThreshold:3000,groups:['groupIncome','groupExpenses'],events:[
+    {name:'monthlyIncome',amount:8000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
+    {name:'monthlyExpense',amount:-5000,group:'groupExpenses',repeat:{frequency:'monthly',dayOfMonth:20}}
+  ]},
+  blank:{openingCash:0,openingDebt:0,cashSafetyThreshold:0,groups:[],events:[]}
+};
+const PRESET_ORDER=['personal','family','debt','freelance','business','cash','blank'];
+function renderPresetGrid(){
+  const grid=document.getElementById('presetGrid');if(!grid)return;
+  grid.innerHTML=PRESET_ORDER.map(key=>`<button class="preset-card" type="button" onclick="createVersionFromPreset('${key}')"><span class="preset-card-title"><span>${esc(presetText(key,'title'))}</span><span class="go">›</span></span><span class="preset-card-desc">${esc(presetText(key,'desc'))}</span><span class="preset-card-meta">${esc(presetText(key,'meta'))}</span></button>`).join('');
+}
+function buildPresetData(key){
+  const def=PRESET_DEFINITIONS[key]||PRESET_DEFINITIONS.cash;
+  const d=emptyData();
+  d.openingCash=def.openingCash;d.openingDebt=def.openingDebt;d.cashSafetyThreshold=def.cashSafetyThreshold;
+  const groupIds={};
+  for(const groupKey of def.groups){
+    const g={id:newGroupId(d.groups),name:presetText(groupKey)};
+    d.groups.push(g);groupIds[groupKey]=g.id;
   }
-  if(key==='debt'){
-    d.openingCash=15000;d.openingDebt=50000;d.cashSafetyThreshold=5000;
-    addGroup('收入');addGroup('生活');addGroup('还款');
-    addEvent('每月收入',10000,start,'收入',monthly(10));
-    addEvent('生活支出',-4000,start,'生活',monthly(asOfDay));
-    addEvent('贷款还款',-3000,start,'还款',monthly(20),true);
-    return {name:'负债还款',data:d};
+  const asOfDate=new Date((workspace.asOf||todayISO())+'T00:00:00');
+  const asOfDay=asOfDate.getDate();
+  for(const spec of def.events){
+    const start=presetDate(spec.offset||0);
+    const e={id:newEventId(d.events),name:presetText(spec.name),amount:spec.amount,start};
+    if(spec.group&&groupIds[spec.group])e.groupId=groupIds[spec.group];
+    if(spec.affectsDebt)e.affectsDebt=true;
+    if(spec.repeat){
+      const r={frequency:spec.repeat.frequency,interval:Math.max(1,Number(spec.repeat.interval||1))};
+      if(r.frequency==='weekly')r.weekday=Number(spec.repeat.weekday??new Date(start+'T00:00:00').getDay());
+      if(r.frequency==='monthly')r.dayOfMonth=spec.repeat.dayOfMonth==='asOf'?asOfDay:Number(spec.repeat.dayOfMonth||new Date(start+'T00:00:00').getDate());
+      if(r.frequency==='yearly'){
+        const sd=new Date(start+'T00:00:00');
+        r.month=sd.getMonth()+1;r.dayOfMonth=sd.getDate();
+      }
+      e.recurrence=r;
+    }
+    d.events.push(e);
   }
-  if(key==='freelance'){
-    d.openingCash=15000;d.openingDebt=0;d.cashSafetyThreshold=8000;
-    addGroup('项目收入');addGroup('固定生活');addGroup('临时收支');
-    addEvent('稳定项目收入',8000,start,'项目收入',monthly(15));
-    addEvent('生活支出',-4500,start,'固定生活',monthly(asOfDay));
-    addEvent('临时项目回款',5000,presetDate(30),'临时收支');
-    return {name:'自由职业',data:d};
-  }
-  if(key==='business'){
-    d.openingCash=50000;d.openingDebt=0;d.cashSafetyThreshold=20000;
-    addGroup('销售回款');addGroup('采购');addGroup('经营费用');
-    addEvent('销售回款',10000,start,'销售回款',{frequency:'weekly',interval:1,weekday:new Date(start+'T00:00:00').getDay()});
-    addEvent('采购付款',-20000,start,'采购',monthly(5));
-    addEvent('工资',-15000,start,'经营费用',monthly(15));
-    addEvent('房租',-5000,start,'经营费用',monthly(1));
-    addEvent('营销费用',-3000,start,'经营费用',monthly(10));
-    return {name:'小生意',data:d};
-  }
-  d.openingCash=10000;d.openingDebt=0;d.cashSafetyThreshold=3000;
-  addGroup('收入');addGroup('支出');
-  addEvent('每月收入',8000,start,'收入',monthly(10));
-  addEvent('每月支出',-5000,start,'支出',monthly(20));
-  return {name:'纯现金预测',data:d};
+  return {name:presetText(key,'title'),data:d};
 }
 function createVersionFromPreset(key){
   syncCurrentVersion();
@@ -3326,7 +3380,14 @@ function setMetadataView(mode){
     updateMetadataStatus();
   }
   ed.scrollTop=0;
-  setTimeout(()=>ed.focus(),20);
+  ed.scrollLeft=0;
+  try{ed.setSelectionRange(0,0)}catch(e){}
+  setTimeout(()=>{
+    ed.focus();
+    try{ed.setSelectionRange(0,0)}catch(e){}
+    ed.scrollTop=0;
+    ed.scrollLeft=0;
+  },20);
 }
 function toggleMetadataDoc(){setMetadataView(metadataViewMode==='doc'?'data':'doc')}
 function openMetadataModal(){
