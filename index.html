@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <!--
 PFS — Personal Financial Simulation
-Copyright (c) 2026 YuYaoYong
+Copyright (c) 2026 YuYaoYong. All rights reserved.
 
-MIT License
+Licensed under the PolyForm Strict License 1.0.0.
+Official license text:
+https://polyformproject.org/licenses/strict/1.0.0
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This is a source-available license, not an OSI open-source license.
 -->
 <html lang="zh-CN"><head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8HVD3NNMG"></script> 
+<script> 
+  window.dataLayer = window.dataLayer || []; 
+  function gtag(){dataLayer.push(arguments);} 
+  gtag('js', new Date()); 
+ 
+  gtag('config', 'G-S8HVD3NNMG'); 
+</script>
 <meta charset="UTF-8">
-<meta name="pfs-storage-scope" content="r0d9cjnv02">
+<meta name="pfs-storage-scope" content="5jou9ykrm3">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PFS — Personal Financial Simulation</title>
 <script id="embeddedFinanceData" type="application/json">{}</script>
@@ -80,8 +75,7 @@ button{cursor:pointer}
 .brand{display:flex;align-items:baseline;gap:9px;min-width:0;color:#334155}.brand-mark{font-size:17px;font-weight:800;letter-spacing:.02em;white-space:nowrap}.brand-full{font-size:11px;font-weight:650;color:#8a93a0;letter-spacing:.015em;white-space:nowrap}
 .logo{width:34px;height:34px;border-radius:11px;background:var(--accent);color:white;display:grid;place-items:center;font-weight:800}
 .actions{display:flex;gap:8px;align-items:center}
-.language-select{height:37px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#536174;padding:0 30px 0 10px;font-size:12px;font-weight:650;outline:none;cursor:pointer}.language-select:hover{background:#fbfcfd;border-color:#ccd6e1}.language-select:focus{border-color:#aebdcb;box-shadow:0 0 0 3px rgba(79,124,172,.07)}
-.preset-trigger{height:37px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#526174;padding:0 11px;font-size:12px;font-weight:680;white-space:nowrap;transition:background .14s ease,border-color .14s ease,box-shadow .14s ease}.preset-trigger:hover,.preset-trigger.open{background:#fbfcfd;border-color:#ccd6e1}.preset-trigger.open{box-shadow:0 0 0 3px rgba(79,124,172,.07)}
+.language-select,.theme-select{height:37px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#536174;padding:0 30px 0 10px;font-size:12px;font-weight:650;outline:none;cursor:pointer}.language-select:hover,.theme-select:hover{background:#fbfcfd;border-color:#ccd6e1}.language-select:focus,.theme-select:focus{border-color:#aebdcb;box-shadow:0 0 0 3px rgba(79,124,172,.07)}
 .version-switcher{position:relative;display:flex;align-items:center;width:240px;margin-right:4px}
 .version-trigger{height:37px;width:100%;border:1px solid var(--line);border-radius:11px;background:#fff;color:#435065;padding:8px 11px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px;text-align:left;outline:none;transition:background .14s ease,border-color .14s ease,box-shadow .14s ease}
 .version-trigger:hover,.version-trigger.open{background:#fbfcfd;border-color:#ccd6e1}.version-trigger.open{box-shadow:0 0 0 3px rgba(79,124,172,.07)}
@@ -90,24 +84,49 @@ button{cursor:pointer}
 .version-list{display:flex;flex-direction:column;gap:2px;max-height:214px;overflow:auto;padding:1px}.version-list::-webkit-scrollbar{width:5px}.version-list::-webkit-scrollbar-thumb{background:#d7dbe0;border-radius:8px}
 .version-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;height:34px;border-radius:10px;color:#4c596b;transition:background .14s ease,color .14s ease}.version-row:hover{background:#f6f9fb}.version-row.active{background:#edf4fa;color:#425872}.version-pick,.version-edit-main{min-width:0;border:0;background:transparent;color:inherit;padding:6px 3px 6px 8px;display:grid;grid-template-columns:18px minmax(0,1fr);align-items:center;gap:6px;text-align:left}.version-option-check{width:18px;color:#5d86ad;font-size:12px;font-weight:800;text-align:center}.version-option-name{font-size:12px;font-weight:720;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.version-row-actions{display:flex;align-items:center;justify-content:flex-end;gap:1px;padding-right:4px}.version-row-action{flex:0 0 22px;width:22px;height:22px;border:0;border-radius:7px;background:transparent;color:#9aa3af;font-size:12px;line-height:1;display:inline-flex;align-items:center;justify-content:center;text-align:center;padding:0}.version-row-icon{display:block;width:100%;line-height:1;text-align:center}.version-row-action.copy .version-row-icon{font-size:11px}.version-row-action.danger .version-row-icon{font-size:15px;transform:translateY(-.5px)}.version-row-action:hover{background:#eef2f6;color:#52677f}.version-row-action.danger:hover{background:#fff1f0;color:var(--danger)}.version-rename-input{min-width:0;width:100%;height:22px;border:1px solid #dfe3e8;border-radius:7px;background:#fff;color:#435065;padding:2px 6px;font-size:12px;line-height:18px;outline:none}.version-rename-input:focus{border-color:#9fb3c8;box-shadow:0 0 0 2px rgba(79,124,172,.08)}.version-delete-text{min-width:0;padding-left:8px;color:#a95b57;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
+
+.settings-menu-wrap{position:relative;display:flex;align-items:center}
+.settings-trigger{height:37px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#526174;padding:0 11px;font-size:12px;font-weight:680;white-space:nowrap;transition:background .14s ease,border-color .14s ease,box-shadow .14s ease,transform .13s ease}
+.settings-trigger:hover,.settings-trigger.open{background:#fbfcfd;border-color:#ccd6e1}
+.settings-trigger.open{box-shadow:0 0 0 3px rgba(79,124,172,.07)}
+.settings-menu{position:absolute;right:0;top:42px;width:220px;padding:8px;background:var(--theme-float,#fff);border:1px solid var(--border-panel);border-radius:14px;box-shadow:var(--shadow-float);display:none;z-index:100}
+.settings-menu.show{display:block}
+.settings-row{display:grid;grid-template-columns:72px minmax(0,1fr);align-items:center;gap:8px;padding:6px 4px}
+.settings-row>label{font-size:11px;color:var(--muted);font-weight:700}
+.settings-row .language-select,.settings-row .theme-select{width:100%;height:34px;border-radius:10px}
+.settings-sep{height:1px;background:var(--divider);margin:5px 2px}
+.settings-action{width:100%;height:34px;border:0;border-radius:9px;background:transparent;color:var(--text-secondary);font-size:12px;font-weight:650;text-align:left;padding:0 9px}
+.settings-action:hover{background:var(--surface-hover);color:var(--text)}
+.language-menu-wrap{position:relative;display:flex;align-items:center}
+.language-trigger{width:42px;height:37px;border:1px solid var(--line);border-radius:11px;background:#fff;color:#526174;padding:0;font-size:14px;font-weight:800;letter-spacing:-.02em;display:inline-flex;align-items:center;justify-content:center;transition:background .14s ease,border-color .14s ease,box-shadow .14s ease,transform .13s ease}
+.language-trigger:hover,.language-trigger.open{background:#fbfcfd;border-color:#ccd6e1}
+.language-trigger.open{box-shadow:0 0 0 3px rgba(79,124,172,.07)}
+.language-menu{position:absolute;right:0;top:42px;width:188px;padding:7px;background:var(--theme-float,#fff);border:1px solid var(--border-panel);border-radius:14px;box-shadow:var(--shadow-float);display:none;z-index:105}
+.language-menu.show{display:block}
+.language-option{width:100%;height:34px;border:0;border-radius:9px;background:transparent;color:var(--text-secondary);font-size:12px;font-weight:650;text-align:left;padding:0 10px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.language-option:hover{background:var(--surface-hover);color:var(--text)}
+.language-option.active{background:var(--theme-selected);color:var(--accent);font-weight:760}
+.language-option.active::after{content:'✓';font-size:11px;font-weight:900}
+
 .project-meta{display:flex;align-items:center;gap:9px;color:#8a93a0;font-size:11px;white-space:nowrap}
 .project-meta a{color:#738095;text-decoration:none}
 .project-meta a:hover{color:#4f6782;text-decoration:underline}
 .version-chip{display:inline-flex;align-items:center;height:24px;padding:0 7px;border:1px solid #e6eaf0;border-radius:8px;background:#fff;color:#697586;font-weight:650;cursor:pointer}.version-chip:hover{background:#f7f9fb;color:#4f6074}
 
 .btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:11px;padding:8px 11px}
+.actions>.btn{height:37px;padding:0 11px;font-size:12px;font-weight:650;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center}
 .btn:hover{background:#fafafa}
 .btn.primary{background:#4b5f76;border-color:#4b5f76;color:#fff}
 /* =========================================================
    03. PRIMARY WORKSPACES
    ========================================================= */
-.layout{height:calc(max(100vh,720px) - 68px);display:grid;grid-template-columns:320px 300px minmax(460px,1fr);column-gap:0;row-gap:14px;padding:14px;overflow:hidden}.main{margin-left:16px}
+.layout{height:calc(max(100vh,720px) - 68px);display:grid;grid-template-columns:348px 300px minmax(460px,1fr);column-gap:0;row-gap:14px;padding:14px;overflow:hidden}.main{margin-left:16px}
 .panel{background:var(--surface-panel);border:1px solid var(--border-panel);border-radius:var(--radius);box-shadow:var(--shadow-panel);min-width:0;min-height:0}
 .left,.editor{height:100%;padding:15px;overflow:hidden;display:flex;flex-direction:column}.left{border-top-right-radius:0;border-bottom-right-radius:0;border-right:0}.editor{border-top-left-radius:0;border-bottom-left-radius:0;box-shadow:var(--shadow-panel);background:#f7f9fb;border-color:var(--border-panel);position:relative}.editor::before{content:'';position:absolute;left:0;top:18px;bottom:18px;width:1px;background:var(--divider)}
 /* =========================================================
    04. EVENT WORKSPACE
    ========================================================= */
-.section-title{font-size:12px;color:var(--muted);font-weight:750;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px}
+.section-title{font-size:12px;color:var(--muted);font-weight:750;letter-spacing:.08em;text-transform:uppercase;margin-bottom:9px}.event-section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}.event-section-head .section-title{margin-bottom:0}.event-list-reset{border:0;background:transparent;color:var(--muted);font-size:10px;font-weight:700;padding:4px 6px;border-radius:7px;line-height:1}.event-list-reset:hover{background:var(--surface-hover);color:var(--text-secondary)}
 .profile-card{padding:13px 14px;border-radius:14px;background:#f8fafc;border:1px solid #dde3ea;margin-bottom:15px;position:relative;box-shadow:0 1px 2px rgba(31,42,55,.025)}.profile-card.active{background:#edf4fa;border-color:#dfe7ef}.profile-card.active::before{content:'';position:absolute;left:-1px;top:8px;bottom:8px;width:3px;border-radius:3px;background:#5d86ad}
 .profile-card .big{font-size:24px;font-weight:800;letter-spacing:-.02em}
 .profile-card .small{font-size:12px;color:var(--muted);margin-top:4px}
@@ -115,7 +134,7 @@ button{cursor:pointer}
 .event-scroll::-webkit-scrollbar{width:6px}.event-scroll::-webkit-scrollbar-thumb{background:#d7dbe0;border-radius:8px}
 
 
-.group-actions{display:grid;grid-template-columns:1.08fr .92fr;gap:7px;margin-bottom:11px}
+.group-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:11px}.group-actions #quickAddTrigger{grid-column:1 / -1;min-height:38px;font-weight:760}.group-actions .group-add{min-width:0;text-align:center;padding-left:6px;padding-right:6px}
 .event-explorer{position:relative;margin-bottom:9px}
 .event-explorer-trigger{width:100%;height:34px;border:1px solid var(--border-control);border-radius:10px;background:var(--surface-panel);color:var(--text-secondary);padding:0 10px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:12px;font-weight:680;text-align:left;transition:background .14s ease,border-color .14s ease,box-shadow .14s ease}
 .event-explorer-trigger:hover,.event-explorer-trigger.open{background:var(--surface-hover);border-color:var(--border-panel)}
@@ -146,9 +165,10 @@ button{cursor:pointer}
 .event-status.ongoing{display:none}
 .event-item.compact-readonly .drag-handle{display:none}
 .event-item.compact-readonly{padding-left:10px}
-.editor-direction{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:3px;background:#f2f4f7;border-radius:10px}
-.editor-direction button{height:31px;border:0;border-radius:8px;background:transparent;color:#7a8492;font-size:12px;font-weight:680}
-.editor-direction button.active{background:#fff;color:#40526a;box-shadow:0 1px 4px rgba(50,65,85,.08)}
+.editor-direction{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:3px;background:var(--surface-soft);border:1px solid var(--theme-soft-border,var(--border-control));border-radius:10px}
+.editor-direction button{height:31px;border:0;border-radius:7px;background:transparent;color:var(--text-secondary);font-size:12px;font-weight:680;transition:background .14s ease,color .14s ease,box-shadow .14s ease}
+.editor-direction button:hover{color:var(--text);background:var(--surface-hover)}
+.editor-direction button.active{background:var(--theme-card-strong,var(--surface-panel));color:var(--accent);box-shadow:0 1px 3px var(--theme-glow)}
 .editor-effect-preview{margin-top:4px;padding:10px 11px;border:1px solid #e5eaf0;background:#f8fafc;border-radius:10px}
 .editor-effect-preview .k{font-size:10px;color:var(--muted);font-weight:720;margin-bottom:6px}.editor-effect-row{display:flex;justify-content:space-between;gap:12px;font-size:12px}.editor-effect-row b{font-variant-numeric:tabular-nums}
 /* P2 — risk signals and cross-view linking */
@@ -181,7 +201,7 @@ button{cursor:pointer}
 .group-head:hover .group-toggle{background:#f4f6f8;color:#8c98a6}
 
 .group-title-wrap{display:flex;align-items:center;min-width:0;gap:7px}
-.group-name{font-size:12.5px;font-weight:740;letter-spacing:.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.group-name{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-size:12.5px;font-weight:740;letter-spacing:.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .group-count{min-width:22px;height:20px;padding:0 7px;border-radius:999px;background:#f2f4f7;color:#8f99a6;font-size:10px;font-weight:700;font-variant-numeric:tabular-nums;display:inline-flex;align-items:center;justify-content:center}
 .group-head.active .group-count{background:#e4eef7;color:#6a819a}
 .group-head.active .group-toggle{background:#f1f4f7;color:#8795a4}
@@ -208,10 +228,10 @@ button{cursor:pointer}
 .event-item.dragging .drag-handle{color:#7d91a7}
 .event-main{display:flex;align-items:center;min-width:0;gap:4px}
 
-.event-item{position:relative;padding:10px 10px 10px 8px;border-radius:12px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;margin-bottom:3px;border:0;background:transparent;transition:background .14s ease,transform .14s ease;cursor:pointer}
+.event-item{position:relative;padding:10px 10px 10px 8px;border-radius:12px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;margin-bottom:3px;border:0;background:transparent;transition:background .14s ease,transform .14s ease;cursor:pointer}
 .event-item:hover{background:#f8fafc}.event-item.active{background:#edf4fa}
 .event-item.active::before{content:'';position:absolute;left:-2px;top:9px;bottom:9px;width:3px;border-radius:999px;background:#5d86ad}
-.event-item .name{font-weight:650;font-size:13.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.event-title{display:flex;align-items:center;gap:7px;min-width:0}.event-kind-icon{width:auto;height:18px;flex:0 0 auto;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px;background:#f2f3f5;color:#7a8088;font-size:10px;font-weight:700;line-height:18px;white-space:nowrap}.event-kind-icon.recurring{background:#eef4ff;color:#2563eb}.event-kind-icon.once{background:#f3f4f6;color:#8a9098}
+.event-item .name{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;font-weight:650;font-size:13.5px;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.event-title{display:flex;align-items:center;gap:7px;min-width:0}.event-kind-icon{width:auto;height:18px;flex:0 0 auto;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;padding:0 6px;background:#f2f3f5;color:#7a8088;font-size:10px;font-weight:700;line-height:18px;white-space:nowrap}.event-kind-icon.recurring{background:#eef4ff;color:#2563eb}.event-kind-icon.once{background:#f3f4f6;color:#8a9098}
 
 .event-status{flex:0 0 auto;font-size:10px;font-weight:650;border-radius:999px;padding:2px 6px;line-height:1.4}
 .event-status.ongoing{background:#edf6f1;color:#5f806f}
@@ -221,7 +241,7 @@ button{cursor:pointer}
 .event-item.time-expired.link-hover,.event-item.time-ended.link-hover{opacity:1}
 
 .event-item .meta{font-size:11px;color:#9aa0a8;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.amount{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;letter-spacing:-.01em}
+.amount{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap;letter-spacing:-.01em;min-width:72px;text-align:right}
 .income{color:var(--ok)} .expense{color:var(--danger)}
 .add-event{width:100%;margin-top:0;margin-bottom:10px;border:0;background:#f6f7f9;border-radius:11px;padding:9px 10px;color:#535963;font-weight:650;text-align:left;transition:background .14s ease}.add-event:hover{background:#eef1f4}
 /* =========================================================
@@ -289,7 +309,21 @@ canvas{width:100%;height:100%;display:block}
 .about-grid a{color:#5d7896;text-decoration:none}.about-grid a:hover{text-decoration:underline}.about-copyright{margin-top:14px;padding-top:12px;border-top:1px solid #edf0f3;color:#8a93a0;font-size:11px;line-height:1.5}
 
 .about-actions{display:flex;justify-content:flex-end;margin-top:16px;padding-top:14px;border-top:1px solid #edf0f3}
-.preset-backdrop{position:fixed;inset:0;background:rgba(29,39,52,.28);display:none;align-items:center;justify-content:center;z-index:135}.preset-backdrop.show{display:flex}.preset-modal{width:min(720px,88vw);background:#fff;border:1px solid #e4e9ef;border-radius:18px;box-shadow:0 24px 70px rgba(31,42,55,.18);padding:18px}.preset-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:14px}.preset-head h3{margin:0 0 5px;font-size:17px}.preset-head p{margin:0;color:var(--muted);font-size:12px;line-height:1.5}.preset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.preset-card{min-width:0;border:1px solid #e5eaf0;border-radius:13px;background:#fff;padding:13px 14px;text-align:left;color:var(--text);transition:background .14s ease,border-color .14s ease,transform .14s ease}.preset-card:hover{background:#f8fafc;border-color:#d5dee8;transform:translateY(-1px)}.preset-card-title{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;font-weight:740;color:#435065}.preset-card-title .go{font-size:16px;color:#a1abb7;font-weight:500}.preset-card-desc{margin-top:5px;color:#7f8998;font-size:11px;line-height:1.45}.preset-card-meta{margin-top:9px;color:#9aa3af;font-size:10px}.preset-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px;padding-top:13px;border-top:1px solid #edf0f3}.preset-foot-note{font-size:11px;color:var(--muted)}
+.guide-backdrop{position:fixed;inset:0;background:rgba(29,39,52,.28);display:none;align-items:center;justify-content:center;z-index:130;padding:24px}.guide-backdrop.show{display:flex}
+.guide-modal{width:min(760px,92vw);max-height:min(760px,88vh);background:var(--theme-float,#fff);border:1px solid var(--border-panel);border-radius:20px;box-shadow:var(--shadow-float);display:flex;flex-direction:column;overflow:hidden;color:var(--text)}
+.guide-head{height:60px;flex:0 0 60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 18px;border-bottom:1px solid var(--divider)}
+.guide-title{font-size:17px;font-weight:800}.guide-body{overflow:auto;padding:18px 20px 20px;line-height:1.7}.guide-intro{margin:0 0 16px;color:var(--text-secondary);font-size:13px}
+.guide-section{padding:14px 0;border-top:1px solid var(--divider)}.guide-section:first-of-type{border-top:0;padding-top:2px}.guide-section h4{margin:0 0 7px;font-size:13px;font-weight:800}.guide-section p{margin:0;color:var(--text-secondary);font-size:12.5px}
+.guide-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:9px}.guide-step{padding:11px 12px;border:1px solid var(--theme-soft-border,var(--border-control));border-radius:13px;background:var(--theme-card,#fff)}.guide-step b{display:block;font-size:12px;margin-bottom:4px}.guide-step span{display:block;font-size:11.5px;line-height:1.55;color:var(--text-secondary)}
+.guide-foot{height:52px;flex:0 0 52px;display:flex;justify-content:flex-end;align-items:center;padding:0 16px;border-top:1px solid var(--divider)}
+.guide-faq{display:flex;flex-direction:column;gap:8px;margin-top:9px}
+.guide-faq-item{padding:11px 12px;border:1px solid var(--theme-soft-border,var(--border-control));border-radius:13px;background:var(--theme-card,#fff)}
+.guide-faq-item b{display:block;font-size:12px;line-height:1.5;margin-bottom:4px;color:var(--text)}
+.guide-faq-item span{display:block;font-size:11.5px;line-height:1.65;color:var(--text-secondary)}
+
+@media(max-width:720px){.guide-steps{grid-template-columns:1fr}.guide-modal{width:100%;max-height:92vh}}
+
+.quick-add-backdrop{position:fixed;inset:0;background:rgba(29,39,52,.28);display:none;align-items:center;justify-content:center;z-index:135}.quick-add-backdrop.show{display:flex}.quick-add-modal{width:min(1040px,96vw);height:min(650px,88vh);background:#fff;border:1px solid #e4e9ef;border-radius:18px;box-shadow:0 24px 70px rgba(31,42,55,.18);display:flex;flex-direction:column;overflow:hidden}.quick-add-head{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-bottom:1px solid var(--divider)}.quick-add-head>div{display:flex;align-items:center;gap:8px;min-width:0}.quick-add-head h3{margin:0;font-size:17px}.quick-add-head p{margin:3px 0 0;color:var(--muted);font-size:11px}.quick-add-back{width:28px;height:28px;border:0;border-radius:8px;background:transparent;color:var(--text-secondary);font-size:23px;line-height:1;display:none;align-items:center;justify-content:center}.quick-add-back.show{display:flex}.quick-add-back:hover{background:var(--surface-hover)}.quick-add-library{flex:1;min-height:0;padding:13px 15px 15px;overflow:auto}.quick-add-search{width:100%;height:34px;border:1px solid var(--border-control);border-radius:10px;background:var(--theme-input,#fff);color:var(--text);padding:0 10px;outline:none}.quick-add-search:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--theme-focus)}.quick-add-categories{display:flex;gap:5px;flex-wrap:wrap;margin:10px 0}.quick-add-category{height:28px;padding:0 10px;border:1px solid transparent;border-radius:9px;background:var(--surface-soft);color:var(--text-secondary);font-size:11px;font-weight:700}.quick-add-category:hover{background:var(--surface-hover)}.quick-add-category.active{background:var(--theme-selected);color:var(--accent);border-color:color-mix(in srgb,var(--accent) 16%,transparent)}.quick-add-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.quick-add-card{min-width:0;min-height:56px;border:1px solid var(--theme-soft-border,var(--border-control));border-radius:11px;background:var(--theme-card-strong,#fff);padding:9px 10px;text-align:left;color:var(--text);transition:background .12s ease,border-color .12s ease}.quick-add-card:hover{background:var(--surface-hover);border-color:color-mix(in srgb,var(--accent) 24%,var(--border-panel))}.quick-add-card b{display:block;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.quick-add-card span{display:block;margin-top:3px;color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.quick-add-editor{display:none;flex:1;min-height:0;flex-direction:column}.quick-add-editor.show{display:flex}.quick-add-rows{flex:1;min-height:0;padding:10px 15px 4px;overflow:auto}.quick-add-row{display:grid;grid-template-columns:22px minmax(140px,1fr) 96px 548px;align-items:center;column-gap:10px;min-height:42px;border-bottom:1px solid var(--divider)}.quick-add-row:last-child{border-bottom:0}.quick-add-row .item-name{font-size:12px;font-weight:680;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.quick-add-row input[type="checkbox"]{width:14px;height:14px;margin:0;accent-color:var(--accent)}.quick-add-money,.quick-add-day,.quick-add-frequency,.quick-add-weekday,.quick-add-once-date,.quick-add-interval,.quick-add-unit,.quick-add-year-month,.quick-add-year-day{box-sizing:border-box;height:31px;border:1px solid var(--border-control);border-radius:9px;background:var(--theme-input,#fff);color:var(--text);min-width:0}.quick-add-money{width:96px;padding:0 10px;text-align:left;justify-self:start;font-variant-numeric:tabular-nums}.quick-add-frequency{width:150px;padding:0 30px 0 10px}.quick-add-once-date{width:144px;padding:0 7px;font-size:11px}.quick-add-weekday{width:142px;padding:0 28px 0 9px}.quick-add-day{width:48px;padding:0 6px;text-align:center;font-variant-numeric:tabular-nums}.quick-add-interval{width:46px;padding:0 6px;text-align:center;font-variant-numeric:tabular-nums}.quick-add-unit{width:92px;padding:0 28px 0 9px}.quick-add-year-month{width:104px;padding:0 28px 0 9px}.quick-add-year-day{width:86px;padding:0 28px 0 9px}.quick-add-schedule{width:548px;display:flex;align-items:center;justify-content:flex-start;gap:10px;color:var(--muted);font-size:10px;min-width:0;justify-self:end}.quick-add-param{flex:1 1 auto;width:auto;min-width:0;display:flex;align-items:center;justify-content:flex-start;gap:7px;white-space:nowrap;overflow:visible}.quick-add-custom-wrap{width:100%;min-width:0;display:flex;align-items:center;justify-content:flex-start;gap:6px;white-space:nowrap}.quick-add-custom-wrap>span:first-child{width:auto;text-align:left;flex:0 0 auto}.quick-add-custom-wrap [data-role="custom-occurrence"]{width:auto;min-width:0;display:flex;align-items:center;justify-content:flex-start;gap:5px;flex:0 0 auto}.quick-add-custom-wrap [data-role="custom-occurrence"] .quick-add-weekday{width:auto;min-width:0;padding-left:9px;padding-right:22px;font-size:14px}.quick-add-custom-wrap [data-role="custom-occurrence"] .quick-add-day{width:48px}.quick-add-custom-sep{color:var(--muted);font-size:10px;flex:0 0 auto}.quick-add-common{padding:8px 15px 12px;border-top:1px solid var(--divider);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 14px}.quick-add-common label{display:grid;grid-template-columns:80px minmax(0,160px);align-items:center;gap:8px;font-size:11px;color:var(--text-secondary);min-width:0}.quick-add-common input,.quick-add-common select{width:160px;height:31px;border:1px solid var(--border-control);border-radius:9px;background:var(--theme-input,#fff);color:var(--text);padding:0 8px}.quick-add-common label.quick-add-common-end-date{display:none}.quick-add-common label.quick-add-common-end-date.show{display:grid}.quick-add-foot{min-height:54px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 15px;border-top:1px solid var(--divider)}.quick-add-foot>div{display:flex;gap:7px}.quick-add-note{font-size:10px;color:var(--muted)}.quick-add-empty{grid-column:1/-1;padding:28px 10px;text-align:center;color:var(--muted);font-size:12px}@media(max-width:860px){.quick-add-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.quick-add-common{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .dialog-backdrop{position:fixed;inset:0;background:rgba(29,39,52,.28);display:none;align-items:center;justify-content:center;z-index:140}.dialog-backdrop.show{display:flex}.dialog-modal{width:380px;background:#fff;border:1px solid #e4e9ef;border-radius:18px;box-shadow:0 24px 70px rgba(31,42,55,.18);padding:18px}.dialog-modal h3{margin:0 0 6px;font-size:17px}.dialog-message{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:14px;white-space:pre-wrap}.dialog-field{margin-top:10px}.dialog-field label{display:block;font-size:12px;font-weight:650;color:#60656d;margin-bottom:6px}.dialog-field input{width:100%;border:1px solid #dfe3e8;border-radius:11px;padding:9px 10px;background:#fff;outline:none}.dialog-field input:focus{border-color:#9aa1ab;box-shadow:0 0 0 3px rgba(17,24,39,.05)}.dialog-error{min-height:18px;margin-top:7px;color:var(--danger);font-size:12px}.dialog-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid #edf0f3}
 
 .export-backdrop{position:fixed;inset:0;background:rgba(29,39,52,.28);display:none;align-items:center;justify-content:center;z-index:120}.export-backdrop.show{display:flex}.export-modal{width:420px;background:#fff;border:1px solid #e4e9ef;border-radius:18px;box-shadow:0 24px 70px rgba(31,42,55,.18);padding:18px}.export-modal h3{margin:0 0 5px;font-size:17px}.export-modal .desc{font-size:12px;color:var(--muted);margin-bottom:16px}
@@ -327,32 +361,443 @@ canvas{width:100%;height:100%;display:block}
 
 
 /* Portrait phone notice */
-.mobile-notice{position:fixed;inset:0;z-index:220;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(246,247,249,.98)}
+.mobile-notice{position:fixed;inset:0;z-index:220;display:none;align-items:center;justify-content:center;padding:max(24px,env(safe-area-inset-top)) max(22px,env(safe-area-inset-right)) max(24px,env(safe-area-inset-bottom)) max(22px,env(safe-area-inset-left));background:var(--surface-page);overflow:auto}
 .mobile-notice.show{display:flex}
-.mobile-notice-card{width:min(360px,100%);background:#fff;border:1px solid var(--border-panel);border-radius:20px;box-shadow:0 24px 70px rgba(31,42,55,.16);padding:24px;text-align:left}
-.mobile-notice-brand{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:14px}
-.mobile-notice-brand strong{font-size:24px;letter-spacing:-.03em;color:#334155}
-.mobile-notice-brand span{font-size:12px;color:var(--muted);font-weight:650}
-.mobile-notice-title{font-size:18px;font-weight:780;color:#334155;margin-bottom:8px}
-.mobile-notice-desc{font-size:13px;line-height:1.7;color:var(--text-secondary);margin-bottom:8px}
-.mobile-notice-tip{font-size:12px;line-height:1.65;color:var(--muted);margin-bottom:18px}
-.mobile-notice-actions{display:flex;justify-content:flex-end}
-.mobile-notice-actions .btn{min-width:96px}
+.mobile-notice-card{width:min(420px,100%);margin:auto;background:transparent;border:0;border-radius:0;box-shadow:none;padding:8px 2px;text-align:center}
+.mobile-notice-brand{display:flex;align-items:baseline;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.mobile-notice-brand strong{font-size:30px;line-height:1;font-weight:900;letter-spacing:-.04em;color:var(--accent)}
+.mobile-notice-brand span{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.02em}
+.mobile-notice-title{max-width:340px;margin:0 auto;font-size:22px;line-height:1.45;font-weight:820;letter-spacing:-.02em;color:var(--text)}
+@media(max-width:420px){.mobile-notice{padding-left:20px;padding-right:20px}.mobile-notice-brand{margin-bottom:26px}.mobile-notice-title{font-size:21px}}
 
 @media(max-width:1120px){
-  .layout{grid-template-columns:230px 300px 1fr}
+  .layout{grid-template-columns:250px 300px 1fr}
   .metrics{grid-template-columns:repeat(2,1fr)}
 }
+
+
+/* =========================================================
+   12. VISUAL THEMES — Light / Dark / Candy / Paper
+   Visual layer only. Financial data and behavior are unchanged.
+   ========================================================= */
+body{
+  --theme-topbar:rgba(255,255,255,.94);
+  --theme-editor:#f8fafc;
+  --theme-card:#ffffff;
+  --theme-card-strong:#ffffff;
+  --theme-control:#ffffff;
+  --theme-control-hover:#f7f9fc;
+  --theme-selected:#edf4ff;
+  --theme-selected-strong:#dfeaff;
+  --theme-brand:#334155;
+  --theme-input:#ffffff;
+  --theme-chart:#ffffff;
+  --theme-float:#ffffff;
+  --theme-soft-border:#e5eaf0;
+  --theme-focus:rgba(73,113,168,.14);
+  --theme-glow:rgba(52,73,102,.08);
+  --theme-pop:#7b61ff;
+  --theme-sun:#f6b73c;
+  --theme-mint:#49b986;
+  --theme-purple:#7c67c8;
+  --chart-grid:#edf1f5;
+  --chart-axis:#8792a2;
+  --chart-line:#526f91;
+  --chart-fill:rgba(82,111,145,.065);
+  --chart-warning:#d89b2b;
+  --chart-danger:#d65f58;
+  --chart-ok:#4f9b73;
+  --chart-node:#6c8198;
+  --chart-node-border:#ffffff;
+  --chart-today:#aab4c0;
+  --chart-month:rgba(82,111,145,.045);
+  --chart-month-alt:rgba(82,111,145,.025);
+  --chart-month-border:rgba(131,145,163,.24);
+}
+
+/* Light — neutral professional software */
+body[data-theme="light"]{
+  --surface-page:#f5f7fa; --surface-panel:#ffffff; --surface-soft:#f3f6f9; --surface-hover:#f7f9fc; --surface-selected:#eaf2fb;
+  --text:#253247; --text-secondary:#5f6f84; --muted:#8a96a6;
+  --border-panel:#d9e0e8; --border-control:#e2e7ed; --divider:#edf0f4;
+  --accent:#4e6f96; --curve:#4e6f96; --hover:#4d79ad; --danger:#c95f5a; --warn:#b78331; --ok:#4d8e6c;
+  --radius:16px; --radius-control:10px;
+  --shadow-panel:0 1px 2px rgba(30,41,59,.04),0 8px 24px rgba(30,41,59,.045); --shadow-float:0 22px 58px rgba(30,41,59,.16);
+  --theme-topbar:rgba(255,255,255,.94); --theme-editor:#f8fafc; --theme-card:#ffffff; --theme-card-strong:#ffffff; --theme-control:#fff; --theme-control-hover:#f7f9fc; --theme-selected:#eaf2fb; --theme-selected-strong:#dfeaf7; --theme-brand:#334155; --theme-input:#fff; --theme-chart:#fff; --theme-float:#fff; --theme-soft-border:#e3e8ee; --theme-focus:rgba(78,111,150,.14); --theme-glow:rgba(65,83,107,.07);
+  --chart-grid:#edf1f5; --chart-axis:#7e8998; --chart-line:#486b92; --chart-fill:rgba(72,107,146,.065); --chart-warning:#c99434; --chart-danger:#c95f5a; --chart-ok:#4d8e6c; --chart-node:#70859b; --chart-node-border:#fff; --chart-today:#adb7c2;
+}
+
+/* Dark — neutral professional dark software */
+body[data-theme="dark"]{
+  --surface-page:#171c24; --surface-panel:#202733; --surface-soft:#282f3b; --surface-hover:#2b3441; --surface-selected:#2d3b4d;
+  --text:#eef2f7; --text-secondary:#b5c0ce; --muted:#7f8b9b;
+  --border-panel:#323b49; --border-control:#3a4453; --divider:#303947;
+  --accent:#82aee0; --curve:#82aee0; --hover:#9ac1ec; --danger:#ef8680; --warn:#e5b15b; --ok:#72c39b;
+  --radius:16px; --radius-control:10px;
+  --shadow-panel:0 1px 2px rgba(0,0,0,.22),0 12px 30px rgba(0,0,0,.16); --shadow-float:0 24px 68px rgba(0,0,0,.42);
+  --theme-topbar:rgba(26,32,42,.95); --theme-editor:#1c232d; --theme-card:#242c38; --theme-card-strong:#222a35; --theme-control:#272f3b; --theme-control-hover:#303946; --theme-selected:#2e3c4f; --theme-selected-strong:#364960; --theme-brand:#eef2f7; --theme-input:#252d39; --theme-chart:#1e2530; --theme-float:#252d39; --theme-soft-border:#343e4d; --theme-focus:rgba(130,174,224,.21); --theme-glow:rgba(0,0,0,.18);
+  --chart-grid:#303946; --chart-axis:#8e9aab; --chart-line:#8bb8ea; --chart-fill:rgba(139,184,234,.075); --chart-warning:#e6b456; --chart-danger:#f08079; --chart-ok:#73cda2; --chart-node:#8ca0b7; --chart-node-border:#1e2530; --chart-today:#647184; --chart-month:rgba(139,184,234,.05); --chart-month-alt:rgba(139,184,234,.025); --chart-month-border:rgba(126,151,179,.22);
+}
+
+/* Candy — vivid casual puzzle-game palette */
+body[data-theme="candy"]{
+  --surface-page:#fff6fb; --surface-panel:#ffffff; --surface-soft:#f4f1ff; --surface-hover:#fff1f6; --surface-selected:#edf3ff;
+  --text:#35405e; --text-secondary:#66718d; --muted:#969db1;
+  --border-panel:#ebe5f2; --border-control:#ebe7f3; --divider:#f1edf6;
+  --accent:#5b8cff; --curve:#5b8cff; --hover:#457cff; --danger:#ff667f; --warn:#f7a928; --ok:#39bd80;
+  --radius:22px; --radius-control:15px;
+  --shadow-panel:0 4px 0 rgba(99,92,190,.035),0 14px 30px rgba(91,91,154,.09); --shadow-float:0 24px 64px rgba(73,65,125,.20);
+  --theme-topbar:rgba(255,250,253,.94); --theme-editor:#fffafd; --theme-card:#fffafd; --theme-card-strong:#ffffff; --theme-control:#ffffff; --theme-control-hover:#fff0f6; --theme-selected:#edf3ff; --theme-selected-strong:#dfe8ff; --theme-brand:#485475; --theme-input:#ffffff; --theme-chart:#fffefe; --theme-float:#ffffff; --theme-soft-border:#ece6f3; --theme-focus:rgba(91,140,255,.18); --theme-glow:rgba(91,140,255,.12); --theme-pop:#ff69a0; --theme-sun:#ffd33d; --theme-mint:#48d69a; --theme-purple:#9b6cff;
+  --chart-grid:#f1edf7; --chart-axis:#858da3; --chart-line:#557fff; --chart-fill:rgba(85,127,255,.15); --chart-warning:#ffb629; --chart-danger:#ff6279; --chart-ok:#36c487; --chart-node:#8f79ff; --chart-node-border:#fff; --chart-today:#bdafd0; --chart-month:rgba(155,108,255,.055); --chart-month-alt:rgba(255,105,160,.035); --chart-month-border:rgba(155,108,255,.20);
+}
+
+/* Paper — warm notebook / printed ledger */
+body[data-theme="paper"]{
+  --surface-page:#f2ecdf; --surface-panel:#fbf7ed; --surface-soft:#f1ebdf; --surface-hover:#f7f0e3; --surface-selected:#e8eee2;
+  --text:#403d36; --text-secondary:#706a5f; --muted:#968f82;
+  --border-panel:#d9d0c0; --border-control:#ded5c7; --divider:#e7dfd1;
+  --accent:#63765e; --curve:#566f64; --hover:#526d62; --danger:#a85f51; --warn:#a67b37; --ok:#5d8061;
+  --radius:13px; --radius-control:8px;
+  --shadow-panel:0 1px 1px rgba(82,68,46,.05),0 5px 14px rgba(82,68,46,.055); --shadow-float:0 18px 48px rgba(68,56,40,.18);
+  --theme-topbar:rgba(248,244,234,.96); --theme-editor:#f5efe4; --theme-card:#faf6ec; --theme-card-strong:#fcf8ef; --theme-control:#fbf7ee; --theme-control-hover:#f3ecdf; --theme-selected:#e7eee1; --theme-selected-strong:#dae5d5; --theme-brand:#514c42; --theme-input:#fcf9f2; --theme-chart:#fbf8f0; --theme-float:#fcf8ef; --theme-soft-border:#ddd4c5; --theme-focus:rgba(99,118,94,.14); --theme-glow:rgba(91,75,50,.06); --theme-pop:#a46158; --theme-sun:#c09547; --theme-mint:#748c69; --theme-purple:#776b83;
+  --chart-grid:#e8e0d3; --chart-axis:#81796d; --chart-line:#526e62; --chart-fill:rgba(82,110,98,.05); --chart-warning:#a67b37; --chart-danger:#a85f51; --chart-ok:#5d8061; --chart-node:#776b83; --chart-node-border:#fbf8f0; --chart-today:#a89f91; --chart-month:rgba(95,111,86,.035); --chart-month-alt:rgba(164,97,88,.018); --chart-month-border:rgba(121,109,92,.20);
+}
+
+/* Shared hierarchy: data first, chrome second. */
+body{transition:background .22s ease,color .22s ease;background-color:var(--surface-page);background-image:none}
+body[data-theme="candy"]{background-image:radial-gradient(circle at 6% 5%,rgba(255,92,160,.09) 0 170px,transparent 171px),radial-gradient(circle at 94% 93%,rgba(47,130,255,.09) 0 220px,transparent 221px)}
+body[data-theme="paper"]{background-image:repeating-linear-gradient(0deg,rgba(90,75,53,.018) 0,rgba(90,75,53,.018) 1px,transparent 1px,transparent 5px)}
+.topbar{background:var(--theme-topbar);border-color:var(--border-panel);box-shadow:0 4px 18px var(--theme-glow)}
+.brand{color:var(--theme-brand)} .brand-mark{font-weight:900;color:var(--accent)} .brand-full,.project-meta{color:var(--muted)}
+.panel{background:var(--surface-panel);border-color:var(--border-panel);box-shadow:var(--shadow-panel)}
+.editor{background:var(--theme-editor);border-color:var(--border-panel)}
+.chart-panel{background:var(--theme-chart);border-color:var(--border-panel);box-shadow:var(--shadow-panel)}
+.profile-card,.state-section,.editor-effect-preview{background:var(--theme-card);border-color:var(--theme-soft-border)}
+.profile-card{transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease}
+.profile-card:hover{transform:translateY(-1px)}
+.profile-card.active,.group-head.active,.event-item.active{background:var(--theme-selected)}
+.profile-card.active{border-color:color-mix(in srgb,var(--accent) 30%,var(--border-panel));box-shadow:0 8px 22px var(--theme-glow)}
+.profile-card.active::before,.group-head.active::before,.event-item.active::before{background:var(--accent)}
+.profile-card .big{font-size:27px;font-weight:850;letter-spacing:-.035em;color:var(--text);font-variant-numeric:tabular-nums}
+.profile-card .small{color:var(--muted)}
+.profile-state-line b{font-size:12px;font-weight:800;color:var(--text)}
+.group-block,.group-events{background:var(--theme-card-strong);border-color:var(--theme-soft-border)}
+.group-block{box-shadow:none}.group-head{border-color:var(--divider)}
+.group-head:hover,.event-item:hover,.event-explorer-trigger:hover,.event-explorer-trigger.open{background:var(--theme-control-hover)}
+.group-count{background:var(--surface-soft);color:var(--text-secondary);border:1px solid var(--border-control)}
+.event-item{transition:background .14s ease,transform .14s ease,box-shadow .14s ease}
+.event-item:hover{transform:translateY(-1px)}
+.event-item .name{font-size:14px;font-weight:760;color:var(--text);letter-spacing:-.005em}
+.event-item .meta{font-size:10.5px;color:var(--muted)}
+.amount{font-size:15px;font-weight:850;letter-spacing:-.025em;text-shadow:0 1px 0 color-mix(in srgb,var(--theme-card) 70%,transparent)}
+.event-kind-icon{font-weight:780;border:1px solid transparent}
+.event-kind-icon.once{background:color-mix(in srgb,var(--theme-purple) 12%,var(--theme-card));color:var(--theme-purple);border-color:color-mix(in srgb,var(--theme-purple) 20%,transparent)}
+.event-kind-icon.recurring{background:color-mix(in srgb,var(--accent) 12%,var(--theme-card));color:var(--accent);border-color:color-mix(in srgb,var(--accent) 20%,transparent)}
+.event-status.ongoing{background:color-mix(in srgb,var(--ok) 14%,var(--theme-card));color:var(--ok)}
+.event-status.expired,.event-status.ended{background:var(--surface-soft);color:var(--muted)}
+.income{color:var(--ok)} .expense{color:var(--danger)}
+.section-title{color:var(--muted);font-weight:800;letter-spacing:.095em}
+.language-select,.theme-select,.version-trigger,.settings-trigger,.language-trigger,.btn,.event-explorer-trigger,.explorer-field select,.status-multi-trigger,.field input,.field select,.dialog-field input,.metadata-editor,.version-rename-input{background:var(--theme-input);color:var(--text);border-color:var(--border-control)}
+.language-select,.theme-select,.version-trigger,.settings-trigger,.language-trigger,.btn{transition:transform .13s ease,background .14s ease,border-color .14s ease,box-shadow .14s ease}
+.language-select:hover,.theme-select:hover,.version-trigger:hover,.settings-trigger:hover,.language-trigger:hover,.btn:hover{background:var(--theme-control-hover);border-color:color-mix(in srgb,var(--accent) 28%,var(--border-panel));transform:translateY(-1px)}
+.language-select:focus,.theme-select:focus,.version-trigger.open,.settings-trigger.open,.language-trigger.open,.field input:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--theme-focus)}
+.version-menu,.event-explorer-popover,.status-multi-menu,.metadata-modal,.about-modal,.quick-add-modal,.dialog-modal,.export-modal,.day-pop,.tooltip.month{background:var(--theme-float);color:var(--text);border-color:var(--border-panel);box-shadow:var(--shadow-float)}
+.version-row{color:var(--text-secondary)} .version-row:hover{background:var(--surface-hover)} .version-row.active{background:var(--theme-selected);color:var(--text)}
+.version-chip{background:color-mix(in srgb,var(--accent) 8%,var(--theme-control));color:var(--accent);border-color:color-mix(in srgb,var(--accent) 18%,var(--border-control))}
+.add-event,.group-add{background:var(--surface-soft);border-color:var(--border-control);color:var(--text-secondary)}
+.add-event:hover,.group-add:hover{background:var(--surface-hover);border-color:var(--border-panel);transform:translateY(-1px)}
+.group-add{transition:transform .13s ease,background .14s ease,border-color .14s ease,box-shadow .14s ease}
+.group-add.primary,.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 5px 12px color-mix(in srgb,var(--accent) 18%,transparent)}
+.range,.metric-switch{background:var(--surface-soft)} .range button,.metric-switch button{color:var(--muted)}
+.range button.active,.metric-switch button.active{background:var(--theme-control);color:var(--accent);box-shadow:0 2px 8px var(--theme-glow)}
+.summary{background:var(--theme-card-strong);border-color:var(--border-panel)}
+.chart-title{font-size:16px;font-weight:830;color:var(--text);letter-spacing:-.02em}
+.day-line.end .value{color:var(--text);font-weight:850}.day-line.start .label,.day-line.end .label{color:var(--text-secondary)}
+.share-action,.quick-add-card{background:var(--theme-card-strong);border-color:var(--theme-soft-border);color:var(--text)}
+.share-action:hover,.quick-add-card:hover{background:var(--surface-hover);border-color:color-mix(in srgb,var(--accent) 22%,var(--border-panel));box-shadow:0 8px 20px var(--theme-glow)}
+.share-action .title,.quick-add-card b{color:var(--text)}
+.metadata-editor-wrap{background:var(--surface-soft)} .metadata-editor.is-doc{background:var(--theme-input);color:var(--text-secondary)}
+.mobile-notice{background:var(--surface-page)} .mobile-notice-card{background:transparent;border:0;box-shadow:none}
+.mobile-notice-brand strong{color:var(--accent)} .mobile-notice-title{color:var(--text)}
+.theme-select{height:37px;border:1px solid var(--border-control);background:var(--theme-control);color:var(--text-secondary);padding:0 30px 0 10px;font-size:12px;font-weight:700;outline:none;cursor:pointer}
+.event-risk-mark{background:color-mix(in srgb,var(--warn) 14%,var(--theme-card));color:var(--warn);border-color:color-mix(in srgb,var(--warn) 28%,transparent)}
+.event-risk-mark.critical{background:color-mix(in srgb,var(--danger) 12%,var(--theme-card));color:var(--danger);border-color:color-mix(in srgb,var(--danger) 26%,transparent)}
+.event-item.risk-event{background:linear-gradient(90deg,color-mix(in srgb,var(--warn) 9%,transparent),transparent 60%)}
+.debt-effect-toggle{background:var(--theme-input);border-color:var(--border-control)} .debt-effect-toggle:hover{background:var(--theme-control-hover)}
+
+/* Candy gets the strongest game-like material cues. */
+body[data-theme="candy"] .profile-card.active{background:linear-gradient(135deg,#e8f1ff 0%,#ffedf6 55%,#fff8d9 100%);border-color:#d6dcff;box-shadow:0 6px 0 rgba(111,96,215,.06),0 16px 32px rgba(91,94,161,.14)}
+body[data-theme="candy"] .group-add.primary{background:linear-gradient(135deg,#2f82ff,#8664ff);border-color:#5d7dff;box-shadow:0 5px 0 rgba(82,69,180,.18),0 10px 20px rgba(91,140,255,.22)}
+body[data-theme="candy"] .group-head{background:linear-gradient(180deg,#fffafd 0%,#fff5fb 100%)}
+body[data-theme="candy"] .group-head:hover{background:linear-gradient(180deg,#fff4fa 0%,#fff0f8 100%)}
+body[data-theme="candy"] .event-item{background:linear-gradient(180deg,#ffffff 0%,#fff8fc 100%);border-color:#eadff5;box-shadow:0 3px 0 rgba(255,255,255,.72),0 8px 16px rgba(119,102,211,.06)}
+body[data-theme="candy"] .event-item:hover{background:linear-gradient(180deg,#ffffff 0%,#fff3fa 100%);border-color:#d9dfff;transform:translateY(-1px);box-shadow:0 3px 0 rgba(255,255,255,.78),0 12px 22px rgba(115,98,214,.11)}
+body[data-theme="candy"] .event-item .meta{color:#8793af}
+body[data-theme="candy"] .event-item .name{font-weight:760;color:#38445f}
+body[data-theme="candy"] .event-kind-icon{border:1px solid transparent;box-shadow:inset 0 -1px 0 rgba(255,255,255,.46)}
+body[data-theme="candy"] .event-kind-icon.once{background:#f4eaff;color:#8f5eff;border-color:#e5d4ff} body[data-theme="candy"] .event-kind-icon.recurring{background:#e8f1ff;color:#3f7cff;border-color:#d6e4ff}
+body[data-theme="candy"] .event-status.ongoing{background:#e6fbef;color:#20af6c;border:1px solid #c9f3dc}
+body[data-theme="candy"] .amount{font-size:16px;font-weight:900;text-shadow:0 1px 0 rgba(255,255,255,.82)}
+body[data-theme="candy"] .amount.income{color:#17b86f} body[data-theme="candy"] .amount.expense{color:#ff4f6d}
+body[data-theme="candy"] .range button.active,body[data-theme="candy"] .metric-switch button.active{background:linear-gradient(135deg,#ffffff 0%,#fff4fb 100%);color:#2f82ff;box-shadow:0 2px 0 rgba(255,255,255,.7),0 8px 16px rgba(92,111,215,.10)}
+body[data-theme="candy"] .version-chip{background:linear-gradient(135deg,#eef4ff 0%,#fff0f8 100%);color:#5a63d4;border-color:#d7ddff}
+
+/* Paper is flatter, warmer, and more tactile. */
+body[data-theme="paper"] .panel{box-shadow:0 1px 0 rgba(255,255,255,.55),0 5px 14px rgba(82,68,46,.045)}
+body[data-theme="paper"] .profile-card.active{background:#e7eee1}
+body[data-theme="paper"] .group-block{border-style:solid}
+body[data-theme="paper"] .group-add.primary{background:#63765e;border-color:#63765e;box-shadow:none}
+body[data-theme="paper"] .event-item .name{font-family:Georgia,"Songti SC","STSong",serif;font-weight:700}
+body[data-theme="paper"] .chart-title{font-family:inherit;font-weight:780}
+
+/* Dark canvas-adjacent surfaces stay integrated. */
+body[data-theme="dark"] .range button.active,body[data-theme="dark"] .metric-switch button.active{background:#354152;color:#a9d0fb}
+body[data-theme="dark"] .event-status.expired,body[data-theme="dark"] .event-status.ended{background:#2d3541;color:#8793a3}
+body[data-theme="dark"] .tooltip{color:#c6d0dc;text-shadow:0 1px 0 rgba(10,14,20,.95),0 0 4px rgba(10,14,20,.8)}
+body[data-theme="dark"] .toast{background:#eef2f7;color:#202733}
+
+
+/* Quick Add controls — one visual scale for every editable field */
+.quick-add-row .quick-add-money,
+.quick-add-row .quick-add-frequency,
+.quick-add-row .quick-add-day,
+.quick-add-row .quick-add-interval,
+.quick-add-row .quick-add-unit,
+.quick-add-row .quick-add-weekday,
+.quick-add-row .quick-add-once-date,
+.quick-add-row .quick-add-year-month,
+.quick-add-row .quick-add-year-day{
+  height:34px;
+  font-size:14px;
+  line-height:1.2;
+  color:var(--text);
+}
+.quick-add-row .quick-add-money{padding:0 9px;text-align:left;}
+.quick-add-row .quick-add-frequency{padding:0 22px 0 9px;}
+.quick-add-row .quick-add-day,
+.quick-add-row .quick-add-interval{padding:0 7px;text-align:center;}
+.quick-add-row .quick-add-unit,
+.quick-add-row .quick-add-weekday,
+.quick-add-row .quick-add-year-month,
+.quick-add-row .quick-add-year-day{padding:0 22px 0 9px;}
+.quick-add-row .quick-add-once-date{padding:0 8px;}
+.quick-add-row .quick-add-schedule,
+.quick-add-row .quick-add-custom-wrap,
+.quick-add-row .quick-add-param{font-size:13px;}
+.quick-add-row .quick-add-custom-sep,
+.quick-add-row .quick-add-day-label,
+.quick-add-row .quick-add-custom-wrap>span:first-child{
+  font-size:13px;
+  line-height:34px;
+  color:var(--text-secondary);
+}
+/* Compact selects: reserve less room for the native arrow while adapting to translated labels. */
+.quick-add-row select{
+  field-sizing:content;
+  max-width:180px;
+}
+.quick-add-row .quick-add-frequency{width:auto;min-width:118px;max-width:156px;}
+.quick-add-row .quick-add-unit{width:auto;min-width:72px;max-width:108px;}
+.quick-add-row .quick-add-weekday{width:auto;min-width:112px;max-width:148px;}
+.quick-add-row .quick-add-year-month{width:auto;min-width:86px;max-width:116px;}
+.quick-add-row .quick-add-year-day{width:auto;min-width:72px;max-width:98px;}
+/* Keep quick-add schedule controls stable and fully visible. */
+.quick-add-row .quick-add-frequency,
+.quick-add-row .quick-add-once-date,
+.quick-add-row .quick-add-weekday,
+.quick-add-row .quick-add-day,
+.quick-add-row .quick-add-interval,
+.quick-add-row .quick-add-unit,
+.quick-add-row .quick-add-year-month,
+.quick-add-row .quick-add-year-day{flex:0 0 auto;}
+
+/* Event selection follows the active visual theme instead of fixed light-theme colors. */
+.event-item.active,
+.group-block .event-item.active{
+  background:var(--theme-selected)!important;
+  color:var(--text);
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 14%,transparent);
+}
+.event-item.active::before,
+.group-block .event-item.active::before{
+  background:var(--accent)!important;
+}
+.event-item.active:hover,
+.group-block .event-item.active:hover{
+  background:var(--theme-selected-strong)!important;
+}
+@media(max-width:980px){
+  .quick-add-modal{width:min(980px,98vw)}
+  .quick-add-row{grid-template-columns:22px minmax(120px,1fr) 88px 520px;column-gap:8px}
+  .quick-add-money{width:88px}
+  .quick-add-schedule{width:520px}
+  .quick-add-frequency{min-width:112px}
+  .quick-add-unit{min-width:68px}
+  .quick-add-year-month{min-width:82px}
+  .quick-add-year-day{min-width:68px}
+}
+.quick-add-common input,
+.quick-add-common select{
+  height:34px;
+  font-size:14px;
+  line-height:1.2;
+  padding:0 9px;
+}
+
+/* Theme refinement — group toggle and event hover */
+.group-toggle{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid transparent;
+  transition:background .14s ease,color .14s ease,border-color .14s ease,box-shadow .14s ease,transform .13s ease;
+}
+.group-toggle svg{width:14px;height:14px;display:block}
+.group-toggle .chev{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.group-head:hover .group-toggle{
+  background:color-mix(in srgb,var(--accent) 8%,var(--theme-control));
+  color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 18%,var(--border-control));
+  box-shadow:0 3px 10px var(--theme-glow);
+}
+.group-head.active .group-toggle{
+  background:color-mix(in srgb,var(--accent) 12%,var(--theme-control));
+  color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 24%,var(--border-control));
+  box-shadow:0 4px 12px var(--theme-glow);
+}
+.event-item:hover,
+.group-block .event-item:hover{
+  background:color-mix(in srgb,var(--accent) 8%,var(--theme-control-hover))!important;
+  box-shadow:0 8px 18px var(--theme-glow);
+}
+.event-item.active:hover,
+.group-block .event-item.active:hover{
+  background:var(--theme-selected-strong)!important;
+  box-shadow:0 10px 22px var(--theme-glow);
+}
+body[data-theme="dark"] .event-item:hover,
+body[data-theme="dark"] .group-block .event-item:hover{
+  box-shadow:0 10px 22px rgba(0,0,0,.22);
+}
+body[data-theme="paper"] .event-item:hover,
+body[data-theme="paper"] .group-block .event-item:hover{
+  box-shadow:0 4px 10px rgba(91,75,50,.08);
+}
+
+
+/* Theme refinement — group count badge */
+.group-count{
+  background:color-mix(in srgb,var(--text-secondary) 7%,var(--theme-card));
+  color:var(--muted);
+  border:1px solid color-mix(in srgb,var(--text-secondary) 12%,var(--border-control));
+  box-shadow:none;
+  transition:background .14s ease,color .14s ease,border-color .14s ease,box-shadow .14s ease;
+}
+.group-head:hover .group-count{
+  background:color-mix(in srgb,var(--accent) 8%,var(--theme-card));
+  color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 18%,var(--border-control));
+}
+.group-head.active .group-count{
+  background:color-mix(in srgb,var(--accent) 14%,var(--theme-card));
+  color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 24%,var(--border-control));
+  box-shadow:0 2px 7px var(--theme-glow);
+}
+
+
+/* Release polish — Event filter fully follows the active theme */
+.event-explorer-trigger{background:var(--theme-input);color:var(--text-secondary);border-color:var(--border-control)}
+.event-explorer-trigger:hover,.event-explorer-trigger.open{background:var(--theme-control-hover);color:var(--text);border-color:color-mix(in srgb,var(--accent) 24%,var(--border-panel))}
+.event-explorer-trigger.open{box-shadow:0 0 0 3px var(--theme-focus)}
+.event-explorer-trigger .chevron{color:var(--muted)}
+.event-explorer-trigger:hover .chevron,.event-explorer-trigger.open .chevron{color:var(--accent)}
+.event-explorer-popover{background:var(--theme-float);color:var(--text);border-color:var(--border-panel);box-shadow:var(--shadow-float)}
+.event-explorer-search input,.explorer-field select,.status-multi-trigger{background:var(--theme-input);color:var(--text);border-color:var(--border-control)}
+.event-explorer-search input::placeholder{color:var(--muted)}
+.event-explorer-search input:hover,.explorer-field select:hover,.status-multi-trigger:hover{background:var(--theme-control-hover);border-color:color-mix(in srgb,var(--accent) 20%,var(--border-panel))}
+.event-explorer-search input:focus,.explorer-field select:focus,.status-multi-trigger.open,.status-multi-trigger:focus{background:var(--theme-input);border-color:var(--accent);box-shadow:0 0 0 3px var(--theme-focus)}
+.explorer-field label{color:var(--muted)}
+.status-multi-trigger{color:var(--text-secondary)}
+.status-multi-trigger .chevron{color:var(--muted)}
+.status-multi-trigger.open .chevron{color:var(--accent)}
+.status-multi-menu{background:var(--theme-float);border-color:var(--border-panel);box-shadow:var(--shadow-float)}
+.status-multi-option{color:var(--text-secondary)!important}
+.status-multi-option:hover{background:var(--theme-control-hover);color:var(--text)!important}
+.status-multi-option:has(input:checked){background:var(--theme-selected);color:var(--accent)!important}
+.status-multi-option input{accent-color:var(--accent)!important}
+.event-explorer-foot{border-color:var(--divider)}
+.event-explorer-count{color:var(--muted)}
+.event-explorer-reset{color:var(--text-secondary)}
+.event-explorer-reset:hover{background:var(--theme-control-hover);color:var(--accent)}
+.event-explorer-trigger.has-risk{border-color:color-mix(in srgb,var(--warn) 38%,var(--border-control));background:color-mix(in srgb,var(--warn) 7%,var(--theme-input))}
+.event-explorer-risk-count{color:var(--warn)}
+
+
+/* Local-first trust signal */
+.project-meta{align-self:flex-end;margin-bottom:1px;gap:7px}
+.local-data-status{
+  height:24px;
+  display:inline-flex;
+  align-items:flex-end;
+  border:0;
+  background:transparent;
+  color:color-mix(in srgb,var(--muted) 88%,transparent);
+  padding:0 0 2px;
+  border-radius:0;
+  font-size:9.5px;
+  line-height:1;
+  font-weight:600;
+  white-space:nowrap;
+  letter-spacing:.01em;
+  transform:none;
+  transition:color .14s ease;
+}
+.local-data-status::before{
+  content:'·';
+  margin-right:7px;
+  color:color-mix(in srgb,var(--muted) 55%,transparent);
+}
+.local-data-status:hover{background:transparent;color:var(--text-secondary)}
+.local-data-status:focus-visible{outline:none;color:var(--accent)}
+
+/* Release polish — Settings trigger active state follows theme */
+.settings-trigger.open{
+  background:var(--theme-selected);
+  color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 28%,var(--border-panel));
+  box-shadow:0 0 0 3px var(--theme-focus);
+  transform:none;
+}
+.settings-trigger.open:hover{
+  background:var(--theme-selected-strong);
+  color:var(--accent);
+  border-color:color-mix(in srgb,var(--accent) 34%,var(--border-panel));
+}
+
+
+/* Release polish — native date controls follow the active theme */
+input[type="date"]{
+  color-scheme:light;
+}
+body[data-theme="dark"] input[type="date"]{
+  color-scheme:dark;
+}
+
+/* Native date icon: leave the browser glyph untouched for maximum compatibility.
+   Theme adaptation is handled by color-scheme on the date input itself. */
+input[type="date"]::-webkit-calendar-picker-indicator{
+  cursor:pointer;
+}
+
+
 </style>
 </head>
 <body>
 <div class="mobile-notice" id="mobileNotice" role="dialog" aria-modal="true" aria-labelledby="mobileNoticeTitle">
   <div class="mobile-notice-card">
     <div class="mobile-notice-brand"><strong>PFS</strong><span id="mobileNoticeFullName">Personal Financial Simulation</span></div>
-    <div class="mobile-notice-title" id="mobileNoticeTitle">个人财务模拟</div>
-    <div class="mobile-notice-desc" id="mobileNoticeDesc">通过当前现金、负债和未来收支事件，模拟未来的现金、负债与净资产变化。</div>
-    <div class="mobile-notice-tip" id="mobileNoticeTip">PFS 可在手机上继续使用，但在电脑或平板等大屏设备上可获得更完整、更优秀的编辑与图表体验。</div>
-    <div class="mobile-notice-actions"><button class="btn primary" id="mobileNoticeContinue" type="button" onclick="dismissMobileNotice()">继续使用</button></div>
+    <div class="mobile-notice-title" id="mobileNoticeTitle">建议使用 PC 或平板电脑访问</div>
   </div>
 </div>
 <div class="app">
@@ -361,10 +806,10 @@ canvas{width:100%;height:100%;display:block}
       <div class="brand"><span class="brand-mark">PFS</span><span class="brand-full">Personal Financial Simulation</span></div>
       <div class="project-meta">
         <button class="version-chip" id="appVersionChip" type="button" title="关于 PFS" onclick="openAboutModal()"></button>
+        <button class="local-data-status" id="localDataStatus" type="button" onclick="openGuideModal()">离线可用，数据仅本地保存</button>
       </div>
     </div>
     <div class="actions">
-      <button class="preset-trigger" id="presetTrigger" type="button" onclick="openPresetModal()">预设模板</button>
       <div class="version-switcher" id="versionSwitcher">
         <button class="version-trigger" type="button" title="数据版本" onclick="toggleVersionMenu(event)" aria-haspopup="menu" aria-expanded="false">
           <span class="version-trigger-name" id="versionTriggerName"></span>
@@ -374,11 +819,31 @@ canvas{width:100%;height:100%;display:block}
           <div class="version-list" id="versionList"></div>
         </div>
       </div>
-      <select class="language-select" id="languageSelect" aria-label="语言" onchange="setLanguage(this.value)">
-        <option value="zh">中文</option><option value="en">English</option><option value="ja">日本語</option>
-      </select>
-      <button class="btn" onclick="openMetadataModal()">元数据</button>
-      <button class="btn" onclick="openShareModal()">分享</button>
+      <div class="language-menu-wrap" id="languageMenuWrap">
+        <button class="language-trigger" id="languageTrigger" type="button" title="语言" aria-label="语言" onclick="toggleLanguageMenu(event)" aria-haspopup="menu" aria-expanded="false">Aa</button>
+        <div class="language-menu" id="languageMenu" role="menu">
+          <button class="language-option" type="button" data-lang="zh" onclick="setLanguageFromMenu('zh')">简体中文</button>
+          <button class="language-option" type="button" data-lang="zh-TW" onclick="setLanguageFromMenu('zh-TW')">繁體中文</button>
+          <button class="language-option" type="button" data-lang="en" onclick="setLanguageFromMenu('en')">English</button>
+          <button class="language-option" type="button" data-lang="ja" onclick="setLanguageFromMenu('ja')">日本語</button>
+          <button class="language-option" type="button" data-lang="ko" onclick="setLanguageFromMenu('ko')">한국어</button>
+          <button class="language-option" type="button" data-lang="es" onclick="setLanguageFromMenu('es')">Español</button>
+          <button class="language-option" type="button" data-lang="fr" onclick="setLanguageFromMenu('fr')">Français</button>
+          <button class="language-option" type="button" data-lang="de" onclick="setLanguageFromMenu('de')">Deutsch</button>
+          <button class="language-option" type="button" data-lang="pt" onclick="setLanguageFromMenu('pt')">Português</button>
+        </div>
+      </div>
+      <div class="settings-menu-wrap" id="settingsMenuWrap">
+        <button class="settings-trigger" id="settingsTrigger" type="button" onclick="toggleSettingsMenu(event)" aria-haspopup="menu" aria-expanded="false">设置</button>
+        <div class="settings-menu" id="settingsMenu" role="menu">
+          <div class="settings-row"><label for="themeSelect">主题</label><select class="theme-select" id="themeSelect" aria-label="主题" title="主题" onchange="setVisualTheme(this.value)"><option value="light">浅色</option><option value="dark">深色</option><option value="candy">糖果</option><option value="paper">纸张</option></select></div>
+          <div class="settings-sep"></div>
+          <button class="settings-action" type="button" onclick="closeSettingsMenu();openGuideModal()">说明</button>
+          <button class="settings-action" type="button" onclick="closeSettingsMenu();openMetadataModal()">元数据</button>
+          <button class="settings-action" type="button" onclick="closeSettingsMenu();openAboutModal()">关于</button>
+        </div>
+      </div>
+      <button class="btn primary" onclick="openShareModal()">分享</button>
     </div>
   </header>
 
@@ -391,7 +856,7 @@ canvas{width:100%;height:100%;display:block}
         <div class="profile-state-line"><span>负债 <b id="leftLiabilities"></b></span><span>净资产 <b id="leftNetWorth"></b></span></div>
       </div>
 
-      <div class="section-title">未来事件</div>
+      <div class="event-section-head"><div class="section-title">未来事件</div><button class="event-list-reset" type="button" onclick="clearEventList()">重置</button></div>
       <div class="event-explorer" id="eventExplorer">
         <button class="event-explorer-trigger" id="eventExplorerTrigger" type="button" onclick="toggleEventExplorer(event)" aria-expanded="false">
           <span class="summary" id="eventExplorerSummary">按分组 · 全部事件</span><span class="chevron">⌄</span>
@@ -412,7 +877,8 @@ canvas{width:100%;height:100%;display:block}
         </div>
       </div>
       <div class="group-actions">
-        <button class="group-add primary" onclick="addEvent()">＋ 添加事件</button>
+        <button class="group-add primary" id="quickAddTrigger" onclick="openQuickAdd()">快速添加</button>
+        <button class="group-add" onclick="addEvent()">＋ 添加事件</button>
         <button class="group-add" onclick="addGroup()">＋ 添加分组</button>
       </div>
       <div class="event-scroll" id="eventList" ondragover="groupListDragOver(event);eventListDragOver(event)" ondrop="groupListDrop(event);eventListDrop(event)"></div>
@@ -474,6 +940,15 @@ canvas{width:100%;height:100%;display:block}
   </div>
 </div>
 
+
+<div class="guide-backdrop" id="guideModal" onclick="if(event.target===this)closeGuideModal()">
+  <div class="guide-modal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+    <div class="guide-head"><div class="guide-title" id="guideTitle"></div></div>
+    <div class="guide-body" id="guideBody"></div>
+    <div class="guide-foot"><button class="btn primary" type="button" id="guideCloseBottom" onclick="closeGuideModal()">关闭</button></div>
+  </div>
+</div>
+
 <div class="about-backdrop" id="aboutModal" onclick="if(event.target===this)closeAboutModal()">
   <div class="about-modal">
     <h3>PFS</h3>
@@ -491,10 +966,10 @@ canvas{width:100%;height:100%;display:block}
       <div class="k">联系邮箱</div>
       <div class="v"><a href="mailto:yyyvbps@163.com">yyyvbps@163.com</a></div>
 
-      <div class="k">开源许可</div>
-      <div class="v">MIT License</div>
+      <div class="k">源码许可</div>
+      <div class="v"><a href="https://polyformproject.org/licenses/strict/1.0.0" target="_blank" rel="noopener noreferrer">PolyForm Strict License 1.0.0</a></div>
     </div>
-    <div class="about-copyright">© 2026 YuYaoYong · PFS 基于 MIT License 开源</div>
+    <div class="about-copyright" id="aboutLicenseNote">© 2026 YuYaoYong · PolyForm Strict：仅允许非商业使用，不授予分发、修改或制作衍生作品的许可</div>
 
     <div class="about-actions">
       <button class="btn" onclick="closeAboutModal()">关闭</button>
@@ -502,14 +977,32 @@ canvas{width:100%;height:100%;display:block}
   </div>
 </div>
 
-<div class="preset-backdrop" id="presetModal" onclick="if(event.target===this)closePresetModal()">
-  <div class="preset-modal" role="dialog" aria-modal="true" aria-labelledby="presetModalTitle">
-    <div class="preset-head">
-      <div><h3 id="presetModalTitle">预设模板</h3><p>选择一个常见场景，快速创建一套可直接修改的预测数据。</p></div>
-      <button class="btn" type="button" onclick="closePresetModal()">关闭</button>
+<div class="quick-add-backdrop" id="quickAddModal" onclick="if(event.target===this)closeQuickAdd()">
+  <div class="quick-add-modal" role="dialog" aria-modal="true" aria-labelledby="quickAddTitle">
+    <div class="quick-add-head">
+      <div>
+        <button class="quick-add-back" id="quickAddBack" type="button" onclick="showQuickAddLibrary()" aria-label="返回">‹</button>
+        <div><h3 id="quickAddTitle">快速添加</h3><p id="quickAddSubtitle">选择常用项目，一次添加一个或一组事件。</p></div>
+      </div>
+      <button class="btn" type="button" onclick="closeQuickAdd()">关闭</button>
     </div>
-    <div class="preset-grid" id="presetGrid"></div>
-    <div class="preset-foot"><span class="preset-foot-note">模板会创建为新的数据版本，不会覆盖当前数据。</span></div>
+    <div class="quick-add-library" id="quickAddLibrary">
+      <input class="quick-add-search" id="quickAddSearch" type="search" placeholder="搜索工资、房贷、车贷……" oninput="renderQuickAddLibrary()">
+      <div class="quick-add-categories" id="quickAddCategories"></div>
+      <div class="quick-add-grid" id="quickAddGrid"></div>
+    </div>
+    <form class="quick-add-editor" id="quickAddEditor" onsubmit="submitQuickAdd(event)">
+      <div class="quick-add-rows" id="quickAddRows"></div>
+      <div class="quick-add-common">
+        <label><span>开始日期</span><input id="quickAddStart" type="date" required></label>
+        <label><span>结束方式</span><select id="quickAddEndMode" onchange="toggleQuickAddEndDate()"><option value="none">长期</option><option value="date">指定日期</option></select></label>
+        <label class="quick-add-common-end-date" id="quickAddEndDateWrap"><span>结束日期</span><input id="quickAddEnd" type="date"></label>
+      </div>
+      <div class="quick-add-foot">
+        <span class="quick-add-note" id="quickAddNote"></span>
+        <div><button class="btn" type="button" onclick="showQuickAddLibrary()">取消</button><button class="btn primary" type="submit">添加</button></div>
+      </div>
+    </form>
   </div>
 </div>
 
@@ -575,41 +1068,142 @@ const LANGUAGE_KEY='pfs-language';
 const I18N={
   en:{
     '预设模板':'Templates','数据版本':'Data Version','元数据':'Metadata','分享':'Share','基准状态':'Baseline','当前资金 · 基准日':'Current Cash · As of','负债':'Debt','净资产':'Net Worth','未来事件':'Future Events','按分组 · 全部事件':'By Group · All Events','搜索事件名称…':'Search events…','展示方式':'View','按分组':'By Group','按时间':'Timeline','平铺列表':'Flat List','排序':'Sort','自定义顺序':'Custom','发生时间':'Date','金额大小':'Amount','名称':'Name','方向':'Direction','全部':'All','收入':'Income','支出':'Expense','发生方式':'Schedule','单次':'One-time','循环':'Recurring','状态':'Status','全部状态':'All Statuses','未来':'Future','进行中':'Ongoing','已结束 / 已过去':'Ended / Past','时间范围':'Time Range','全部时间':'All Time','未来 7 天':'Next 7 Days','未来 30 天':'Next 30 Days','未来 3 个月':'Next 3 Months','当前图表范围':'Chart Range','分组':'Group','全部分组':'All Groups','风险':'Risk','全部事件':'All Events','仅风险事件':'Risk Only','排除风险事件':'Exclude Risk','重置':'Reset','＋ 添加事件':'+ Add Event','＋ 添加分组':'+ Add Group','现金':'Cash','月度统计':'Monthly Stats','半年':'6M','1年':'1Y','2年':'2Y','3年':'3Y','5年':'5Y','现金预测':'Cash Forecast','负债预测':'Debt Forecast','净资产预测':'Net Worth Forecast',
-    '数据说明':'Data Guide','返回数据':'Back to Data','格式化':'Format','应用':'Apply','关闭':'Close','JSON 有效':'Valid JSON','Ctrl/Cmd + S 应用 · Tab 缩进':'Ctrl/Cmd + S Apply · Tab Indent','页面版本':'App Version','项目':'Project','官网':'Website','联系邮箱':'Contact Email','开源许可':'License','© 2026 YuYaoYong · PFS 基于 MIT License 开源':'© 2026 YuYaoYong · PFS is open source under the MIT License','选择一个常见场景，快速创建一套可直接修改的预测数据。':'Choose a common scenario to create an editable forecast instantly.','个人日常':'Personal','工资、住房、生活费和日常固定支出':'Salary, housing, living costs and recurring expenses','适合个人月度现金预测':'For personal monthly cash forecasting','负债还款':'Debt Payoff','收入、生活支出和每月还款，观察债务下降':'Income, living costs and monthly repayments','适合贷款或欠款规划':'For loans and debt planning','自由职业':'Freelance','不固定收入搭配稳定生活支出':'Variable income with stable living costs','适合项目制、接单型收入':'For project and freelance income','小生意':'Small Business','回款、采购、工资、房租和营销费用':'Receipts, purchases, payroll, rent and marketing','适合个体经营和小公司':'For sole traders and small businesses','纯现金预测':'Cash Only','只关注收入和支出，不使用负债变化':'Track only income and expenses, without debt changes','最简单的现金流结构':'The simplest cash forecast','空白模板':'Blank','只保留当前现金、负债和安全现金线':'Keep only cash, debt and safety balance','从零开始自己建立':'Start from scratch','模板会创建为新的数据版本，不会覆盖当前数据。':'Templates create a new data version and never overwrite current data.',
+    '数据说明':'Data Guide','返回数据':'Back to Data','格式化':'Format','应用':'Apply','关闭':'Close','JSON 有效':'Valid JSON','Ctrl/Cmd + S 应用 · Tab 缩进':'Ctrl/Cmd + S Apply · Tab Indent','页面版本':'App Version','项目':'Project','官网':'Website','联系邮箱':'Contact Email','开源许可':'License','源码许可':'Source License','© 2026 YuYaoYong · PFS 基于 MIT License 开源':'© 2026 YuYaoYong · PFS is open source under the MIT License','© 2026 YuYaoYong · PolyForm Strict：仅允许非商业使用，不授予分发、修改或制作衍生作品的许可':'© 2026 YuYaoYong · Source may be viewed and used; modified versions may not be published or redistributed as new works','选择一个常见场景，快速创建一套可直接修改的预测数据。':'Choose a common scenario to create an editable forecast instantly.','个人日常':'Personal','工资、住房、生活费和日常固定支出':'Salary, housing, living costs and recurring expenses','适合个人月度现金预测':'For personal monthly cash forecasting','负债还款':'Debt Payoff','收入、生活支出和每月还款，观察债务下降':'Income, living costs and monthly repayments','适合贷款或欠款规划':'For loans and debt planning','自由职业':'Freelance','不固定收入搭配稳定生活支出':'Variable income with stable living costs','适合项目制、接单型收入':'For project and freelance income','小生意':'Small Business','回款、采购、工资、房租和营销费用':'Receipts, purchases, payroll, rent and marketing','适合个体经营和小公司':'For sole traders and small businesses','纯现金预测':'Cash Only','只关注收入和支出，不使用负债变化':'Track only income and expenses, without debt changes','最简单的现金流结构':'The simplest cash forecast','空白模板':'Blank','只保留当前现金、负债和安全现金线':'Keep only cash, debt and safety balance','从零开始自己建立':'Start from scratch','模板会创建为新的数据版本，不会覆盖当前数据。':'Templates create a new data version and never overwrite current data.',
     '当前状态':'Current State','设置预测的起点':'Set the starting point of the forecast','预测基准日':'As-of Date','当前现金':'Current Cash','当前负债':'Current Debt','安全现金线':'Safety Balance','修改即自动保存':'Changes save automatically','事件分组':'Event Group','个事件':'events','分组名称':'Group Name','删除分组':'Delete Group','这是什么？':'What is this?','资金方向':'Cash Direction','多少钱？':'Amount','金额':'Amount','是否借款':'Borrowed Money?','是否还债':'Debt Repayment?','勾选后，这笔收入会同时增加负债':'When checked, this income also increases debt','勾选后，这笔支出会同时减少负债':'When checked, this expense also reduces debt','一次性':'One-time','每天':'Daily','每周':'Weekly','每月':'Monthly','每年':'Yearly','自定义周期':'Custom Interval','属于哪里？':'Group','分组':'Group','未分组':'Ungrouped','发生日期':'Date','开始日期':'Start Date','发生月份':'Month','循环周期':'Repeat Interval','每':'Every','结束方式':'End','长期':'No End','指定日期':'On Date','结束日期':'End Date','未设置结束日期':'No end date set','事件影响':'Event Impact','删除':'Delete','复制':'Duplicate','保存':'Save','取消':'Cancel','重命名':'Rename','确认删除':'Confirm Delete','展开':'Expand','折叠':'Collapse','拖动排序':'Drag to reorder','暂无未来事件':'No future events','没有符合当前条件的事件':'No events match the current filters','暂无事件':'No events','预计结余':'Projected Balance','下次':'Next','至':'to','今天':'Today','明天':'Tomorrow','最近':'Next','单次事件':'One-time event','循环事件':'Recurring event','风险事件':'Risk event','低于安全资金':'Below safety balance','资金将为负':'Cash will be negative','临界':'Warning','风险':'Risk','已还清':'Cleared','已过去':'Past','已结束':'Ended','基准日前':'Before baseline',
     '本月收入':'Monthly Income','本月支出':'Monthly Expenses','本月净现金流':'Monthly Net','本月结余率':'Net Margin','周期性收入':'Recurring Income','周期性支出':'Recurring Expenses','周期性结余率':'Recurring Margin','单次收入':'One-time Income','单次支出':'One-time Expenses','统计范围：':'Range:','日初始':'Opening','发生当日预计结余':'Closing','剩余负债':'Remaining Debt','当天没有资金事件':'No cash events that day','现金结余':'Cash Balance','安全资金':'Safety Balance','预测提醒':'Forecast Alert',
     '官方链接':'Official Link','打开官方网站':'Open Website','离线工具':'Offline Tool','不含数据':'Without Data','当前页面':'Current Page','包含全部数据版本':'Includes all data versions','确定':'OK','知道了':'Got it','请输入内容':'Please enter a value','JSON 错误：':'JSON Error: ','无法应用：':'Unable to apply: ','元数据已应用':'Metadata applied','至少保留一个数据版本':'Keep at least one data version','已复制事件':'Event duplicated','已删除':'Deleted','已复制版本':'Version duplicated','已删除版本':'Version deleted','分组已删除，事件已移到未分组':'Group deleted; events moved to Ungrouped','已生成含数据页面':'Data page generated','已生成空白离线工具':'Blank offline tool generated','生成 HTML 失败':'HTML generation failed','导出模板尚未初始化':'Export template is not initialized','无法创建干净页面模板':'Unable to create a clean page template','缺少嵌入数据容器':'Embedded data container is missing','新事件':'New Event','新分组':'New Group','版本':'Version','天':'day','周':'week','月':'month','年':'year','每周一':'Every Monday','每周二':'Every Tuesday','每周三':'Every Wednesday','每周四':'Every Thursday','每周五':'Every Friday','每周六':'Every Saturday','每周日':'Every Sunday','缺少工作区 ID':'Workspace ID is missing','关于 PFS':'About PFS','安全资金':'Safety Balance','风险事件':'Risk event','日初始':'Opening','现金结余':'Cash Balance','剩余负债':'Remaining Debt','当天没有资金事件':'No cash events that day','风险':'Risk','临界':'Warning','已还清':'Cleared','今天':'Today'
   },
   ja:{
     '预设模板':'テンプレート','数据版本':'データ版','元数据':'メタデータ','分享':'共有','基准状态':'基準状態','当前资金 · 基准日':'現在資金・基準日','负债':'負債','净资产':'純資産','未来事件':'将来イベント','按分组 · 全部事件':'グループ別・全イベント','搜索事件名称…':'イベントを検索…','展示方式':'表示','按分组':'グループ別','按时间':'時系列','平铺列表':'一覧','排序':'並び順','自定义顺序':'カスタム','发生时间':'発生日','金额大小':'金額','名称':'名前','方向':'方向','全部':'すべて','收入':'収入','支出':'支出','发生方式':'発生方法','单次':'単発','循环':'繰り返し','状态':'状態','全部状态':'すべての状態','未来':'未来','进行中':'進行中','已结束 / 已过去':'終了 / 過去','时间范围':'期間','全部时间':'全期間','未来 7 天':'今後7日','未来 30 天':'今後30日','未来 3 个月':'今後3か月','当前图表范围':'グラフ範囲','分组':'グループ','全部分组':'全グループ','风险':'リスク','全部事件':'全イベント','仅风险事件':'リスクのみ','排除风险事件':'リスクを除外','重置':'リセット','＋ 添加事件':'＋ イベント追加','＋ 添加分组':'＋ グループ追加','现金':'現金','月度统计':'月次統計','半年':'6か月','1年':'1年','2年':'2年','3年':'3年','5年':'5年','现金预测':'現金予測','负债预测':'負債予測','净资产预测':'純資産予測',
-    '数据说明':'データ説明','返回数据':'データに戻る','格式化':'整形','应用':'適用','关闭':'閉じる','JSON 有效':'JSON 有効','Ctrl/Cmd + S 应用 · Tab 缩进':'Ctrl/Cmd + S 適用・Tab インデント','页面版本':'アプリ版','项目':'プロジェクト','官网':'公式サイト','联系邮箱':'連絡先メール','开源许可':'ライセンス','© 2026 YuYaoYong · PFS 基于 MIT License 开源':'© 2026 YuYaoYong · PFS は MIT License でオープンソース公開されています','选择一个常见场景，快速创建一套可直接修改的预测数据。':'よくあるシナリオから編集可能な予測データをすぐ作成します。','个人日常':'個人生活','工资、住房、生活费和日常固定支出':'給与、住居費、生活費、日常の固定支出','适合个人月度现金预测':'個人の月次資金予測向け','负债还款':'負債返済','收入、生活支出和每月还款，观察债务下降':'収入、生活費、毎月返済で負債減少を確認','适合贷款或欠款规划':'ローン・負債計画向け','自由职业':'フリーランス','不固定收入搭配稳定生活支出':'変動収入と安定した生活支出','适合项目制、接单型收入':'案件・受注型収入向け','小生意':'小規模事業','回款、采购、工资、房租和营销费用':'入金、仕入、給与、家賃、マーケティング費','适合个体经营和小公司':'個人事業・小規模企業向け','纯现金预测':'現金のみ','只关注收入和支出，不使用负债变化':'収入と支出だけを追跡し負債変動は使いません','最简单的现金流结构':'最もシンプルな資金予測','空白模板':'空白','只保留当前现金、负债和安全现金线':'現金、負債、安全資金のみ保持','从零开始自己建立':'ゼロから作成','模板会创建为新的数据版本，不会覆盖当前数据。':'テンプレートは新しいデータ版として作成され、現在のデータを上書きしません。',
+    '数据说明':'データ説明','返回数据':'データに戻る','格式化':'整形','应用':'適用','关闭':'閉じる','JSON 有效':'JSON 有効','Ctrl/Cmd + S 应用 · Tab 缩进':'Ctrl/Cmd + S 適用・Tab インデント','页面版本':'アプリ版','项目':'プロジェクト','官网':'公式サイト','联系邮箱':'連絡先メール','开源许可':'ライセンス','源码许可':'ソースライセンス','© 2026 YuYaoYong · PFS 基于 MIT License 开源':'© 2026 YuYaoYong · PFS は MIT License でオープンソース公開されています','© 2026 YuYaoYong · PolyForm Strict：仅允许非商业使用，不授予分发、修改或制作衍生作品的许可':'© 2026 YuYaoYong · ソースは閲覧・利用できますが、改変版を新しい作品として公開・再配布することは禁止されています','选择一个常见场景，快速创建一套可直接修改的预测数据。':'よくあるシナリオから編集可能な予測データをすぐ作成します。','个人日常':'個人生活','工资、住房、生活费和日常固定支出':'給与、住居費、生活費、日常の固定支出','适合个人月度现金预测':'個人の月次資金予測向け','负债还款':'負債返済','收入、生活支出和每月还款，观察债务下降':'収入、生活費、毎月返済で負債減少を確認','适合贷款或欠款规划':'ローン・負債計画向け','自由职业':'フリーランス','不固定收入搭配稳定生活支出':'変動収入と安定した生活支出','适合项目制、接单型收入':'案件・受注型収入向け','小生意':'小規模事業','回款、采购、工资、房租和营销费用':'入金、仕入、給与、家賃、マーケティング費','适合个体经营和小公司':'個人事業・小規模企業向け','纯现金预测':'現金のみ','只关注收入和支出，不使用负债变化':'収入と支出だけを追跡し負債変動は使いません','最简单的现金流结构':'最もシンプルな資金予測','空白模板':'空白','只保留当前现金、负债和安全现金线':'現金、負債、安全資金のみ保持','从零开始自己建立':'ゼロから作成','模板会创建为新的数据版本，不会覆盖当前数据。':'テンプレートは新しいデータ版として作成され、現在のデータを上書きしません。',
     '当前状态':'現在の状態','设置预测的起点':'予測の開始点を設定','预测基准日':'基準日','当前现金':'現在の現金','当前负债':'現在の負債','安全现金线':'安全資金ライン','修改即自动保存':'変更は自動保存','事件分组':'イベントグループ','个事件':'件','分组名称':'グループ名','删除分组':'グループ削除','这是什么？':'内容','资金方向':'資金方向','多少钱？':'金額','金额':'金額','是否借款':'借入ですか','是否还债':'返済ですか','勾选后，这笔收入会同时增加负债':'チェックすると、この収入と同時に負債も増えます','勾选后，这笔支出会同时减少负债':'チェックすると、この支出と同時に負債も減ります','一次性':'一回のみ','每天':'毎日','每周':'毎週','每月':'毎月','每年':'毎年','自定义周期':'カスタム周期','属于哪里？':'グループ','分组':'グループ','未分组':'未分類','发生日期':'発生日','开始日期':'開始日','发生月份':'発生月','循环周期':'繰り返し周期','每':'毎','结束方式':'終了条件','长期':'期限なし','指定日期':'日付指定','结束日期':'終了日','未设置结束日期':'終了日未設定','事件影响':'イベント影響','删除':'削除','复制':'複製','保存':'保存','取消':'キャンセル','重命名':'名前変更','确认删除':'削除確認','展开':'展開','折叠':'折りたたむ','拖动排序':'ドラッグで並べ替え','暂无未来事件':'将来イベントはありません','没有符合当前条件的事件':'条件に一致するイベントはありません','暂无事件':'イベントなし','预计结余':'予想残高','下次':'次回','至':'まで','今天':'今日','明天':'明日','最近':'次回','单次事件':'単発イベント','循环事件':'繰り返しイベント','风险事件':'リスクイベント','低于安全资金':'安全資金を下回る','资金将为负':'資金がマイナスになります','临界':'注意','已还清':'返済完了','已过去':'過去','已结束':'終了','基准日前':'基準日前',
     '本月收入':'今月の収入','本月支出':'今月の支出','本月净现金流':'今月の純増減','本月结余率':'今月の貯蓄率','周期性收入':'毎月固定収入','周期性支出':'毎月固定支出','周期性结余率':'毎月固定利益率','单次收入':'単発収入','单次支出':'単発支出','统计范围：':'集計範囲：','日初始':'開始残高','发生当日预计结余':'当日予想残高','剩余负债':'残り負債','当天没有资金事件':'当日の資金イベントはありません','现金结余':'現金残高','安全资金':'安全資金','预测提醒':'予測アラート',
     '官方链接':'公式リンク','打开官方网站':'公式サイトを開く','离线工具':'オフラインツール','不含数据':'データなし','当前页面':'現在のページ','包含全部数据版本':'すべてのデータ版を含む','确定':'OK','知道了':'了解','请输入内容':'内容を入力してください','JSON 错误：':'JSON エラー：','无法应用：':'適用できません：','元数据已应用':'メタデータを適用しました','至少保留一个数据版本':'少なくとも1つのデータ版を残してください','已复制事件':'イベントを複製しました','已删除':'削除しました','已复制版本':'データ版を複製しました','已删除版本':'データ版を削除しました','分组已删除，事件已移到未分组':'グループを削除し、イベントを未分類へ移動しました','已生成含数据页面':'データ入りページを生成しました','已生成空白离线工具':'空のオフラインツールを生成しました','生成 HTML 失败':'HTML生成に失敗','导出模板尚未初始化':'エクスポートテンプレートが未初期化です','无法创建干净页面模板':'クリーンなページテンプレートを作成できません','缺少嵌入数据容器':'埋め込みデータ領域がありません','新事件':'新しいイベント','新分组':'新しいグループ','版本':'バージョン','天':'日','周':'週','月':'か月','年':'年','每周一':'毎週月曜日','每周二':'毎週火曜日','每周三':'毎週水曜日','每周四':'毎週木曜日','每周五':'毎週金曜日','每周六':'毎週土曜日','每周日':'毎週日曜日','缺少工作区 ID':'ワークスペースIDがありません','关于 PFS':'PFSについて','安全资金':'安全資金','风险事件':'リスクイベント','日初始':'開始残高','现金结余':'現金残高','剩余负债':'残り負債','当天没有资金事件':'当日の資金イベントはありません','风险':'リスク','临界':'注意','已还清':'返済完了','今天':'今日'
+  },
+  'zh-TW':{
+    '预设模板':'預設模板','数据版本':'資料版本','元数据':'中繼資料','分享':'分享','设置':'設定','语言':'語言','主题':'主題','浅色':'淺色','深色':'深色','糖果':'糖果','纸张':'紙張','基准状态':'基準狀態','当前资金 · 基准日':'目前資金 · 基準日','负债':'負債','净资产':'淨資產','未来事件':'未來事件','按分组 · 全部事件':'按群組 · 全部事件','搜索事件名称…':'搜尋事件名稱…','展示方式':'顯示方式','按分组':'按群組','按时间':'按時間','平铺列表':'平鋪清單','排序':'排序','自定义顺序':'自訂順序','发生时间':'發生時間','金额大小':'金額大小','名称':'名稱','方向':'方向','全部':'全部','收入':'收入','支出':'支出','发生方式':'發生方式','单次':'單次','循环':'循環','状态':'狀態','全部状态':'全部狀態','未来':'未來','进行中':'進行中','已结束 / 已过去':'已結束 / 已過去','时间范围':'時間範圍','全部时间':'全部時間','未来 7 天':'未來 7 天','未来 30 天':'未來 30 天','未来 3 个月':'未來 3 個月','当前图表范围':'目前圖表範圍','分组':'群組','全部分组':'全部群組','风险':'風險','全部事件':'全部事件','仅风险事件':'僅風險事件','排除风险事件':'排除風險事件','重置':'重設','＋ 添加事件':'＋ 新增事件','＋ 添加分组':'＋ 新增群組','现金':'現金','月度统计':'月度統計','半年':'半年','1年':'1年','2年':'2年','3年':'3年','5年':'5年','现金预测':'現金預測','负债预测':'負債預測','净资产预测':'淨資產預測','数据说明':'資料說明','返回数据':'返回資料','格式化':'格式化','应用':'套用','关闭':'關閉','页面版本':'頁面版本','官网':'官網','联系邮箱':'聯絡信箱','源码许可':'原始碼授權','关于 PFS':'關於 PFS','当前状态':'目前狀態','设置预测的起点':'設定預測起點','预测基准日':'預測基準日','当前现金':'目前現金','当前负债':'目前負債','安全现金线':'安全現金線','修改即自动保存':'修改後自動儲存','事件分组':'事件群組','分组名称':'群組名稱','删除分组':'刪除群組','资金方向':'資金方向','多少钱？':'金額','金额':'金額','是否借款':'是否借款','是否还债':'是否還債','一次性':'一次性','每天':'每天','每周':'每週','每月':'每月','每年':'每年','自定义周期':'自訂週期','未分组':'未分組','发生日期':'發生日期','开始日期':'開始日期','结束方式':'結束方式','长期':'長期','指定日期':'指定日期','结束日期':'結束日期','事件影响':'事件影響','删除':'刪除','复制':'複製','保存':'儲存','取消':'取消','重命名':'重新命名','确认删除':'確認刪除','暂无未来事件':'暫無未來事件','暂无事件':'暫無事件','预计结余':'預計結餘','今天':'今天','明天':'明天','单次事件':'單次事件','循环事件':'循環事件','风险事件':'風險事件','低于安全资金':'低於安全資金','资金将为负':'資金將為負','安全资金':'安全資金','预测提醒':'預測提醒','当前页面':'目前頁面','离线工具':'離線工具','不含数据':'不含資料','包含全部数据版本':'包含全部資料版本','确定':'確定','新事件':'新事件','新分组':'新群組','版本':'版本'
+  },
+  ko:{
+    '预设模板':'템플릿','数据版本':'데이터 버전','元数据':'메타데이터','分享':'공유','设置':'설정','语言':'언어','主题':'테마','浅色':'라이트','深色':'다크','糖果':'캔디','纸张':'페이퍼','基准状态':'기준 상태','当前资金 · 基准日':'현재 자금 · 기준일','负债':'부채','净资产':'순자산','未来事件':'향후 이벤트','按分组 · 全部事件':'그룹별 · 전체 이벤트','搜索事件名称…':'이벤트 검색…','展示方式':'보기','按分组':'그룹별','按时间':'타임라인','平铺列表':'목록','排序':'정렬','自定义顺序':'사용자 지정','发生时间':'발생일','金额大小':'금액','名称':'이름','方向':'구분','全部':'전체','收入':'수입','支出':'지출','发生方式':'반복 방식','单次':'일회성','循环':'반복','状态':'상태','全部状态':'전체 상태','未来':'예정','进行中':'진행 중','已结束 / 已过去':'종료 / 지난 항목','时间范围':'기간','全部时间':'전체 기간','未来 7 天':'향후 7일','未来 30 天':'향후 30일','未来 3 个月':'향후 3개월','当前图表范围':'현재 차트 범위','分组':'그룹','全部分组':'전체 그룹','风险':'위험','全部事件':'전체 이벤트','仅风险事件':'위험만','排除风险事件':'위험 제외','重置':'초기화','＋ 添加事件':'＋ 이벤트 추가','＋ 添加分组':'＋ 그룹 추가','现金':'현금','月度统计':'월별 통계','半年':'6개월','1年':'1년','2年':'2년','3年':'3년','5年':'5년','现金预测':'현금 예측','负债预测':'부채 예측','净资产预测':'순자산 예측','数据说明':'데이터 안내','返回数据':'데이터로 돌아가기','格式化':'서식 정리','应用':'적용','关闭':'닫기','页面版本':'앱 버전','官网':'웹사이트','联系邮箱':'이메일','源码许可':'소스 라이선스','关于 PFS':'PFS 정보','当前状态':'현재 상태','设置预测的起点':'예측 시작점 설정','预测基准日':'기준일','当前现金':'현재 현금','当前负债':'현재 부채','安全现金线':'안전 현금선','修改即自动保存':'변경 사항 자동 저장','事件分组':'이벤트 그룹','分组名称':'그룹 이름','删除分组':'그룹 삭제','资金方向':'자금 방향','多少钱？':'금액','金额':'금액','是否借款':'차입금인가요?','是否还债':'부채 상환인가요?','一次性':'일회성','每天':'매일','每周':'매주','每月':'매월','每年':'매년','自定义周期':'사용자 지정 주기','未分组':'미분류','发生日期':'발생일','开始日期':'시작일','结束方式':'종료 방식','长期':'종료 없음','指定日期':'날짜 지정','结束日期':'종료일','事件影响':'이벤트 영향','删除':'삭제','复制':'복제','保存':'저장','取消':'취소','重命名':'이름 변경','确认删除':'삭제 확인','暂无未来事件':'향후 이벤트 없음','暂无事件':'이벤트 없음','预计结余':'예상 잔액','今天':'오늘','明天':'내일','单次事件':'일회성 이벤트','循环事件':'반복 이벤트','风险事件':'위험 이벤트','低于安全资金':'안전 현금 이하','资金将为负':'현금이 마이너스가 됩니다','安全资金':'안전 현금','预测提醒':'예측 알림','当前页面':'현재 페이지','离线工具':'오프라인 도구','不含数据':'데이터 없음','包含全部数据版本':'모든 데이터 버전 포함','确定':'확인','新事件':'새 이벤트','新分组':'새 그룹','版本':'버전'
+  },
+  es:{
+    '预设模板':'Plantillas','数据版本':'Versión de datos','元数据':'Metadatos','分享':'Compartir','设置':'Ajustes','语言':'Idioma','主题':'Tema','浅色':'Claro','深色':'Oscuro','糖果':'Candy','纸张':'Papel','基准状态':'Estado base','当前资金 · 基准日':'Efectivo actual · Fecha base','负债':'Deuda','净资产':'Patrimonio neto','未来事件':'Eventos futuros','按分组 · 全部事件':'Por grupo · Todos','搜索事件名称…':'Buscar eventos…','展示方式':'Vista','按分组':'Por grupo','按时间':'Cronología','平铺列表':'Lista','排序':'Ordenar','自定义顺序':'Personalizado','发生时间':'Fecha','金额大小':'Importe','名称':'Nombre','方向':'Dirección','全部':'Todos','收入':'Ingresos','支出':'Gastos','发生方式':'Frecuencia','单次':'Único','循环':'Recurrente','状态':'Estado','全部状态':'Todos los estados','未来':'Futuro','进行中':'En curso','已结束 / 已过去':'Finalizado / Pasado','时间范围':'Periodo','全部时间':'Todo el periodo','未来 7 天':'Próximos 7 días','未来 30 天':'Próximos 30 días','未来 3 个月':'Próximos 3 meses','当前图表范围':'Rango del gráfico','分组':'Grupo','全部分组':'Todos los grupos','风险':'Riesgo','全部事件':'Todos los eventos','仅风险事件':'Solo riesgos','排除风险事件':'Excluir riesgos','重置':'Restablecer','＋ 添加事件':'＋ Añadir evento','＋ 添加分组':'＋ Añadir grupo','现金':'Efectivo','月度统计':'Estadísticas mensuales','半年':'6 meses','1年':'1 año','2年':'2 años','3年':'3 años','5年':'5 años','现金预测':'Previsión de efectivo','负债预测':'Previsión de deuda','净资产预测':'Previsión de patrimonio','数据说明':'Guía de datos','返回数据':'Volver a datos','格式化':'Formatear','应用':'Aplicar','关闭':'Cerrar','页面版本':'Versión de la app','官网':'Sitio web','联系邮箱':'Correo','源码许可':'Licencia del código','关于 PFS':'Acerca de PFS','当前状态':'Estado actual','设置预测的起点':'Definir inicio de la previsión','预测基准日':'Fecha base','当前现金':'Efectivo actual','当前负债':'Deuda actual','安全现金线':'Reserva de seguridad','修改即自动保存':'Los cambios se guardan automáticamente','事件分组':'Grupo de eventos','分组名称':'Nombre del grupo','删除分组':'Eliminar grupo','资金方向':'Dirección del efectivo','多少钱？':'Importe','金额':'Importe','是否借款':'¿Es un préstamo?','是否还债':'¿Es un pago de deuda?','一次性':'Único','每天':'Diario','每周':'Semanal','每月':'Mensual','每年':'Anual','自定义周期':'Intervalo personalizado','未分组':'Sin grupo','发生日期':'Fecha','开始日期':'Fecha de inicio','结束方式':'Fin','长期':'Sin fin','指定日期':'En una fecha','结束日期':'Fecha final','事件影响':'Impacto','删除':'Eliminar','复制':'Duplicar','保存':'Guardar','取消':'Cancelar','重命名':'Renombrar','确认删除':'Confirmar eliminación','暂无未来事件':'No hay eventos futuros','暂无事件':'No hay eventos','预计结余':'Saldo previsto','今天':'Hoy','明天':'Mañana','单次事件':'Evento único','循环事件':'Evento recurrente','风险事件':'Evento de riesgo','低于安全资金':'Por debajo de la reserva','资金将为负':'El efectivo será negativo','安全资金':'Reserva de seguridad','预测提醒':'Alerta de previsión','当前页面':'Página actual','离线工具':'Herramienta sin conexión','不含数据':'Sin datos','包含全部数据版本':'Incluye todas las versiones','确定':'Aceptar','新事件':'Nuevo evento','新分组':'Nuevo grupo','版本':'Versión'
+  },
+  fr:{
+    '预设模板':'Modèles','数据版本':'Version des données','元数据':'Métadonnées','分享':'Partager','设置':'Réglages','语言':'Langue','主题':'Thème','浅色':'Clair','深色':'Sombre','糖果':'Candy','纸张':'Papier','基准状态':'État de référence','当前资金 · 基准日':'Trésorerie actuelle · Date de référence','负债':'Dette','净资产':'Patrimoine net','未来事件':'Événements futurs','按分组 · 全部事件':'Par groupe · Tous','搜索事件名称…':'Rechercher…','展示方式':'Affichage','按分组':'Par groupe','按时间':'Chronologie','平铺列表':'Liste','排序':'Trier','自定义顺序':'Personnalisé','发生时间':'Date','金额大小':'Montant','名称':'Nom','方向':'Sens','全部':'Tous','收入':'Revenus','支出':'Dépenses','发生方式':'Fréquence','单次':'Ponctuel','循环':'Récurrent','状态':'État','全部状态':'Tous les états','未来':'À venir','进行中':'En cours','已结束 / 已过去':'Terminé / Passé','时间范围':'Période','全部时间':'Toute la période','未来 7 天':'7 prochains jours','未来 30 天':'30 prochains jours','未来 3 个月':'3 prochains mois','当前图表范围':'Plage du graphique','分组':'Groupe','全部分组':'Tous les groupes','风险':'Risque','全部事件':'Tous les événements','仅风险事件':'Risques uniquement','排除风险事件':'Exclure les risques','重置':'Réinitialiser','＋ 添加事件':'＋ Ajouter un événement','＋ 添加分组':'＋ Ajouter un groupe','现金':'Trésorerie','月度统计':'Statistiques mensuelles','半年':'6 mois','1年':'1 an','2年':'2 ans','3年':'3 ans','5年':'5 ans','现金预测':'Prévision de trésorerie','负债预测':'Prévision de dette','净资产预测':'Prévision de patrimoine','数据说明':'Guide des données','返回数据':'Retour aux données','格式化':'Formater','应用':'Appliquer','关闭':'Fermer','页面版本':'Version de l’application','官网':'Site web','联系邮箱':'E-mail','源码许可':'Licence du code','关于 PFS':'À propos de PFS','当前状态':'État actuel','设置预测的起点':'Définir le point de départ','预测基准日':'Date de référence','当前现金':'Trésorerie actuelle','当前负债':'Dette actuelle','安全现金线':'Seuil de sécurité','修改即自动保存':'Enregistrement automatique','事件分组':'Groupe d’événements','分组名称':'Nom du groupe','删除分组':'Supprimer le groupe','资金方向':'Sens des flux','多少钱？':'Montant','金额':'Montant','是否借款':'S’agit-il d’un emprunt ?','是否还债':'S’agit-il d’un remboursement ?','一次性':'Ponctuel','每天':'Quotidien','每周':'Hebdomadaire','每月':'Mensuel','每年':'Annuel','自定义周期':'Intervalle personnalisé','未分组':'Sans groupe','发生日期':'Date','开始日期':'Date de début','结束方式':'Fin','长期':'Sans fin','指定日期':'À une date','结束日期':'Date de fin','事件影响':'Impact','删除':'Supprimer','复制':'Dupliquer','保存':'Enregistrer','取消':'Annuler','重命名':'Renommer','确认删除':'Confirmer la suppression','暂无未来事件':'Aucun événement futur','暂无事件':'Aucun événement','预计结余':'Solde prévu','今天':'Aujourd’hui','明天':'Demain','单次事件':'Événement ponctuel','循环事件':'Événement récurrent','风险事件':'Événement à risque','低于安全资金':'Sous le seuil de sécurité','资金将为负':'La trésorerie deviendra négative','安全资金':'Seuil de sécurité','预测提醒':'Alerte de prévision','当前页面':'Page actuelle','离线工具':'Outil hors ligne','不含数据':'Sans données','包含全部数据版本':'Inclut toutes les versions','确定':'OK','新事件':'Nouvel événement','新分组':'Nouveau groupe','版本':'Version'
+  },
+  de:{
+    '预设模板':'Vorlagen','数据版本':'Datenversion','元数据':'Metadaten','分享':'Teilen','设置':'Einstellungen','语言':'Sprache','主题':'Design','浅色':'Hell','深色':'Dunkel','糖果':'Candy','纸张':'Papier','基准状态':'Ausgangsstatus','当前资金 · 基准日':'Aktuelles Guthaben · Stichtag','负债':'Schulden','净资产':'Nettovermögen','未来事件':'Zukünftige Ereignisse','按分组 · 全部事件':'Nach Gruppe · Alle','搜索事件名称…':'Ereignisse suchen…','展示方式':'Ansicht','按分组':'Nach Gruppe','按时间':'Zeitachse','平铺列表':'Liste','排序':'Sortierung','自定义顺序':'Benutzerdefiniert','发生时间':'Datum','金额大小':'Betrag','名称':'Name','方向':'Richtung','全部':'Alle','收入':'Einnahmen','支出':'Ausgaben','发生方式':'Rhythmus','单次':'Einmalig','循环':'Wiederkehrend','状态':'Status','全部状态':'Alle Status','未来':'Zukünftig','进行中':'Laufend','已结束 / 已过去':'Beendet / Vergangen','时间范围':'Zeitraum','全部时间':'Gesamter Zeitraum','未来 7 天':'Nächste 7 Tage','未来 30 天':'Nächste 30 Tage','未来 3 个月':'Nächste 3 Monate','当前图表范围':'Diagrammbereich','分组':'Gruppe','全部分组':'Alle Gruppen','风险':'Risiko','全部事件':'Alle Ereignisse','仅风险事件':'Nur Risiken','排除风险事件':'Risiken ausschließen','重置':'Zurücksetzen','＋ 添加事件':'＋ Ereignis hinzufügen','＋ 添加分组':'＋ Gruppe hinzufügen','现金':'Liquidität','月度统计':'Monatsstatistik','半年':'6 Monate','1年':'1 Jahr','2年':'2 Jahre','3年':'3 Jahre','5年':'5 Jahre','现金预测':'Liquiditätsprognose','负债预测':'Schuldenprognose','净资产预测':'Vermögensprognose','数据说明':'Datenleitfaden','返回数据':'Zurück zu Daten','格式化':'Formatieren','应用':'Anwenden','关闭':'Schließen','页面版本':'App-Version','官网':'Website','联系邮箱':'E-Mail','源码许可':'Quellcode-Lizenz','关于 PFS':'Über PFS','当前状态':'Aktueller Status','设置预测的起点':'Startpunkt der Prognose','预测基准日':'Stichtag','当前现金':'Aktuelle Liquidität','当前负债':'Aktuelle Schulden','安全现金线':'Sicherheitsreserve','修改即自动保存':'Änderungen werden automatisch gespeichert','事件分组':'Ereignisgruppe','分组名称':'Gruppenname','删除分组':'Gruppe löschen','资金方向':'Geldfluss','多少钱？':'Betrag','金额':'Betrag','是否借款':'Ist dies ein Darlehen?','是否还债':'Ist dies eine Schuldentilgung?','一次性':'Einmalig','每天':'Täglich','每周':'Wöchentlich','每月':'Monatlich','每年':'Jährlich','自定义周期':'Benutzerdefiniert','未分组':'Ohne Gruppe','发生日期':'Datum','开始日期':'Startdatum','结束方式':'Ende','长期':'Kein Ende','指定日期':'An Datum','结束日期':'Enddatum','事件影响':'Auswirkung','删除':'Löschen','复制':'Duplizieren','保存':'Speichern','取消':'Abbrechen','重命名':'Umbenennen','确认删除':'Löschen bestätigen','暂无未来事件':'Keine zukünftigen Ereignisse','暂无事件':'Keine Ereignisse','预计结余':'Prognostizierter Saldo','今天':'Heute','明天':'Morgen','单次事件':'Einmaliges Ereignis','循环事件':'Wiederkehrendes Ereignis','风险事件':'Risikoereignis','低于安全资金':'Unter Sicherheitsreserve','资金将为负':'Liquidität wird negativ','安全资金':'Sicherheitsreserve','预测提醒':'Prognosewarnung','当前页面':'Aktuelle Seite','离线工具':'Offline-Tool','不含数据':'Ohne Daten','包含全部数据版本':'Enthält alle Datenversionen','确定':'OK','新事件':'Neues Ereignis','新分组':'Neue Gruppe','版本':'Version'
+  },
+  pt:{
+    '预设模板':'Modelos','数据版本':'Versão dos dados','元数据':'Metadados','分享':'Partilhar','设置':'Definições','语言':'Idioma','主题':'Tema','浅色':'Claro','深色':'Escuro','糖果':'Candy','纸张':'Papel','基准状态':'Estado base','当前资金 · 基准日':'Caixa atual · Data base','负债':'Dívida','净资产':'Património líquido','未来事件':'Eventos futuros','按分组 · 全部事件':'Por grupo · Todos','搜索事件名称…':'Pesquisar eventos…','展示方式':'Vista','按分组':'Por grupo','按时间':'Cronologia','平铺列表':'Lista','排序':'Ordenar','自定义顺序':'Personalizado','发生时间':'Data','金额大小':'Montante','名称':'Nome','方向':'Direção','全部':'Todos','收入':'Receitas','支出':'Despesas','发生方式':'Frequência','单次':'Único','循环':'Recorrente','状态':'Estado','全部状态':'Todos os estados','未来':'Futuro','进行中':'Em curso','已结束 / 已过去':'Terminado / Passado','时间范围':'Período','全部时间':'Todo o período','未来 7 天':'Próximos 7 dias','未来 30 天':'Próximos 30 dias','未来 3 个月':'Próximos 3 meses','当前图表范围':'Intervalo do gráfico','分组':'Grupo','全部分组':'Todos os grupos','风险':'Risco','全部事件':'Todos os eventos','仅风险事件':'Apenas riscos','排除风险事件':'Excluir riscos','重置':'Repor','＋ 添加事件':'＋ Adicionar evento','＋ 添加分组':'＋ Adicionar grupo','现金':'Caixa','月度统计':'Estatísticas mensais','半年':'6 meses','1年':'1 ano','2年':'2 anos','3年':'3 anos','5年':'5 anos','现金预测':'Previsão de caixa','负债预测':'Previsão de dívida','净资产预测':'Previsão de património','数据说明':'Guia de dados','返回数据':'Voltar aos dados','格式化':'Formatar','应用':'Aplicar','关闭':'Fechar','页面版本':'Versão da app','官网':'Site','联系邮箱':'E-mail','源码许可':'Licença do código','关于 PFS':'Sobre o PFS','当前状态':'Estado atual','设置预测的起点':'Definir início da previsão','预测基准日':'Data base','当前现金':'Caixa atual','当前负债':'Dívida atual','安全现金线':'Reserva de segurança','修改即自动保存':'As alterações são guardadas automaticamente','事件分组':'Grupo de eventos','分组名称':'Nome do grupo','删除分组':'Eliminar grupo','资金方向':'Direção do caixa','多少钱？':'Montante','金额':'Montante','是否借款':'É um empréstimo?','是否还债':'É um pagamento de dívida?','一次性':'Único','每天':'Diário','每周':'Semanal','每月':'Mensal','每年':'Anual','自定义周期':'Intervalo personalizado','未分组':'Sem grupo','发生日期':'Data','开始日期':'Data de início','结束方式':'Fim','长期':'Sem fim','指定日期':'Numa data','结束日期':'Data final','事件影响':'Impacto','删除':'Eliminar','复制':'Duplicar','保存':'Guardar','取消':'Cancelar','重命名':'Renomear','确认删除':'Confirmar eliminação','暂无未来事件':'Sem eventos futuros','暂无事件':'Sem eventos','预计结余':'Saldo previsto','今天':'Hoje','明天':'Amanhã','单次事件':'Evento único','循环事件':'Evento recorrente','风险事件':'Evento de risco','低于安全资金':'Abaixo da reserva','资金将为负':'O caixa ficará negativo','安全资金':'Reserva de segurança','预测提醒':'Alerta de previsão','当前页面':'Página atual','离线工具':'Ferramenta offline','不含数据':'Sem dados','包含全部数据版本':'Inclui todas as versões','确定':'OK','新事件':'Novo evento','新分组':'Novo grupo','版本':'Versão'
   }
 };
+
+// Chinese is the source-language fallback, but keep an explicit dictionary object
+// so shared i18n extensions can safely use Object.assign across every locale.
+I18N.zh ||= {};
+
+Object.assign(I18N.en,{'设置':'Settings','语言':'Language','主题':'Theme','浅色':'Light','深色':'Dark','糖果':'Candy','纸张':'Paper'});
+Object.assign(I18N.en,{'关于':'About'});
+Object.assign(I18N.ja,{'关于':'このアプリについて'});
+Object.assign(I18N['zh-TW'],{'关于':'關於'});
+Object.assign(I18N.ko,{'关于':'정보'});
+Object.assign(I18N.es,{'关于':'Acerca de'});
+Object.assign(I18N.fr,{'关于':'À propos'});
+Object.assign(I18N.de,{'关于':'Über'});
+Object.assign(I18N.pt,{'关于':'Sobre'});
+
+Object.assign(I18N.en,{'说明':'Guide'});
+Object.assign(I18N.ja,{'说明':'ガイド'});
+Object.assign(I18N['zh-TW'],{'说明':'說明'});
+Object.assign(I18N.ko,{'说明':'안내'});
+Object.assign(I18N.es,{'说明':'Guía'});
+Object.assign(I18N.fr,{'说明':'Guide'});
+Object.assign(I18N.de,{'说明':'Anleitung'});
+Object.assign(I18N.pt,{'说明':'Guia'});
+Object.assign(I18N.en,{'清空事件':'Clear Events','确定清空当前数据版本中的全部事件和分组吗？':'Clear all events and groups in the current data version?','清空':'Clear','事件和分组已清空':'Events and groups cleared'});
+Object.assign(I18N.ja,{'清空事件':'イベントをクリア','确定清空当前数据版本中的全部事件和分组吗？':'現在のデータ版のすべてのイベントとグループをクリアしますか？','清空':'クリア','事件和分组已清空':'イベントとグループをクリアしました'});
+Object.assign(I18N.ko,{'清空事件':'이벤트 비우기','确定清空当前数据版本中的全部事件和分组吗？':'현재 데이터 버전의 모든 이벤트와 그룹을 비울까요?','清空':'비우기','事件和分组已清空':'이벤트와 그룹을 비웠습니다'});
+Object.assign(I18N['zh-TW'],{'清空事件':'清空事件','确定清空当前数据版本中的全部事件和分组吗？':'確定清空目前資料版本中的全部事件和群組嗎？','清空':'清空','事件和分组已清空':'事件和群組已清空'});
+Object.assign(I18N.es,{'清空事件':'Vaciar eventos','确定清空当前数据版本中的全部事件和分组吗？':'¿Vaciar todos los eventos y grupos de la versión de datos actual?','清空':'Vaciar','事件和分组已清空':'Eventos y grupos vaciados'});
+Object.assign(I18N.fr,{'清空事件':'Vider les événements','确定清空当前数据版本中的全部事件和分组吗？':'Vider tous les événements et groupes de la version actuelle ?','清空':'Vider','事件和分组已清空':'Événements et groupes vidés'});
+Object.assign(I18N.de,{'清空事件':'Ereignisse leeren','确定清空当前数据版本中的全部事件和分组吗？':'Alle Ereignisse und Gruppen der aktuellen Datenversion leeren?','清空':'Leeren','事件和分组已清空':'Ereignisse und Gruppen geleert'});
+Object.assign(I18N.pt,{'清空事件':'Limpar eventos','确定清空当前数据版本中的全部事件和分组吗？':'Limpar todos os eventos e grupos da versão de dados atual?','清空':'Limpar','事件和分组已清空':'Eventos e grupos limpos'});
+
+Object.assign(I18N.zh,{'按开始日期':'按开始日期'});
+Object.assign(I18N['zh-TW'],{'按开始日期':'依開始日期'});
+Object.assign(I18N.en,{'按开始日期':'From start date'});
+Object.assign(I18N.ja,{'按开始日期':'開始日基準'});
+Object.assign(I18N.ko,{'按开始日期':'시작일 기준'});
+Object.assign(I18N.es,{'按开始日期':'Según inicio'});
+Object.assign(I18N.fr,{'按开始日期':'Selon le début'});
+Object.assign(I18N.de,{'按开始日期':'Ab Startdatum'});
+Object.assign(I18N.pt,{'按开始日期':'Pela data inicial'});
+
+Object.assign(I18N.zh, {'快速添加':'快速添加','选择常用项目，一次添加一个或一组事件。':'选择常用项目，一次添加一个或一组事件。'});
+Object.assign(I18N['zh-TW']||={}, {'快速添加':'快速新增','选择常用项目，一次添加一个或一组事件。':'選擇常用項目，一次新增一個或一組事件。'});
+Object.assign(I18N.en, {'快速添加':'Quick Add','选择常用项目，一次添加一个或一组事件。':'Choose a common item and add one or several events at once.'});
+Object.assign(I18N.ja, {'快速添加':'クイック追加','选择常用项目，一次添加一个或一组事件。':'よく使う項目から1件または複数のイベントをまとめて追加します。'});
+Object.assign(I18N.ko, {'快速添加':'빠른 추가','选择常用项目，一次添加一个或一组事件。':'자주 쓰는 항목에서 하나 또는 여러 이벤트를 한 번에 추가합니다.'});
+Object.assign(I18N.es, {'快速添加':'Añadir rápido','选择常用项目，一次添加一个或一组事件。':'Añade uno o varios eventos desde opciones habituales.'});
+Object.assign(I18N.fr, {'快速添加':'Ajout rapide','选择常用项目，一次添加一个或一组事件。':'Ajoutez un ou plusieurs événements depuis des choix courants.'});
+Object.assign(I18N.de, {'快速添加':'Schnell hinzufügen','选择常用项目，一次添加一个或一组事件。':'Füge ein oder mehrere Ereignisse aus häufigen Vorlagen hinzu.'});
+Object.assign(I18N.pt, {'快速添加':'Adicionar rápido','选择常用项目，一次添加一个或一组事件。':'Adicione um ou vários eventos a partir de opções comuns.'});
+
+const GUIDE_CONTENT={"zh":{"title":"PFS 使用说明","intro":"PFS 用来模拟未来的钱会怎么变化。它关注的不是复杂记账，而是帮助你提前看清未来的现金、负债和净资产趋势。","sections":[["如何使用","先设置基准状态，再加入未来会发生的收入和支出事件，最后看右侧趋势图。如果未来某个时间资金变紧，就提前调整计划。"],["设计哲学","大道至简。PFS 不模拟贷款合同、利率规则或复杂会计，只记录实际会发生的钱。借款、还本金、利息，都可以直接用事件表达。"],["数据安全","数据默认保存在当前浏览器本地，不会因为使用页面而自动上传。请自行保管导出的文件，并避免在公共设备上保存敏感财务数据。"],["文件与分享","可以导出包含当前数据的页面，也可以导出不含数据的离线工具。分享带数据文件前，请确认其中没有不希望他人看到的信息。"]]},"zh-TW":{"title":"PFS 使用說明","intro":"PFS 用來模擬未來的錢會怎麼變化。它關注的不是複雜記帳，而是幫助你提前看清未來的現金、負債與淨資產趨勢。","sections":[["如何使用","先設定基準狀態，再加入未來會發生的收入與支出事件，最後看右側趨勢圖。如果未來某個時間資金變緊，就提前調整計畫。"],["設計哲學","大道至簡。PFS 不模擬貸款合約、利率規則或複雜會計，只記錄實際會發生的錢。借款、還本金、利息，都可以直接用事件表達。"],["資料安全","資料預設儲存在目前瀏覽器本機，不會因為使用頁面而自動上傳。請自行保管匯出的檔案，並避免在公共設備上保存敏感財務資料。"],["檔案與分享","可以匯出包含目前資料的頁面，也可以匯出不含資料的離線工具。分享帶資料檔案前，請確認其中沒有不希望他人看到的資訊。"]]},"en":{"title":"How to use PFS","intro":"PFS helps you see how your money may change in the future. It focuses on clear trends in cash, debt, and net worth rather than complex accounting.","sections":[["How to use","Set the starting state, add future income and expense events, then read the chart. If money becomes tight later, adjust the plan early."],["Design philosophy","Keep it simple. PFS does not simulate loan contracts, interest-rate rules, or full accounting. It records money that will actually move. Borrowing, principal repayment, and interest can all be expressed as events."],["Data safety","Your data is stored locally in this browser by default and is not automatically uploaded just by using the page. Keep exported files safe and avoid storing sensitive financial data on public devices."],["Files and sharing","You can export a page with your current data or an empty offline tool. Before sharing a file that contains data, make sure it includes nothing you want to keep private."]]},"ja":{"title":"PFS の使い方","intro":"PFS は、これからお金がどう変化するかを見るためのツールです。複雑な会計処理ではなく、現金・負債・純資産の流れを分かりやすく見ることを重視しています。","sections":[["使い方","基準状態を設定し、未来の収入・支出イベントを追加して、右側のグラフを確認します。将来資金が厳しくなりそうなら早めに計画を調整します。"],["設計思想","シンプルさを重視しています。PFS はローン契約、金利ルール、複雑な会計処理を再現しません。実際に動くお金だけを扱い、借入・元本返済・利息もイベントで表現します。"],["データの安全","データは既定でこのブラウザ内に保存され、ページを使うだけで自動的に外部へ送信されることはありません。書き出したファイルはご自身で安全に管理してください。"],["ファイルと共有","現在のデータを含むページ、またはデータを含まないオフラインツールを書き出せます。データ入りファイルを共有する前に、公開したくない情報が含まれていないか確認してください。"]]},"ko":{"title":"PFS 사용 안내","intro":"PFS는 앞으로 돈이 어떻게 변할지 보는 도구입니다. 복잡한 회계보다 현금·부채·순자산의 흐름을 쉽게 이해하는 데 초점을 둡니다.","sections":[["사용 방법","기준 상태를 설정하고 미래 수입·지출 이벤트를 추가한 뒤 오른쪽 차트를 봅니다. 나중에 자금이 부족해질 것 같으면 미리 계획을 조정합니다."],["설계 철학","단순함을 우선합니다. PFS는 대출 계약, 금리 규칙, 복잡한 회계를 재현하지 않습니다. 실제로 움직일 돈만 기록하며 차입, 원금 상환, 이자도 이벤트로 표현합니다."],["데이터 안전","데이터는 기본적으로 이 브라우저에 로컬로 저장되며 페이지를 사용한다고 자동 업로드되지 않습니다. 내보낸 파일은 직접 안전하게 보관하세요."],["파일과 공유","현재 데이터가 포함된 페이지 또는 데이터가 없는 오프라인 도구를 내보낼 수 있습니다. 데이터가 포함된 파일을 공유하기 전에 공개하고 싶지 않은 정보가 없는지 확인하세요."]]},"es":{"title":"Cómo usar PFS","intro":"PFS sirve para ver cómo puede cambiar tu dinero en el futuro. Se centra en mostrar con claridad la evolución del efectivo, la deuda y el patrimonio neto, sin complicar la experiencia con contabilidad avanzada.","sections":[["Cómo usarlo","Define el estado inicial, añade ingresos y gastos futuros y mira el gráfico. Si el dinero se complica más adelante, ajusta el plan con tiempo."],["Filosofía de diseño","Mantenerlo simple. PFS no simula contratos de préstamo, reglas de interés ni contabilidad completa. Solo registra el dinero que realmente se moverá. Préstamos, principal e intereses pueden expresarse como eventos."],["Seguridad de los datos","Los datos se guardan localmente en este navegador por defecto y no se suben automáticamente por usar la página. Guarda con cuidado los archivos exportados y evita dejar datos sensibles en equipos públicos."],["Archivos y compartir","Puedes exportar una página con tus datos actuales o una herramienta sin datos. Antes de compartir un archivo con datos, comprueba que no contiene información que quieras mantener privada."]]},"fr":{"title":"Comment utiliser PFS","intro":"PFS permet de voir comment votre argent peut évoluer dans le futur. Il privilégie une lecture claire de la trésorerie, des dettes et du patrimoine net plutôt qu’une comptabilité complexe.","sections":[["Comment l’utiliser","Définissez l’état de départ, ajoutez les revenus et dépenses futurs, puis consultez le graphique. Si la trésorerie devient tendue plus tard, ajustez le plan à l’avance."],["Philosophie de conception","Rester simple. PFS ne simule pas les contrats de prêt, les règles de taux d’intérêt ni une comptabilité complète. Il enregistre seulement les mouvements d’argent réels. Emprunt, remboursement du capital et intérêts peuvent être exprimés comme événements."],["Sécurité des données","Les données sont enregistrées localement dans ce navigateur par défaut et ne sont pas automatiquement envoyées ailleurs lorsque vous utilisez la page. Conservez les fichiers exportés en lieu sûr."],["Fichiers et partage","Vous pouvez exporter une page avec vos données actuelles ou un outil hors ligne sans données. Avant de partager un fichier contenant des données, vérifiez qu’il ne contient rien que vous souhaitez garder privé."]]},"de":{"title":"PFS verwenden","intro":"PFS zeigt, wie sich dein Geld künftig entwickeln kann. Der Schwerpunkt liegt auf einem klaren Blick auf Liquidität, Schulden und Nettovermögen statt auf komplexer Buchhaltung.","sections":[["So funktioniert es","Lege den Ausgangszustand fest, füge zukünftige Einnahmen und Ausgaben hinzu und prüfe das Diagramm. Wird das Geld später knapp, passe den Plan frühzeitig an."],["Designphilosophie","Einfach bleiben. PFS simuliert keine Kreditverträge, Zinsregeln oder vollständige Buchhaltung. Es erfasst nur Geld, das sich tatsächlich bewegt. Kreditaufnahme, Tilgung und Zinsen können als Ereignisse dargestellt werden."],["Datensicherheit","Die Daten werden standardmäßig lokal in diesem Browser gespeichert und nicht allein durch die Nutzung der Seite automatisch hochgeladen. Bewahre exportierte Dateien sicher auf."],["Dateien und Teilen","Du kannst eine Seite mit deinen aktuellen Daten oder ein leeres Offline-Tool exportieren. Prüfe vor dem Teilen einer Datei mit Daten, ob sie Informationen enthält, die privat bleiben sollen."]]},"pt":{"title":"Como usar o PFS","intro":"O PFS mostra como o seu dinheiro pode mudar no futuro. O foco é tornar claras as tendências de caixa, dívida e património líquido, sem complicar com contabilidade avançada.","sections":[["Como usar","Defina o estado inicial, adicione receitas e despesas futuras e veja o gráfico. Se o dinheiro ficar apertado mais à frente, ajuste o plano com antecedência."],["Filosofia de design","Manter simples. O PFS não simula contratos de empréstimo, regras de juros nem contabilidade completa. Regista apenas dinheiro que realmente se movimenta. Empréstimos, pagamento de principal e juros podem ser representados como eventos."],["Segurança dos dados","Os dados são guardados localmente neste navegador por predefinição e não são enviados automaticamente apenas por utilizar a página. Guarde os ficheiros exportados em segurança."],["Ficheiros e partilha","Pode exportar uma página com os dados atuais ou uma ferramenta offline sem dados. Antes de partilhar um ficheiro com dados, confirme que não contém informação que queira manter privada."]]}};
+const ABOUT_LICENSE_NOTE={
+  zh:'© 2026 YuYaoYong · PolyForm Strict：仅允许非商业使用，不授予分发、修改或制作衍生作品的许可',
+  'zh-TW':'© 2026 YuYaoYong · PolyForm Strict：僅允許非商業使用，不授予散布、修改或製作衍生作品的許可',
+  en:'© 2026 YuYaoYong · PolyForm Strict: noncommercial use only; distribution, modification, and derivative works are not licensed',
+  ja:'© 2026 YuYaoYong · PolyForm Strict：非商用利用のみ許可され、配布・改変・派生作品の作成は許諾されません',
+  ko:'© 2026 YuYaoYong · PolyForm Strict: 비상업적 사용만 허용되며 배포, 수정 및 파생 저작물 제작은 허가되지 않습니다',
+  es:'© 2026 YuYaoYong · PolyForm Strict: solo uso no comercial; no se autoriza la distribución, modificación ni la creación de obras derivadas',
+  fr:'© 2026 YuYaoYong · PolyForm Strict : usage non commercial uniquement ; la distribution, la modification et les œuvres dérivées ne sont pas autorisées',
+  de:'© 2026 YuYaoYong · PolyForm Strict: nur nichtkommerzielle Nutzung; Verbreitung, Änderungen und abgeleitete Werke sind nicht lizenziert',
+  pt:'© 2026 YuYaoYong · PolyForm Strict: apenas uso não comercial; distribuição, modificação e obras derivadas não são licenciadas'
+};
+Object.assign(I18N.ja,{'设置':'設定','语言':'言語','主题':'テーマ','浅色':'ライト','深色':'ダーク','糖果':'キャンディ','纸张':'ペーパー'});
 let currentLanguage='zh';
 function trBase(text){
   const raw=String(text??'');
   if(currentLanguage==='zh') return raw;
   const dict=I18N[currentLanguage]||{};
   if(dict[raw]!=null) return dict[raw];
+  const fallback=I18N.en||{};
+  if(fallback[raw]!=null) return fallback[raw];
   let m;
-  if((m=raw.match(/^每月 (\d+) 日$/))) return currentLanguage==='en'?`Day ${m[1]} monthly`:`毎月${m[1]}日`;
-  if((m=raw.match(/^(\d+) 月$/))) return currentLanguage==='en'?`Month ${m[1]}`:`${m[1]}月`;
-  if((m=raw.match(/^(\d+) 天后 · (.+)$/))) return currentLanguage==='en'?`In ${m[1]} days · ${m[2]}`:`${m[1]}日後 · ${m[2]}`;
-  if((m=raw.match(/^事件分组 · (\d+) 个事件$/))) return currentLanguage==='en'?`Event Group · ${m[1]} events`:`イベントグループ · ${m[1]}件`;
-  if((m=raw.match(/^(\d+) 个事件$/))) return currentLanguage==='en'?`${m[1]} events`:`${m[1]}件`;
-  if((m=raw.match(/^(\d+) 个风险事件$/))) return currentLanguage==='en'?`${m[1]} risk events`:`リスク ${m[1]}件`;
-  if((m=raw.match(/^最近 (.+)$/))) return currentLanguage==='en'?`Next ${m[1]}`:`次回 ${m[1]}`;
+  const locale=localeCode();
+  if((m=raw.match(/^每月 (\d+) 日$/))) return currentLanguage==='en'?`Monthly · Day ${m[1]}`:new Intl.DateTimeFormat(locale,{day:'numeric'}).format(new Date(2026,0,Number(m[1])))+' · '+(trBase('每月'));
+  if((m=raw.match(/^(\d+) 月$/))) return new Intl.DateTimeFormat(locale,{month:'long'}).format(new Date(2026,Number(m[1])-1,1));
+  if((m=raw.match(/^(\d+) 天后 · (.+)$/))) return `${m[1]} ${trBase('天')} · ${m[2]}`;
+  if((m=raw.match(/^事件分组 · (\d+) 个事件$/))) return `${trBase('事件分组')} · ${m[1]} ${trBase('个事件')}`;
+  if((m=raw.match(/^(\d+) 个事件$/))) return `${m[1]} ${trBase('个事件')}`;
+  if((m=raw.match(/^(\d+) 个风险事件$/))) return `${m[1]} ${trBase('风险事件')}`;
+  if((m=raw.match(/^最近 (.+)$/))) return `${trBase('最近')} ${m[1]}`;
   return raw;
 }
-function localeCode(){return currentLanguage==='en'?'en-US':currentLanguage==='ja'?'ja-JP':'zh-CN'}
+const LANGUAGE_LOCALES={zh:'zh-CN','zh-TW':'zh-TW',en:'en-US',ja:'ja-JP',ko:'ko-KR',es:'es-ES',fr:'fr-FR',de:'de-DE',pt:'pt-PT'};
+const SUPPORTED_LANGUAGES=Object.keys(LANGUAGE_LOCALES);
+function localeCode(){return LANGUAGE_LOCALES[currentLanguage]||'en-US'}
+function detectEnvironmentLanguage(){
+  const langs=[...(Array.isArray(navigator.languages)?navigator.languages:[]),navigator.language,navigator.userLanguage].filter(Boolean).map(x=>String(x).toLowerCase());
+  for(const x of langs){
+    if(/^zh-(tw|hk|mo|hant)/.test(x)||x.includes('hant')) return 'zh-TW';
+    if(x==='zh'||x.startsWith('zh-')) return 'zh';
+    if(x==='ja'||x.startsWith('ja-')) return 'ja';
+    if(x==='ko'||x.startsWith('ko-')) return 'ko';
+    if(x==='es'||x.startsWith('es-')) return 'es';
+    if(x==='fr'||x.startsWith('fr-')) return 'fr';
+    if(x==='de'||x.startsWith('de-')) return 'de';
+    if(x==='pt'||x.startsWith('pt-')) return 'pt';
+    if(x==='en'||x.startsWith('en-')) return 'en';
+  }
+  return 'en';
+}
 function loadLanguage(){
-  const embedded=document.querySelector('meta[name="pfs-language"]')?.content;
-  const saved=localStorage.getItem(LANGUAGE_KEY);
-  const lang=embedded||saved||((navigator.language||'').toLowerCase().startsWith('ja')?'ja':(navigator.language||'').toLowerCase().startsWith('en')?'en':'zh');
-  return ['zh','en','ja'].includes(lang)?lang:'zh';
+  let saved='';try{saved=localStorage.getItem(LANGUAGE_KEY)||''}catch(e){}
+  return SUPPORTED_LANGUAGES.includes(saved)?saved:detectEnvironmentLanguage();
 }
 function shouldSkipI18nNode(el){return !!el?.closest?.('.name,.group-name,.version-option-name,.version-rename-input,.editor-head h3,#metadataEditor,input:not([type="button"]),textarea')}
 function translateElementText(el){
@@ -629,21 +1223,38 @@ function translateElementText(el){
     el.setAttribute(attr,trBase(raw));
   }
 }
+const LANGUAGE_NAMES={
+  zh:{full:'个人财务模拟',title:'PFS — 个人财务模拟'},'zh-TW':{full:'個人財務模擬',title:'PFS — 個人財務模擬'},en:{full:'Personal Financial Simulation',title:'PFS — Personal Financial Simulation'},ja:{full:'個人財務シミュレーション',title:'PFS — 個人財務シミュレーション'},ko:{full:'개인 재무 시뮬레이션',title:'PFS — 개인 재무 시뮬레이션'},es:{full:'Simulación Financiera Personal',title:'PFS — Simulación Financiera Personal'},fr:{full:'Simulation Financière Personnelle',title:'PFS — Simulation Financière Personnelle'},de:{full:'Persönliche Finanzsimulation',title:'PFS — Persönliche Finanzsimulation'},pt:{full:'Simulação Financeira Pessoal',title:'PFS — Simulação Financeira Pessoal'}
+};
+const LOCAL_DATA_STATUS={
+  zh:{text:'离线可用，数据仅本地保存',title:'财务数据保存在本地；点击查看数据安全说明'},
+  'zh-TW':{text:'離線可用，資料僅本機儲存',title:'財務資料儲存在本機；點擊查看資料安全說明'},
+  en:{text:'Offline ready, data stored locally only',title:'Financial data stays local. Click for data safety details.'},
+  ja:{text:'オフライン対応、データはローカル保存のみ',title:'財務データはローカルに保存されます。クリックして詳細を確認。'},
+  ko:{text:'오프라인 사용 가능, 데이터는 로컬에만 저장',title:'재무 데이터는 로컬에 저장됩니다. 클릭해 데이터 안전 안내를 확인하세요.'},
+  es:{text:'Disponible sin conexión, datos solo locales',title:'Los datos financieros se guardan localmente. Haz clic para más detalles.'},
+  fr:{text:'Disponible hors ligne, données stockées localement uniquement',title:'Les données financières restent en local. Cliquez pour les détails.'},
+  de:{text:'Offline nutzbar, Daten nur lokal gespeichert',title:'Finanzdaten werden lokal gespeichert. Klicken für Details.'},
+  pt:{text:'Disponível offline, dados armazenados apenas localmente',title:'Os dados financeiros são guardados localmente. Clique para ver detalhes.'}
+};
 function applyI18n(root=document.body){
   if(!root)return;
   if(root.nodeType===1)translateElementText(root);
   root.querySelectorAll?.('*').forEach(translateElementText);
-  document.documentElement.lang=currentLanguage==='zh'?'zh-CN':currentLanguage==='ja'?'ja':'en';
-  const localizedFullName=currentLanguage==='zh'?'个人财务模拟':currentLanguage==='ja'?'個人財務シミュレーション':'Personal Financial Simulation';
-  document.querySelectorAll('.brand-full').forEach(el=>{el.textContent=localizedFullName});
-  document.title=currentLanguage==='zh'?'PFS — 个人财务模拟':currentLanguage==='ja'?'PFS — 個人財務シミュレーション':'PFS — Personal Financial Simulation';
-  const sel=document.getElementById('languageSelect');if(sel)sel.value=currentLanguage;
+  document.documentElement.lang=localeCode();
+  const names=LANGUAGE_NAMES[currentLanguage]||LANGUAGE_NAMES.en;
+  document.querySelectorAll('.brand-full').forEach(el=>{el.textContent=names.full});
+  document.title=names.title;
+  document.querySelectorAll('.language-option[data-lang]').forEach(el=>el.classList.toggle('active',el.dataset.lang===currentLanguage));
   const versionChip=document.getElementById('appVersionChip');if(versionChip)versionChip.textContent='v'+APP_VERSION;
+  const localStatus=document.getElementById('localDataStatus');if(localStatus){const copy=LOCAL_DATA_STATUS[currentLanguage]||LOCAL_DATA_STATUS.en;localStatus.textContent=copy.text;localStatus.title=copy.title;localStatus.setAttribute('aria-label',copy.title)}
+  const aboutNote=document.getElementById('aboutLicenseNote');if(aboutNote)aboutNote.textContent=ABOUT_LICENSE_NOTE[currentLanguage]||ABOUT_LICENSE_NOTE.en;
 }
 function setLanguage(lang){
-  if(!['zh','en','ja'].includes(lang))return;
-  currentLanguage=lang;localStorage.setItem(LANGUAGE_KEY,lang);
-  render();renderPresetGrid();applyI18n(document.body);
+  if(!SUPPORTED_LANGUAGES.includes(lang))return;
+  currentLanguage=lang;try{localStorage.setItem(LANGUAGE_KEY,lang)}catch(e){}
+  render();renderQuickAddLibrary();applyI18n(document.body);updateMobileNotice();
+  if(document.getElementById('guideModal')?.classList.contains('show')) renderGuide();
   if(metadataViewMode==='doc'&&document.getElementById('metadataModal')?.classList.contains('show')) setMetadataView('doc');
 }
 const i18nObserver=new MutationObserver(records=>{for(const r of records){for(const n of r.addedNodes){if(n.nodeType===1)applyI18n(n);else if(n.nodeType===3&&n.parentElement)translateElementText(n.parentElement)}}});
@@ -653,7 +1264,7 @@ const WORKSPACE_FORMAT='pfs-workspace';
 const WORKSPACE_VERSION=1;
 const PROJECT_URL='https://yuyaoyong.github.io';
 const CONTACT_EMAIL='yyyvbps@163.com';
-const LICENSE_NAME='MIT License';
+const LICENSE_NAME='PolyForm Strict License 1.0.0';
 const STORAGE_KEY_BASE='pfs.v1';
 const EVENT_ID_RE=/^evt_[a-z0-9]{6}$/;
 const GROUP_ID_RE=/^grp_[a-z0-9]{6}$/;
@@ -750,7 +1361,7 @@ function emptyData(){
 }
 
 function defaultVersionLabel(){
-  return currentLanguage==='en'?'Version 1':currentLanguage==='ja'?'バージョン 1':'版本 1';
+  return `${trBase('版本')} 1`;
 }
 function isDefaultVersionName(name){
   return ['版本 1','Version 1','バージョン 1'].includes(String(name||'').trim());
@@ -1014,7 +1625,7 @@ const Storage={
 function symbol(){const c=workspace?.currency||'CNY';return c==='CNY'||c==='JPY'?'¥':c==='USD'?'$':c==='EUR'?'€':c==='GBP'?'£':c+' '}
 function fmt(n){return symbol()+Math.round(Number(n||0)).toLocaleString(localeCode())}
 function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function shortDate(s){if(!s)return '—';const d=new Date(s+'T00:00:00');if(currentLanguage==='en')return d.toLocaleDateString('en-US',{month:'short',day:'numeric'});if(currentLanguage==='ja')return `${d.getMonth()+1}月${d.getDate()}日`;return `${d.getMonth()+1}月${d.getDate()}日`}
+function shortDate(s){if(!s)return '—';const d=new Date(s+'T00:00:00');return d.toLocaleDateString(localeCode(),{month:'short',day:'numeric'})}
 function toast(msg){const t=document.getElementById('toast');t.textContent=trBase(msg);t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1400)}
 
 let activeAppDialog=null;
@@ -1237,160 +1848,244 @@ function simulate(days){
 /* =========================================================
  * 07. SCENARIOS / VERSION UI
  * ======================================================= */
-function openPresetModal(){
+/* =========================================================
+ * 07. QUICK ADD — DECLARATIVE PRESETS
+ * ======================================================= */
+const QUICK_ADD_GROUPS={
+  income:{zh:'收入','zh-TW':'收入',en:'Income',ja:'収入',ko:'수입',es:'Ingresos',fr:'Revenus',de:'Einnahmen',pt:'Receitas'},
+  housing:{zh:'住房','zh-TW':'住房',en:'Housing',ja:'住居',ko:'주거',es:'Vivienda',fr:'Logement',de:'Wohnen',pt:'Habitação'},
+  vehicle:{zh:'车辆','zh-TW':'車輛',en:'Vehicle',ja:'車両',ko:'차량',es:'Vehículo',fr:'Véhicule',de:'Fahrzeug',pt:'Veículo'},
+  living:{zh:'生活','zh-TW':'生活',en:'Living',ja:'生活',ko:'생활',es:'Vida diaria',fr:'Vie courante',de:'Lebenshaltung',pt:'Vida diária'},
+  family:{zh:'家庭','zh-TW':'家庭',en:'Family',ja:'家族',ko:'가족',es:'Familia',fr:'Famille',de:'Familie',pt:'Família'},
+  business:{zh:'经营','zh-TW':'經營',en:'Business',ja:'事業',ko:'사업',es:'Negocio',fr:'Activité',de:'Geschäft',pt:'Negócio'},
+  debt:{zh:'负债','zh-TW':'負債',en:'Debt',ja:'負債',ko:'부채',es:'Deuda',fr:'Dette',de:'Schulden',pt:'Dívida'},
+  other:{zh:'其他','zh-TW':'其他',en:'Other',ja:'その他',ko:'기타',es:'Otros',fr:'Autres',de:'Sonstiges',pt:'Outros'}
+};
+const QUICK_ADD_TEXT={
+  zh:{all:'全部',housing:'房',vehicle:'车',work:'工作',family:'家庭',business:'生意',debt:'负债',monthly:'每月',yearly:'每年',day:'日',start:'开始日期',add:'添加',cancel:'取消',back:'返回',search:'搜索工资、房贷、车贷……',empty:'没有找到匹配的预设',selected:'将添加 {n} 个事件',
+    salary:'工资',bonus:'奖金',sideIncome:'副业收入',rent:'房租',mortgage:'房贷还款',housingCosts:'住房固定支出',carLoan:'车贷还款',vehicleCosts:'养车支出',familyCosts:'家庭固定支出',loanRepayment:'贷款还款',debtPlan:'债务还款计划',customerReceipt:'客户回款',supplierPayment:'采购付款',payroll:'员工工资',businessRent:'经营房租',operatingCosts:'每月经营支出',utilities:'水电通讯',propertyFee:'物业费',fuel:'油费 / 充电',parking:'停车费',carInsurance:'车险',living:'生活费',education:'教育',insurance:'保险',elderSupport:'赡养',extraRepayment:'额外还款',marketing:'营销费用',tax:'税费'},
+  'zh-TW':{all:'全部',housing:'房',vehicle:'車',work:'工作',family:'家庭',business:'生意',debt:'負債',monthly:'每月',yearly:'每年',day:'日',start:'開始日期',add:'新增',cancel:'取消',back:'返回',search:'搜尋薪資、房貸、車貸……',empty:'找不到符合的預設',selected:'將新增 {n} 個事件',salary:'薪資',bonus:'獎金',sideIncome:'副業收入',rent:'房租',mortgage:'房貸還款',housingCosts:'住房固定支出',carLoan:'車貸還款',vehicleCosts:'養車支出',familyCosts:'家庭固定支出',loanRepayment:'貸款還款',debtPlan:'債務還款計畫',customerReceipt:'客戶回款',supplierPayment:'採購付款',payroll:'員工薪資',businessRent:'經營房租',operatingCosts:'每月經營支出',utilities:'水電通訊',propertyFee:'物業費',fuel:'油費 / 充電',parking:'停車費',carInsurance:'車險',living:'生活費',education:'教育',insurance:'保險',elderSupport:'贍養',extraRepayment:'額外還款',marketing:'行銷費用',tax:'稅費'},
+  en:{all:'All',housing:'Home',vehicle:'Car',work:'Work',family:'Family',business:'Business',debt:'Debt',monthly:'Monthly',yearly:'Yearly',day:'day',start:'Start date',add:'Add',cancel:'Cancel',back:'Back',search:'Search salary, mortgage, car loan…',empty:'No matching presets',selected:'Adds {n} events',salary:'Salary',bonus:'Bonus',sideIncome:'Side income',rent:'Rent',mortgage:'Mortgage repayment',housingCosts:'Housing costs',carLoan:'Car loan repayment',vehicleCosts:'Vehicle costs',familyCosts:'Family costs',loanRepayment:'Loan repayment',debtPlan:'Debt repayment plan',customerReceipt:'Customer receipt',supplierPayment:'Supplier payment',payroll:'Payroll',businessRent:'Business rent',operatingCosts:'Monthly operating costs',utilities:'Utilities & telecom',propertyFee:'Property / management fee',fuel:'Fuel / charging',parking:'Parking',carInsurance:'Car insurance',living:'Living costs',education:'Education',insurance:'Insurance',elderSupport:'Family support',extraRepayment:'Extra repayment',marketing:'Marketing',tax:'Tax'},
+  ja:{all:'すべて',housing:'住宅',vehicle:'車',work:'仕事',family:'家族',business:'事業',debt:'負債',monthly:'毎月',yearly:'毎年',day:'日',start:'開始日',add:'追加',cancel:'キャンセル',back:'戻る',search:'給与、住宅ローン、自動車ローンを検索…',empty:'該当するプリセットがありません',selected:'{n}件のイベントを追加',salary:'給与',bonus:'賞与',sideIncome:'副業収入',rent:'家賃',mortgage:'住宅ローン返済',housingCosts:'住居固定費',carLoan:'自動車ローン返済',vehicleCosts:'車両費',familyCosts:'家族固定費',loanRepayment:'ローン返済',debtPlan:'返済計画',customerReceipt:'顧客入金',supplierPayment:'仕入支払',payroll:'従業員給与',businessRent:'事業家賃',operatingCosts:'毎月の運営費',utilities:'光熱・通信',propertyFee:'管理費',fuel:'燃料 / 充電',parking:'駐車場',carInsurance:'自動車保険',living:'生活費',education:'教育',insurance:'保険',elderSupport:'扶養',extraRepayment:'追加返済',marketing:'広告費',tax:'税金'},
+  ko:{all:'전체',housing:'주택',vehicle:'차',work:'직장',family:'가족',business:'사업',debt:'부채',monthly:'매월',yearly:'매년',day:'일',start:'시작일',add:'추가',cancel:'취소',back:'뒤로',search:'급여, 주택대출, 자동차대출 검색…',empty:'일치하는 프리셋 없음',selected:'이벤트 {n}개 추가',salary:'급여',bonus:'보너스',sideIncome:'부업 수입',rent:'임대료',mortgage:'주택대출 상환',housingCosts:'주거 고정비',carLoan:'자동차대출 상환',vehicleCosts:'차량 유지비',familyCosts:'가족 고정비',loanRepayment:'대출 상환',debtPlan:'부채 상환 계획',customerReceipt:'고객 입금',supplierPayment:'구매 대금',payroll:'직원 급여',businessRent:'사업 임대료',operatingCosts:'월 운영비',utilities:'공과금·통신',propertyFee:'관리비',fuel:'유류 / 충전',parking:'주차비',carInsurance:'자동차 보험',living:'생활비',education:'교육',insurance:'보험',elderSupport:'부양',extraRepayment:'추가 상환',marketing:'마케팅',tax:'세금'},
+  es:{all:'Todo',housing:'Casa',vehicle:'Coche',work:'Trabajo',family:'Familia',business:'Negocio',debt:'Deuda',monthly:'Mensual',yearly:'Anual',day:'día',start:'Inicio',add:'Añadir',cancel:'Cancelar',back:'Volver',search:'Buscar salario, hipoteca, préstamo de coche…',empty:'No hay preajustes',selected:'Añade {n} eventos',salary:'Salario',bonus:'Bonus',sideIncome:'Ingreso extra',rent:'Alquiler',mortgage:'Hipoteca',housingCosts:'Gastos de vivienda',carLoan:'Préstamo de coche',vehicleCosts:'Gastos del coche',familyCosts:'Gastos familiares',loanRepayment:'Pago de préstamo',debtPlan:'Plan de deuda',customerReceipt:'Cobro de cliente',supplierPayment:'Pago a proveedor',payroll:'Nómina',businessRent:'Alquiler del negocio',operatingCosts:'Gastos operativos mensuales',utilities:'Servicios y telecom.',propertyFee:'Comunidad / gestión',fuel:'Combustible / carga',parking:'Aparcamiento',carInsurance:'Seguro del coche',living:'Vida diaria',education:'Educación',insurance:'Seguro',elderSupport:'Apoyo familiar',extraRepayment:'Pago extra',marketing:'Marketing',tax:'Impuestos'},
+  fr:{all:'Tout',housing:'Logement',vehicle:'Voiture',work:'Travail',family:'Famille',business:'Activité',debt:'Dette',monthly:'Mensuel',yearly:'Annuel',day:'jour',start:'Début',add:'Ajouter',cancel:'Annuler',back:'Retour',search:'Rechercher salaire, prêt immobilier, auto…',empty:'Aucun préréglage',selected:'Ajoute {n} événements',salary:'Salaire',bonus:'Prime',sideIncome:'Revenu complémentaire',rent:'Loyer',mortgage:'Remboursement immobilier',housingCosts:'Frais de logement',carLoan:'Crédit auto',vehicleCosts:'Frais de voiture',familyCosts:'Frais familiaux',loanRepayment:'Remboursement de prêt',debtPlan:'Plan de remboursement',customerReceipt:'Encaissement client',supplierPayment:'Paiement fournisseur',payroll:'Salaires',businessRent:'Loyer professionnel',operatingCosts:'Frais mensuels d’activité',utilities:'Énergie & télécom',propertyFee:'Charges / gestion',fuel:'Carburant / recharge',parking:'Stationnement',carInsurance:'Assurance auto',living:'Vie courante',education:'Éducation',insurance:'Assurance',elderSupport:'Soutien familial',extraRepayment:'Remboursement extra',marketing:'Marketing',tax:'Impôts'},
+  de:{all:'Alle',housing:'Wohnen',vehicle:'Auto',work:'Arbeit',family:'Familie',business:'Geschäft',debt:'Schulden',monthly:'Monatlich',yearly:'Jährlich',day:'Tag',start:'Startdatum',add:'Hinzufügen',cancel:'Abbrechen',back:'Zurück',search:'Gehalt, Hypothek, Autokredit suchen…',empty:'Keine passenden Vorlagen',selected:'Fügt {n} Ereignisse hinzu',salary:'Gehalt',bonus:'Bonus',sideIncome:'Nebeneinkommen',rent:'Miete',mortgage:'Hypothekenrate',housingCosts:'Wohnkosten',carLoan:'Autokreditrate',vehicleCosts:'Fahrzeugkosten',familyCosts:'Familienkosten',loanRepayment:'Kreditrate',debtPlan:'Tilgungsplan',customerReceipt:'Kundenzahlung',supplierPayment:'Lieferantenzahlung',payroll:'Löhne',businessRent:'Geschäftsmiete',operatingCosts:'Monatliche Betriebskosten',utilities:'Versorgung & Telekom',propertyFee:'Hausgeld / Verwaltung',fuel:'Kraftstoff / Laden',parking:'Parken',carInsurance:'Kfz-Versicherung',living:'Lebenshaltung',education:'Bildung',insurance:'Versicherung',elderSupport:'Familienunterstützung',extraRepayment:'Sondertilgung',marketing:'Marketing',tax:'Steuern'},
+  pt:{all:'Tudo',housing:'Casa',vehicle:'Carro',work:'Trabalho',family:'Família',business:'Negócio',debt:'Dívida',monthly:'Mensal',yearly:'Anual',day:'dia',start:'Data inicial',add:'Adicionar',cancel:'Cancelar',back:'Voltar',search:'Pesquisar salário, crédito habitação, carro…',empty:'Sem predefinições',selected:'Adiciona {n} eventos',salary:'Salário',bonus:'Bónus',sideIncome:'Rendimento extra',rent:'Renda',mortgage:'Prestação da casa',housingCosts:'Custos de habitação',carLoan:'Prestação automóvel',vehicleCosts:'Custos do carro',familyCosts:'Custos familiares',loanRepayment:'Pagamento de empréstimo',debtPlan:'Plano de dívida',customerReceipt:'Recebimento de cliente',supplierPayment:'Pagamento a fornecedor',payroll:'Salários',businessRent:'Renda do negócio',operatingCosts:'Custos operacionais mensais',utilities:'Serviços e telecom.',propertyFee:'Condomínio / gestão',fuel:'Combustível / carga',parking:'Estacionamento',carInsurance:'Seguro automóvel',living:'Despesas diárias',education:'Educação',insurance:'Seguro',elderSupport:'Apoio familiar',extraRepayment:'Pagamento extra',marketing:'Marketing',tax:'Impostos'}
+};
+const QUICK_ADD_PRESETS=[
+  {id:'salary',category:'work',items:[qaItem('salary','income',1,'monthly',10,12000)]},
+  {id:'bonus',category:'work',items:[qaItem('bonus','income',1,null,null,10000)]},
+  {id:'sideIncome',category:'work',items:[qaItem('sideIncome','income',1,'monthly',20,3000)]},
+  {id:'rent',category:'housing',items:[qaItem('rent','housing',-1,'monthly',5,3000)]},
+  {id:'mortgage',category:'housing',items:[qaItem('mortgage','housing',-1,'monthly',20,5000,true)]},
+  {id:'housingCosts',category:'housing',items:[qaItem('mortgage','housing',-1,'monthly',20,5000,true),qaItem('propertyFee','housing',-1,'monthly',10,300),qaItem('utilities','living',-1,'monthly',15,500)]},
+  {id:'carLoan',category:'vehicle',items:[qaItem('carLoan','vehicle',-1,'monthly',20,2500,true)]},
+  {id:'vehicleCosts',category:'vehicle',items:[qaItem('fuel','vehicle',-1,'monthly',10,800),qaItem('parking','vehicle',-1,'monthly',5,300),qaItem('carInsurance','vehicle',-1,'yearly',null,4000)]},
+  {id:'familyCosts',category:'family',items:[qaItem('living','living',-1,'monthly',1,4000),qaItem('education','family',-1,'monthly',10,1500),qaItem('insurance','family',-1,'yearly',null,5000),qaItem('elderSupport','family',-1,'monthly',15,1000)]},
+  {id:'loanRepayment',category:'debt',items:[qaItem('loanRepayment','debt',-1,'monthly',20,3000,true)]},
+  {id:'debtPlan',category:'debt',items:[qaItem('loanRepayment','debt',-1,'monthly',20,3000,true),qaItem('extraRepayment','debt',-1,'monthly',28,1000,true)]},
+  {id:'customerReceipt',category:'business',items:[qaItem('customerReceipt','business',1,'daily',null,30000)]},
+  {id:'supplierPayment',category:'business',items:[qaItem('supplierPayment','business',-1,'monthly',15,20000)]},
+  {id:'payroll',category:'business',items:[qaItem('payroll','business',-1,'monthly',15,15000)]},
+  {id:'businessRent',category:'business',items:[qaItem('businessRent','business',-1,'monthly',1,5000)]},
+  {id:'operatingCosts',category:'business',items:[qaItem('payroll','business',-1,'monthly',15,15000),qaItem('businessRent','business',-1,'monthly',1,5000),qaItem('utilities','business',-1,'monthly',10,1000),qaItem('marketing','business',-1,'monthly',5,3000),qaItem('tax','business',-1,'monthly',20,2000)]}
+];
+function qaItem(name,group,direction,frequency,day,defaultAmount,affectsDebt=false){return {name,group,direction,frequency,day,defaultAmount,affectsDebt}}
+function qaText(key){const lang=QUICK_ADD_TEXT[currentLanguage]||QUICK_ADD_TEXT.en;return lang[key]??QUICK_ADD_TEXT.en[key]??key}
+function recurrenceUnitText(unit){
+  const labels={
+    zh:{daily:'天',weekly:'周',monthly:'个月',yearly:'年'},'zh-TW':{daily:'天',weekly:'週',monthly:'個月',yearly:'年'},
+    en:{daily:'days',weekly:'weeks',monthly:'months',yearly:'years'},ja:{daily:'日',weekly:'週',monthly:'か月',yearly:'年'},
+    ko:{daily:'일',weekly:'주',monthly:'개월',yearly:'년'},es:{daily:'días',weekly:'sem.',monthly:'meses',yearly:'años'},
+    fr:{daily:'jours',weekly:'sem.',monthly:'mois',yearly:'ans'},de:{daily:'Tage',weekly:'Wo.',monthly:'Monate',yearly:'Jahre'},
+    pt:{daily:'dias',weekly:'sem.',monthly:'meses',yearly:'anos'}
+  };
+  const lang=labels[currentLanguage]||labels.en;return lang[unit]||labels.en[unit]||unit;
+}
+function recurrenceDayText(day){
+  const n=Math.max(1,Math.min(31,Math.floor(Number(day)||1)));
+  const labels={
+    zh:`${n} 日`,'zh-TW':`${n} 日`,en:`Day ${n}`,ja:`${n}日`,ko:`${n}일`,
+    es:`día ${n}`,fr:`jour ${n}`,de:`Tag ${n}`,pt:`dia ${n}`
+  };
+  return labels[currentLanguage]||labels.en;
+}
+function weekdayOccurrenceText(day){
+  const d=((Number(day)%7)+7)%7;
+  if(currentLanguage==='zh') return ['周日','周一','周二','周三','周四','周五','周六'][d];
+  if(currentLanguage==='zh-TW') return ['週日','週一','週二','週三','週四','週五','週六'][d];
+  const date=new Date(Date.UTC(2026,7,16+d)); // 2026-08-16 is Sunday
+  try{return new Intl.DateTimeFormat(localeCode(),{weekday:'long',timeZone:'UTC'}).format(date)}catch(e){return ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d]}
+}
+function monthlyOccurrenceText(day){
+  const n=Math.max(1,Math.min(31,Math.floor(Number(day)||1)));
+  if(currentLanguage==='en') return `Monthly · Day ${n}`;
+  if(currentLanguage==='ja') return `毎月 ${n}日`;
+  if(currentLanguage==='ko') return `매월 ${n}일`;
+  if(currentLanguage==='es') return `Mensual · día ${n}`;
+  if(currentLanguage==='fr') return `Mensuel · jour ${n}`;
+  if(currentLanguage==='de') return `Monatlich · Tag ${n}`;
+  if(currentLanguage==='pt') return `Mensal · dia ${n}`;
+  if(currentLanguage==='zh-TW') return `每月 ${n} 日`;
+  return `每月 ${n} 日`;
+}
+function quickAddDayControl(role,value){
+  const n=Math.max(1,Math.min(31,Math.floor(Number(value)||1)));
+  const input=`<input class="quick-add-day" data-role="${role}" type="number" min="1" max="31" value="${n}">`;
+  if(currentLanguage==='en') return `<span class="quick-add-day-label">Day</span>${input}`;
+  if(['es','fr','de','pt'].includes(currentLanguage)) return `<span class="quick-add-day-label">${esc(recurrenceDayText(n).replace(String(n),'').trim())}</span>${input}`;
+  return `${input}<span>${esc(recurrenceDayText(n).replace(String(n),'').trim())}</span>`;
+}
+function qaGroupName(key,lang=currentLanguage){const d=QUICK_ADD_GROUPS[key]||QUICK_ADD_GROUPS.other;return d[lang]||d.en}
+function normalizedGroupName(name){return String(name||'').trim().toLocaleLowerCase()}
+function ensureQuickAddGroup(key){
+  const localizedName=qaGroupName(key,currentLanguage);
+  const target=normalizedGroupName(localizedName);
+  let group=(data.groups||[]).find(g=>normalizedGroupName(g.name)===target);
+  if(group)return group.id;
+  group={id:newGroupId(data.groups||[]),name:localizedName};
+  data.groups.push(group);return group.id;
+}
+let quickAddCategory='all',quickAddPresetId=null;
+function openQuickAdd(){
   closeVersionMenu();
-  renderPresetGrid();
-  document.getElementById('presetModal')?.classList.add('show');
-  document.getElementById('presetTrigger')?.classList.add('open');
+  quickAddCategory='all';
+  quickAddPresetId=null;
+  const search=document.getElementById('quickAddSearch');
+  if(search) search.value='';
+  document.getElementById('quickAddModal')?.classList.add('show');
+  showQuickAddLibrary();
 }
-function closePresetModal(){
-  document.getElementById('presetModal')?.classList.remove('show');
-  document.getElementById('presetTrigger')?.classList.remove('open');
+function closeQuickAdd(){document.getElementById('quickAddModal')?.classList.remove('show');quickAddPresetId=null}
+function showQuickAddLibrary(){
+  quickAddPresetId=null;
+  document.getElementById('quickAddLibrary')?.style.removeProperty('display');
+  document.getElementById('quickAddEditor')?.classList.remove('show');
+  document.getElementById('quickAddBack')?.classList.remove('show');
+  const title=document.getElementById('quickAddTitle');if(title)title.textContent=trBase('快速添加');
+  const subtitle=document.getElementById('quickAddSubtitle');if(subtitle)subtitle.textContent=trBase('选择常用项目，一次添加一个或一组事件。');
+  renderQuickAddLibrary();
 }
-function presetDate(dayOffset=0){
-  const base=new Date((workspace.asOf||todayISO())+'T00:00:00');
-  base.setDate(base.getDate()+dayOffset);
-  return localISO(base);
+function renderQuickAddLibrary(){
+  const catBox=document.getElementById('quickAddCategories'),grid=document.getElementById('quickAddGrid'),search=document.getElementById('quickAddSearch');if(!catBox||!grid)return;
+  const cats=['all','housing','vehicle','work','family','business','debt'];
+  catBox.innerHTML=cats.map(c=>`<button type="button" class="quick-add-category ${quickAddCategory===c?'active':''}" onclick="setQuickAddCategory('${c}')">${esc(qaText(c))}</button>`).join('');
+  if(search)search.placeholder=qaText('search');
+  const q=String(search?.value||'').trim().toLocaleLowerCase();
+  const items=QUICK_ADD_PRESETS.filter(p=>(quickAddCategory==='all'||p.category===quickAddCategory)&&(!q||qaText(p.id).toLocaleLowerCase().includes(q)||p.items.some(i=>qaText(i.name).toLocaleLowerCase().includes(q))));
+  grid.innerHTML=items.length?items.map(p=>`<button class="quick-add-card" type="button" onclick="editQuickAdd('${p.id}')"><b>${esc(qaText(p.id))}</b><span>${p.items.length===1?esc(qaText(p.items[0].name)):esc(qaText('selected').replace('{n}',p.items.length))}</span></button>`).join(''):`<div class="quick-add-empty">${esc(qaText('empty'))}</div>`;
 }
-
-/* Presets are language-neutral blueprints. Localized names are resolved only
-   when the user creates a version; after creation they become normal user data. */
-const PRESET_TEXT={
-  zh:{
-    personal:{title:'个人日常',desc:'工资、住房、生活和日常固定支出',meta:'适合个人基础收支预测'},
-    family:{title:'家庭预算',desc:'双收入、房贷、日常生活、教育与保险',meta:'适合家庭共同财务规划'},
-    debt:{title:'负债还款',desc:'正常还款与额外还款并行，观察债务下降',meta:'适合贷款或欠款规划'},
-    freelance:{title:'自由职业',desc:'固定合作、项目回款与周期性支出并存',meta:'适合项目制、接单型收入'},
-    business:{title:'小生意',desc:'回款、采购、工资、房租、营销和经营贷款',meta:'适合个体经营和小公司'},
-    cash:{title:'纯现金预测',desc:'只关注收入和支出，不使用负债变化',meta:'最简单的现金预测结构'},
-    blank:{title:'空白模板',desc:'只保留当前现金、负债和安全现金线',meta:'从零开始自己建立'},
-    groupIncome:'收入',groupHousing:'住房',groupLiving:'生活',groupHousehold:'家庭支出',groupChildren:'教育',groupInsurance:'保险',groupDebt:'还款',groupProjects:'项目收入',groupWork:'工作支出',groupSales:'销售回款',groupPurchasing:'采购',groupOperating:'经营费用',groupExpenses:'支出',
-    salary:'工资',salaryPrimary:'主要工资',salarySecondary:'第二份收入',rent:'住房支出',living:'生活费',utilities:'水电通讯',plannedPurchase:'计划性支出',mortgage:'房贷还款',groceries:'日常采购',education:'教育支出',insurance:'保险费',monthlyIncome:'每月收入',essentialLiving:'基本生活支出',loanPayment:'贷款还款',extraDebtPayment:'额外还款',retainerIncome:'固定合作收入',projectPayment:'项目回款',workTools:'软件与工具',quarterlyTax:'季度税费',salesReceipts:'销售回款',purchasePayment:'采购付款',payroll:'工资',businessRent:'房租',marketing:'营销费用',businessLoan:'经营贷款还款',monthlyExpense:'每月支出'
-  },
-  en:{
-    personal:{title:'Personal Basics',desc:'Salary, housing, living costs and recurring bills',meta:'For everyday personal forecasting'},
-    family:{title:'Household Budget',desc:'Two incomes, mortgage, household, education and insurance',meta:'For shared household planning'},
-    debt:{title:'Debt Payoff',desc:'Regular and extra repayments to track debt reduction',meta:'For loans and debt planning'},
-    freelance:{title:'Freelance',desc:'Retainers, project payments and recurring work costs',meta:'For project-based and variable income'},
-    business:{title:'Small Business',desc:'Receipts, purchasing, payroll, rent, marketing and business debt',meta:'For sole traders and small businesses'},
-    cash:{title:'Cash Only',desc:'Track income and expenses without debt changes',meta:'The simplest cash forecast'},
-    blank:{title:'Blank',desc:'Keep only current cash, debt and cash safety threshold',meta:'Start from scratch'},
-    groupIncome:'Income',groupHousing:'Housing',groupLiving:'Living',groupHousehold:'Household',groupChildren:'Education',groupInsurance:'Insurance',groupDebt:'Debt Repayment',groupProjects:'Project Income',groupWork:'Work Costs',groupSales:'Sales Receipts',groupPurchasing:'Purchasing',groupOperating:'Operating Costs',groupExpenses:'Expenses',
-    salary:'Salary',salaryPrimary:'Primary Salary',salarySecondary:'Second Income',rent:'Housing Cost',living:'Living Costs',utilities:'Utilities & Telecom',plannedPurchase:'Planned Purchase',mortgage:'Mortgage Repayment',groceries:'Groceries',education:'Education',insurance:'Insurance Premium',monthlyIncome:'Monthly Income',essentialLiving:'Essential Living Costs',loanPayment:'Loan Repayment',extraDebtPayment:'Extra Debt Payment',retainerIncome:'Retainer Income',projectPayment:'Project Payment',workTools:'Software & Tools',quarterlyTax:'Quarterly Tax',salesReceipts:'Sales Receipts',purchasePayment:'Supplier Payment',payroll:'Payroll',businessRent:'Rent',marketing:'Marketing',businessLoan:'Business Loan Repayment',monthlyExpense:'Monthly Expenses'
-  },
-  ja:{
-    personal:{title:'個人生活',desc:'給与、住居費、生活費、日常の固定支出',meta:'個人の基本的な資金予測向け'},
-    family:{title:'家計予算',desc:'二つの収入、住宅ローン、生活費、教育、保険',meta:'家族の共同資金計画向け'},
-    debt:{title:'負債返済',desc:'通常返済と追加返済で負債の減少を確認',meta:'ローン・負債計画向け'},
-    freelance:{title:'フリーランス',desc:'継続契約、案件入金、定期的な仕事支出',meta:'案件・変動収入向け'},
-    business:{title:'小規模事業',desc:'入金、仕入、給与、家賃、広告、事業ローン',meta:'個人事業・小規模企業向け'},
-    cash:{title:'現金のみ',desc:'負債変動を使わず収入と支出だけを追跡',meta:'最もシンプルな現金予測'},
-    blank:{title:'空白',desc:'現在の現金、負債、安全現金ラインのみ保持',meta:'ゼロから作成'},
-    groupIncome:'収入',groupHousing:'住居',groupLiving:'生活',groupHousehold:'家計支出',groupChildren:'教育',groupInsurance:'保険',groupDebt:'返済',groupProjects:'案件収入',groupWork:'仕事支出',groupSales:'売上入金',groupPurchasing:'仕入',groupOperating:'運営費',groupExpenses:'支出',
-    salary:'給与',salaryPrimary:'主な給与',salarySecondary:'第二の収入',rent:'住居費',living:'生活費',utilities:'水道光熱・通信',plannedPurchase:'予定支出',mortgage:'住宅ローン返済',groceries:'食費・日用品',education:'教育費',insurance:'保険料',monthlyIncome:'毎月収入',essentialLiving:'基本生活費',loanPayment:'ローン返済',extraDebtPayment:'追加返済',retainerIncome:'継続契約収入',projectPayment:'案件入金',workTools:'ソフト・ツール',quarterlyTax:'四半期税金',salesReceipts:'売上入金',purchasePayment:'仕入支払',payroll:'給与',businessRent:'家賃',marketing:'広告費',businessLoan:'事業ローン返済',monthlyExpense:'毎月支出'
+function setQuickAddCategory(category){quickAddCategory=category;renderQuickAddLibrary()}
+function editQuickAdd(id){
+  const preset=QUICK_ADD_PRESETS.find(p=>p.id===id);if(!preset)return;quickAddPresetId=id;
+  document.getElementById('quickAddLibrary').style.display='none';document.getElementById('quickAddEditor').classList.add('show');document.getElementById('quickAddBack').classList.add('show');
+  document.getElementById('quickAddTitle').textContent=qaText(id);document.getElementById('quickAddSubtitle').textContent='';document.getElementById('quickAddStart').value=workspace.asOf||todayISO();const qaEndMode=document.getElementById('quickAddEndMode');if(qaEndMode)qaEndMode.value='none';const qaEnd=document.getElementById('quickAddEnd');if(qaEnd)qaEnd.value='';toggleQuickAddEndDate();
+  const rows=document.getElementById('quickAddRows');
+  rows.innerHTML=preset.items.map((item,index)=>{
+    const isCombo=preset.items.length>1,checked='checked',freq=item.frequency||'once';
+    return `<div class="quick-add-row" data-item-index="${index}"><input data-role="enabled" type="checkbox" ${checked} ${isCombo?'':'style="visibility:hidden"'}><div class="item-name">${esc(qaText(item.name))}</div><input class="quick-add-money" data-role="amount" type="number" min="0" step="0.01" value="${item.defaultAmount||0}" required><div class="quick-add-schedule"><select class="quick-add-frequency" data-role="frequency" onchange="renderQuickAddScheduleParam(this.closest('.quick-add-row'))"><option value="once" ${freq==='once'?'selected':''}>${esc(trBase('单次'))}</option><option value="daily" ${freq==='daily'?'selected':''}>${esc(trBase('每天'))}</option><option value="weekly" ${freq==='weekly'?'selected':''}>${esc(trBase('每周'))}</option><option value="monthly" ${freq==='monthly'?'selected':''}>${esc(trBase('每月'))}</option><option value="yearly" ${freq==='yearly'?'selected':''}>${esc(trBase('每年'))}</option><option value="custom" ${freq==='custom'?'selected':''}>${esc(trBase('自定义周期'))}</option></select><span class="quick-add-param" data-role="schedule-param" data-default-day="${item.day||1}"></span></div></div>`;
+  }).join('');
+  rows.querySelectorAll('.quick-add-row').forEach(renderQuickAddScheduleParam);
+  updateQuickAddNote();
+  rows.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',updateQuickAddNote));
+  applyI18n(document.getElementById('quickAddEditor'));
+}
+function quickAddYearControl(month,day,rolePrefix='year'){
+  const m=Math.max(1,Math.min(12,Number(month||1)));
+  const max=daysInMonth(new Date().getFullYear(),m);
+  const d=Math.max(1,Math.min(max,Number(day||1)));
+  const monthOptions=Array.from({length:12},(_,i)=>`<option value="${i+1}" ${i+1===m?'selected':''}>${esc(trBase(`${i+1} 月`))}</option>`).join('');
+  const dayOptions=Array.from({length:max},(_,i)=>`<option value="${i+1}" ${i+1===d?'selected':''}>${esc(recurrenceDayText(i+1))}</option>`).join('');
+  return `<select class="quick-add-year-month" data-role="${rolePrefix}-month" onchange="syncQuickAddYearDay(this.closest('.quick-add-row'),'${rolePrefix}')">${monthOptions}</select><select class="quick-add-year-day" data-role="${rolePrefix}-year-day">${dayOptions}</select>`;
+}
+function syncQuickAddYearDay(row,rolePrefix='year'){
+  if(!row)return;
+  const monthEl=row.querySelector(`[data-role="${rolePrefix}-month"]`),dayEl=row.querySelector(`[data-role="${rolePrefix}-year-day"]`);if(!monthEl||!dayEl)return;
+  const month=Math.max(1,Math.min(12,Number(monthEl.value||1))),preferred=Math.max(1,Number(dayEl.value||1)),max=daysInMonth(new Date().getFullYear(),month);
+  dayEl.innerHTML=Array.from({length:max},(_,i)=>`<option value="${i+1}">${esc(recurrenceDayText(i+1))}</option>`).join('');
+  dayEl.value=String(Math.min(preferred,max));
+}
+function toggleQuickAddEndDate(){
+  const mode=document.getElementById('quickAddEndMode')?.value||'none',wrap=document.getElementById('quickAddEndDateWrap'),end=document.getElementById('quickAddEnd'),start=document.getElementById('quickAddStart');
+  wrap?.classList.toggle('show',mode==='date');
+  if(mode==='date'&&end&&!end.value)end.value=start?.value||workspace.asOf||todayISO();
+}
+function renderQuickAddScheduleParam(row){
+  if(!row)return;
+  const frequency=row.querySelector('[data-role="frequency"]')?.value||'once';
+  const box=row.querySelector('[data-role="schedule-param"]');if(!box)return;
+  const defaultDay=Math.max(1,Math.min(31,Number(box.dataset.defaultDay||1)));
+  const start=document.getElementById('quickAddStart')?.value||workspace.asOf||todayISO();
+  if(frequency==='once'){
+    box.innerHTML=`<input class="quick-add-once-date" data-role="once-date" type="date" value="${start}" required>`;
   }
-};
-function presetText(key,field){
-  const lang=PRESET_TEXT[currentLanguage]||PRESET_TEXT.zh;
-  const fallback=PRESET_TEXT.zh;
-  const value=lang[key]??fallback[key]??key;
-  return field&&value&&typeof value==='object'?(value[field]??fallback[key]?.[field]??key):value;
-}
-const PRESET_DEFINITIONS={
-  personal:{openingCash:20000,openingDebt:0,cashSafetyThreshold:5000,groups:['groupIncome','groupHousing','groupLiving'],events:[
-    {name:'salary',amount:12000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
-    {name:'rent',amount:-3500,group:'groupHousing',repeat:{frequency:'monthly',dayOfMonth:5}},
-    {name:'living',amount:-2800,group:'groupLiving',repeat:{frequency:'monthly',dayOfMonth:'asOf'}},
-    {name:'utilities',amount:-600,group:'groupHousing',repeat:{frequency:'monthly',dayOfMonth:15}},
-    {name:'plannedPurchase',amount:-3000,group:'groupLiving',offset:45}
-  ]},
-  family:{openingCash:40000,openingDebt:180000,cashSafetyThreshold:15000,groups:['groupIncome','groupHousing','groupHousehold','groupChildren','groupInsurance'],events:[
-    {name:'salaryPrimary',amount:15000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
-    {name:'salarySecondary',amount:8000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:20}},
-    {name:'mortgage',amount:-4500,group:'groupHousing',repeat:{frequency:'monthly',dayOfMonth:5},affectsDebt:true},
-    {name:'groceries',amount:-1200,group:'groupHousehold',repeat:{frequency:'weekly',weekday:6}},
-    {name:'utilities',amount:-800,group:'groupHousehold',repeat:{frequency:'monthly',dayOfMonth:15}},
-    {name:'education',amount:-1500,group:'groupChildren',repeat:{frequency:'monthly',dayOfMonth:1}},
-    {name:'insurance',amount:-6000,group:'groupInsurance',offset:90,repeat:{frequency:'yearly'}}
-  ]},
-  debt:{openingCash:15000,openingDebt:100000,cashSafetyThreshold:8000,groups:['groupIncome','groupLiving','groupDebt'],events:[
-    {name:'monthlyIncome',amount:12000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
-    {name:'essentialLiving',amount:-4500,group:'groupLiving',repeat:{frequency:'monthly',dayOfMonth:'asOf'}},
-    {name:'loanPayment',amount:-4000,group:'groupDebt',repeat:{frequency:'monthly',dayOfMonth:20},affectsDebt:true},
-    {name:'extraDebtPayment',amount:-10000,group:'groupDebt',offset:60,affectsDebt:true}
-  ]},
-  freelance:{openingCash:25000,openingDebt:0,cashSafetyThreshold:12000,groups:['groupProjects','groupLiving','groupWork'],events:[
-    {name:'retainerIncome',amount:6000,group:'groupProjects',repeat:{frequency:'monthly',dayOfMonth:15}},
-    {name:'projectPayment',amount:12000,group:'groupProjects',offset:30},
-    {name:'living',amount:-5000,group:'groupLiving',repeat:{frequency:'monthly',dayOfMonth:'asOf'}},
-    {name:'workTools',amount:-500,group:'groupWork',repeat:{frequency:'monthly',dayOfMonth:5}},
-    {name:'quarterlyTax',amount:-6000,group:'groupWork',offset:75,repeat:{frequency:'monthly',interval:3}}
-  ]},
-  business:{openingCash:80000,openingDebt:30000,cashSafetyThreshold:30000,groups:['groupSales','groupPurchasing','groupOperating','groupDebt'],events:[
-    {name:'salesReceipts',amount:15000,group:'groupSales',repeat:{frequency:'weekly',weekday:5}},
-    {name:'purchasePayment',amount:-30000,group:'groupPurchasing',repeat:{frequency:'monthly',dayOfMonth:5}},
-    {name:'payroll',amount:-20000,group:'groupOperating',repeat:{frequency:'monthly',dayOfMonth:15}},
-    {name:'businessRent',amount:-8000,group:'groupOperating',repeat:{frequency:'monthly',dayOfMonth:1}},
-    {name:'marketing',amount:-2000,group:'groupOperating',repeat:{frequency:'weekly',weekday:1}},
-    {name:'businessLoan',amount:-5000,group:'groupDebt',repeat:{frequency:'monthly',dayOfMonth:20},affectsDebt:true}
-  ]},
-  cash:{openingCash:10000,openingDebt:0,cashSafetyThreshold:3000,groups:['groupIncome','groupExpenses'],events:[
-    {name:'monthlyIncome',amount:8000,group:'groupIncome',repeat:{frequency:'monthly',dayOfMonth:10}},
-    {name:'monthlyExpense',amount:-5000,group:'groupExpenses',repeat:{frequency:'monthly',dayOfMonth:20}}
-  ]},
-  blank:{openingCash:0,openingDebt:0,cashSafetyThreshold:0,groups:[],events:[]}
-};
-const PRESET_ORDER=['personal','family','debt','freelance','business','cash','blank'];
-function renderPresetGrid(){
-  const grid=document.getElementById('presetGrid');if(!grid)return;
-  grid.innerHTML=PRESET_ORDER.map(key=>`<button class="preset-card" type="button" onclick="createVersionFromPreset('${key}')"><span class="preset-card-title"><span>${esc(presetText(key,'title'))}</span><span class="go">›</span></span><span class="preset-card-desc">${esc(presetText(key,'desc'))}</span><span class="preset-card-meta">${esc(presetText(key,'meta'))}</span></button>`).join('');
-}
-function buildPresetData(key){
-  const def=PRESET_DEFINITIONS[key]||PRESET_DEFINITIONS.cash;
-  const d=emptyData();
-  d.openingCash=def.openingCash;d.openingDebt=def.openingDebt;d.cashSafetyThreshold=def.cashSafetyThreshold;
-  const groupIds={};
-  for(const groupKey of def.groups){
-    const g={id:newGroupId(d.groups),name:presetText(groupKey)};
-    d.groups.push(g);groupIds[groupKey]=g.id;
+  else if(frequency==='monthly'){box.innerHTML=quickAddDayControl('day',defaultDay);}
+  else if(frequency==='weekly'){
+    const weekday=new Date(start+'T00:00:00').getDay();
+    box.innerHTML=`<select class="quick-add-weekday" data-role="weekday">${[1,2,3,4,5,6,0].map(d=>`<option value="${d}" ${d===weekday?'selected':''}>${esc(weekdayOccurrenceText(d))}</option>`).join('')}</select>`;
   }
-  const asOfDate=new Date((workspace.asOf||todayISO())+'T00:00:00');
-  const asOfDay=asOfDate.getDate();
-  for(const spec of def.events){
-    const start=presetDate(spec.offset||0);
-    const e={id:newEventId(d.events),name:presetText(spec.name),amount:spec.amount,start};
-    if(spec.group&&groupIds[spec.group])e.groupId=groupIds[spec.group];
-    if(spec.affectsDebt)e.affectsDebt=true;
-    if(spec.repeat){
-      const r={frequency:spec.repeat.frequency,interval:Math.max(1,Number(spec.repeat.interval||1))};
-      if(r.frequency==='weekly')r.weekday=Number(spec.repeat.weekday??new Date(start+'T00:00:00').getDay());
-      if(r.frequency==='monthly')r.dayOfMonth=spec.repeat.dayOfMonth==='asOf'?asOfDay:Number(spec.repeat.dayOfMonth||new Date(start+'T00:00:00').getDate());
-      if(r.frequency==='yearly'){
-        const sd=new Date(start+'T00:00:00');
-        r.month=sd.getMonth()+1;r.dayOfMonth=sd.getDate();
-      }
-      e.recurrence=r;
+  else if(frequency==='yearly'){const d=new Date(start+'T00:00:00');box.innerHTML=quickAddYearControl(d.getMonth()+1,d.getDate(),'year');}
+  else if(frequency==='custom'){
+    box.innerHTML=`<span class="quick-add-custom-wrap"><span>${esc(trBase('每'))}</span><input class="quick-add-interval" data-role="interval" type="text" inputmode="numeric" pattern="[0-9]*" value="6" aria-label="${esc(trBase('循环周期'))}"><select class="quick-add-unit" data-role="unit" onchange="renderQuickAddCustomOccurrence(this.closest('.quick-add-row'))"><option value="daily">${esc(recurrenceUnitText('daily'))}</option><option value="weekly">${esc(recurrenceUnitText('weekly'))}</option><option value="monthly" selected>${esc(recurrenceUnitText('monthly'))}</option><option value="yearly">${esc(recurrenceUnitText('yearly'))}</option></select><span data-role="custom-occurrence"></span></span>`;
+    renderQuickAddCustomOccurrence(row);
+  }
+  else box.textContent='';
+  box.querySelectorAll('input,select').forEach(el=>el.addEventListener('input',updateQuickAddNote));
+  const intervalInput=box.querySelector('[data-role="interval"]');
+  if(intervalInput) intervalInput.addEventListener('input',()=>{intervalInput.value=intervalInput.value.replace(/\D/g,'').slice(0,3);});
+}
+function renderQuickAddCustomOccurrence(row){
+  if(!row)return;
+  const unit=row.querySelector('[data-role="unit"]')?.value||'monthly';
+  const box=row.querySelector('[data-role="custom-occurrence"]');if(!box)return;
+  const defaultDay=Math.max(1,Math.min(31,Number(row.querySelector('[data-role="schedule-param"]')?.dataset.defaultDay||1)));
+  const start=document.getElementById('quickAddStart')?.value||workspace.asOf||todayISO();
+  if(unit==='weekly'){
+    const weekday=new Date(start+'T00:00:00').getDay();
+    box.innerHTML=`<span class="quick-add-custom-sep">·</span><select class="quick-add-weekday" data-role="custom-weekday">${[1,2,3,4,5,6,0].map(d=>`<option value="${d}" ${d===weekday?'selected':''}>${esc(weekdayOccurrenceText(d))}</option>`).join('')}</select>`;
+  }else if(unit==='monthly'){
+    box.innerHTML=`<span class="quick-add-custom-sep">·</span>${quickAddDayControl('custom-day',defaultDay)}`;
+  }else if(unit==='yearly'){
+    const d=new Date(start+'T00:00:00');box.innerHTML=`<span class="quick-add-custom-sep">·</span>${quickAddYearControl(d.getMonth()+1,d.getDate(),'custom-year')}`;
+  }else box.textContent='';
+}
+function updateQuickAddNote(){
+  const preset=QUICK_ADD_PRESETS.find(p=>p.id===quickAddPresetId);if(!preset)return;
+  const rows=[...document.querySelectorAll('#quickAddRows .quick-add-row')];const n=rows.filter(r=>r.querySelector('[data-role="enabled"]')?.checked!==false&&Number(r.querySelector('[data-role="amount"]')?.value)>0).length;
+  const note=document.getElementById('quickAddNote');if(note)note.textContent=qaText('selected').replace('{n}',n);
+}
+function submitQuickAdd(event){
+  event.preventDefault();const preset=QUICK_ADD_PRESETS.find(p=>p.id===quickAddPresetId);if(!preset)return;
+  const start=document.getElementById('quickAddStart').value;if(!isISODate(start))return;
+  const rows=[...document.querySelectorAll('#quickAddRows .quick-add-row')];let added=0,lastId=null;
+  rows.forEach((row,index)=>{
+    const item=preset.items[index],enabled=row.querySelector('[data-role="enabled"]')?.checked!==false,raw=Number(row.querySelector('[data-role="amount"]')?.value||0);if(!enabled||!Number.isFinite(raw)||raw<=0)return;
+    const frequency=row.querySelector('[data-role="frequency"]')?.value||'once';
+    const eventStart=frequency==='once'?(row.querySelector('[data-role="once-date"]')?.value||start):start;
+    if(!isISODate(eventStart))return;
+    const e={id:newEventId(data.events),name:qaText(item.name),amount:Math.abs(raw)*item.direction,start:eventStart,groupId:ensureQuickAddGroup(item.group)};
+    if(item.affectsDebt)e.affectsDebt=true;
+    if(frequency==='daily')e.recurrence={frequency:'daily',interval:1};
+    else if(frequency==='weekly'){const weekday=Math.max(0,Math.min(6,Math.floor(Number(row.querySelector('[data-role="weekday"]')?.value??new Date(start+'T00:00:00').getDay()))));e.recurrence={frequency:'weekly',interval:1,weekday}}
+    else if(frequency==='monthly'){const day=Math.max(1,Math.min(31,Math.floor(Number(row.querySelector('[data-role="day"]')?.value||item.day||1))));e.recurrence={frequency:'monthly',interval:1,dayOfMonth:day}}
+    else if(frequency==='yearly'){e.recurrence={frequency:'yearly',interval:1,month:Math.max(1,Math.min(12,Number(row.querySelector('[data-role="year-month"]')?.value||1))),dayOfMonth:Math.max(1,Math.min(31,Number(row.querySelector('[data-role="year-year-day"]')?.value||1)))}}
+    else if(frequency==='custom'){
+      const interval=Math.max(2,Math.floor(Number(row.querySelector('[data-role="interval"]')?.value||2)));
+      const unit=row.querySelector('[data-role="unit"]')?.value||'monthly';
+      e.recurrence={frequency:unit,interval};
+      if(unit==='weekly')e.recurrence.weekday=Math.max(0,Math.min(6,Math.floor(Number(row.querySelector('[data-role="custom-weekday"]')?.value??new Date(start+'T00:00:00').getDay()))));
+      else if(unit==='monthly')e.recurrence.dayOfMonth=Math.max(1,Math.min(31,Math.floor(Number(row.querySelector('[data-role="custom-day"]')?.value||item.day||1))));
+      else if(unit==='yearly'){e.recurrence.month=Math.max(1,Math.min(12,Number(row.querySelector('[data-role="custom-year-month"]')?.value||1)));e.recurrence.dayOfMonth=Math.max(1,Math.min(31,Number(row.querySelector('[data-role="custom-year-year-day"]')?.value||1)));}
     }
-    d.events.push(e);
-  }
-  return {name:presetText(key,'title'),data:d};
-}
-function createVersionFromPreset(key){
-  syncCurrentVersion();
-  const preset=buildPresetData(key);
-  const normalized=normalize(preset.data);
-    const v={id:newDataVersionId(workspace.versions),name:uniqueVersionName(preset.name),data:normalized};
-  workspace.versions.push(v);
-  workspace.activeVersionId=v.id;
-  data=v.data;
-  selected={type:'profile',id:null};
-  hoveredListEventId=null;
-  collapseAllGroups();
-  closeDayPop();
-  closePresetModal();
-  persist();
-  render();
-  toast(currentLanguage==='en'?`Created “${v.name}”`:currentLanguage==='ja'?`「${v.name}」を作成しました`:`已创建「${v.name}」`);
+    if(e.recurrence&&document.getElementById('quickAddEndMode')?.value==='date'){
+      const until=document.getElementById('quickAddEnd')?.value||'';
+      if(until&&until>=e.start)e.recurrence.until=until;
+    }
+    data.events.push(e);lastId=e.id;added++;
+  });
+  if(!added)return;
+  selected={type:'event',id:lastId};persist();closeQuickAdd();render();toast(qaText('selected').replace('{n}',added));
 }
 
 function renderVersionSwitcher(){
@@ -1758,9 +2453,35 @@ function updateEventExplorerFromControls(){
   if(x.view!=='group'&&x.sort==='custom')x.sort='time';
   Store.touch();syncEventExplorerControls();renderEventList();
 }
+async function clearEventList(){
+  if(!(data.events?.length||data.groups?.length)){toast(trBase('暂无事件'));return;}
+  const confirmed=await appConfirmDialog({
+    title:trBase('清空事件'),
+    message:trBase('确定清空当前数据版本中的全部事件和分组吗？'),
+    okText:trBase('清空'),
+    cancelText:trBase('取消')
+  });
+  if(!confirmed)return;
+  data.events=[];
+  data.groups=[];
+  collapsedGroups.clear();
+  selected={type:'profile',id:null};
+  hoveredListEventId=null;
+  closeDayPop();
+  persist();
+  render();
+  toast(trBase('事件和分组已清空'));
+}
 function resetEventExplorer(){
-  Store.ui.eventExplorer={view:'group',query:'',direction:'all',recurrence:'all',status:['all'],timeRange:'all',group:'all',risk:'all',sort:'custom',open:true};
-  Store.touch();syncEventExplorerControls();renderEventList();
+  Store.ui.eventExplorer={view:'group',query:'',direction:'all',recurrence:'all',status:['all'],timeRange:'all',group:'all',risk:'all',sort:'custom',open:false};
+  collapsedGroups.clear();
+  hoveredListEventId=null;
+  Store.touch();
+  closeEventStatusMenu();
+  syncEventExplorerControls();
+  renderEventList();
+  closeEventExplorer();
+  const list=document.getElementById('eventList');if(list)list.scrollTop=0;
 }
 function toggleEventExplorer(evt){
   evt?.stopPropagation();
@@ -1852,9 +2573,11 @@ function renderEventList(){
   const visible=EventQuery.run(all,Store.ui.eventExplorer);
   syncEventExplorerControls();
   if(!all.length&&!groups.length){box.innerHTML='<div class="event-list-empty">暂无未来事件</div>';return}
-  if(!visible.length){box.innerHTML='<div class="event-list-empty">没有符合当前条件的事件</div>';return}
 
   const x=Store.ui.eventExplorer;
+  // Group view must still render empty groups. This is especially important for
+  // the first newly-created group, before it contains any events.
+  if(x.view!=='group'&&!visible.length){box.innerHTML='<div class="event-list-empty">没有符合当前条件的事件</div>';return}
   if(x.view==='timeline'){
     const by=new Map();
     visible.forEach(e=>{const k=timelineKey(e);if(!by.has(k))by.set(k,[]);by.get(k).push(e)});
@@ -1873,7 +2596,7 @@ function renderEventList(){
   for(const g of groups){
     const allEvents=all.filter(e=>e.groupId===g.id);
     const events=visible.filter(e=>e.groupId===g.id);
-    if(filtered&&!events.length)continue;
+    if(filtered&&!events.length&&!(selected.type==='group'&&selected.id===g.id))continue;
     const collapsed=collapsedGroups.has(g.id);
     const countText=filtered?`${events.length}/${allEvents.length}`:`${allEvents.length}`;
     parts.push(`<div class="group-block top-level-block" data-group-id="${g.id}">
@@ -1909,7 +2632,7 @@ function selectEvent(id){selected={type:'event',id};render()}
 function addGroup(){
   const g={id:newGroupId(data.groups||[]),name:trBase('新分组')};
   data.groups.unshift(g);
-  collapsedGroups.add(g.id);
+  collapsedGroups.delete(g.id);
   selected={type:'group',id:g.id};
   persist();
   render();
@@ -2342,7 +3065,7 @@ function eventDragEnd(evt){
 function renderEditor(){
   const ed=document.getElementById('editor');
   if(selected.type==='profile'){
-    ed.innerHTML=`<div class="editor-head"><h3>${trBase('当前状态')}</h3><div class="editor-summary">${trBase('设置预测的起点')}</div></div><div class="editor-form"><div class="field"><label>预测基准日</label><input id="p_asof" type="date" value="${workspace.asOf||todayISO()}" onchange="autoSaveProfile()"></div><div class="field"><label>当前现金</label><input id="p_balance" type="number" value="${Number(data.openingCash||0)}" oninput="autoSaveProfile()"></div><div class="field"><label>当前负债</label><input id="p_debt" type="number" min="0" value="${Math.max(0,Number(data.openingDebt||0))}" oninput="autoSaveProfile()"></div><div class="field"><label>安全现金线</label><input id="p_safe" type="number" value="${Number(data.cashSafetyThreshold||0)}" oninput="autoSaveProfile()"></div></div><div class="editor-actions"><span class="sub">修改即自动保存</span></div>`;return;
+    ed.innerHTML=`<div class="editor-head"><h3>${trBase('基准状态')}</h3><div class="editor-summary">${trBase('设置预测的起点')}</div></div><div class="editor-form"><div class="field"><label>预测基准日</label><input id="p_asof" type="date" value="${workspace.asOf||todayISO()}" onchange="autoSaveProfile()"></div><div class="field"><label>当前现金</label><input id="p_balance" type="number" value="${Number(data.openingCash||0)}" oninput="autoSaveProfile()"></div><div class="field"><label>当前负债</label><input id="p_debt" type="number" min="0" value="${Math.max(0,Number(data.openingDebt||0))}" oninput="autoSaveProfile()"></div><div class="field"><label>安全现金线</label><input id="p_safe" type="number" min="0" value="${Math.max(0,Number(data.cashSafetyThreshold||0))}" oninput="autoSaveProfile()"></div></div><div class="editor-actions"><span class="sub">修改即自动保存</span></div>`;return;
   }
   if(selected.type==='group'){
     const g=(data.groups||[]).find(x=>x.id===selected.id);
@@ -2393,13 +3116,13 @@ function renderEditor(){
       <div class="field" id="monthlyDateField">
         <label>发生日期</label>
         <select id="e_monthday" onchange="autoSaveEvent()">
-          ${Array.from({length:31},(_,i)=>`<option value="${i+1}">每月 ${i+1} 日</option>`).join('')}
+          ${Array.from({length:31},(_,i)=>`<option value="${i+1}">${esc(monthlyOccurrenceText(i+1))}</option>`).join('')}
         </select>
       </div>
 
       <div class="row2" id="yearlyDateField">
         <div class="field"><label>发生月份</label><select id="e_year_month" onchange="syncYearDayOptions();autoSaveEvent()">
-          ${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1} 月</option>`).join('')}
+          ${Array.from({length:12},(_,i)=>`<option value="${i+1}">${esc(trBase(`${i+1} 月`))}</option>`).join('')}
         </select></div>
         <div class="field"><label>发生日期</label><select id="e_year_day" onchange="autoSaveEvent()"></select></div>
       </div>
@@ -2411,10 +3134,10 @@ function renderEditor(){
             <span class="sub" style="font-size:13px">每</span>
             <input id="e_interval" type="number" min="1" step="1" value="${Math.max(1,Math.floor(Number(e.recurrence?.interval||1)))}" oninput="autoSaveEvent()">
             <select id="e_rec_unit" onchange="toggleCustomOccurrence();autoSaveEvent()">
-              <option value="daily">天</option>
-              <option value="weekly">周</option>
-              <option value="monthly">月</option>
-              <option value="yearly">年</option>
+              <option value="daily">${esc(recurrenceUnitText('daily'))}</option>
+              <option value="weekly">${esc(recurrenceUnitText('weekly'))}</option>
+              <option value="monthly">${esc(recurrenceUnitText('monthly'))}</option>
+              <option value="yearly">${esc(recurrenceUnitText('yearly'))}</option>
             </select>
             <span class="sub" style="font-size:13px;white-space:nowrap">发生一次</span>
           </div>
@@ -2423,11 +3146,11 @@ function renderEditor(){
           <option value="1">周一</option><option value="2">周二</option><option value="3">周三</option><option value="4">周四</option><option value="5">周五</option><option value="6">周六</option><option value="0">周日</option>
         </select></div>
         <div class="field" id="customMonthlyOccurrence"><label>发生日期</label><select id="e_custom_monthday" onchange="autoSaveEvent()">
-          ${Array.from({length:31},(_,i)=>`<option value="${i+1}">${i+1} 日</option>`).join('')}
+          ${Array.from({length:31},(_,i)=>`<option value="${i+1}">${esc(recurrenceDayText(i+1))}</option>`).join('')}
         </select></div>
         <div class="row2" id="customYearlyOccurrence">
           <div class="field"><label>发生月份</label><select id="e_custom_year_month" onchange="syncCustomYearDayOptions();autoSaveEvent()">
-            ${Array.from({length:12},(_,i)=>`<option value="${i+1}">${i+1} 月</option>`).join('')}
+            ${Array.from({length:12},(_,i)=>`<option value="${i+1}">${esc(trBase(`${i+1} 月`))}</option>`).join('')}
           </select></div>
           <div class="field"><label>发生日期</label><select id="e_custom_year_day" onchange="autoSaveEvent()"></select></div>
         </div>
@@ -2480,7 +3203,7 @@ function fillDaySelect(id,month,preferredDay){
   const year=new Date((workspace.asOf||todayISO())+'T00:00:00').getFullYear();
   const max=daysInMonth(year,month);
   const current=Math.max(1,Number(preferredDay||el.value||1));
-  el.innerHTML=Array.from({length:max},(_,i)=>`<option value="${i+1}">${i+1} 日</option>`).join('');
+  el.innerHTML=Array.from({length:max},(_,i)=>`<option value="${i+1}">${esc(recurrenceDayText(i+1))}</option>`).join('');
   el.value=String(Math.min(current,max));
 }
 function syncYearDayOptions(preferredDay){
@@ -2539,7 +3262,7 @@ function autoSaveProfile(){
   const asOfEl=document.getElementById('p_asof'),balanceEl=document.getElementById('p_balance'),debtEl=document.getElementById('p_debt'),safeEl=document.getElementById('p_safe');
   if(!asOfEl||!balanceEl||!debtEl||!safeEl)return;
   workspace.asOf=asOfEl.value||todayISO();
-  data.openingCash=Number(balanceEl.value||0);data.openingDebt=Math.max(0,Number(debtEl.value||0));data.cashSafetyThreshold=Number(safeEl.value||0);
+  data.openingCash=Number(balanceEl.value||0);data.openingDebt=Math.max(0,Number(debtEl.value||0));data.cashSafetyThreshold=Math.max(0,Number(safeEl.value||0));
   persist();ProfileView.render();renderEventList();drawChart(simulate(selectedRange).timeline);
 }
 function autoSaveGroup(){
@@ -2558,6 +3281,7 @@ function deleteGroup(){
   data.groups=data.groups.filter(g=>g.id!==id);
   collapsedGroups.delete(id);
   selected={type:'profile',id:null};
+  persist();
   render();
   toast(trBase('分组已删除，事件已移到未分组'));
 }
@@ -2647,7 +3371,7 @@ function autoSaveEvent(){
 function nextCopyEventName(name){
   const base=String(name||trBase('新事件')).trim()||trBase('新事件');
   const names=new Set(data.events.map(e=>e.name));
-  const suffix=currentLanguage==='en'?'Copy':currentLanguage==='ja'?'コピー':'副本';
+  const suffix=currentLanguage==='zh'?'副本':currentLanguage==='zh-TW'?'副本':currentLanguage==='ja'?'コピー':currentLanguage==='ko'?'복사본':currentLanguage==='es'?'Copia':currentLanguage==='fr'?'Copie':currentLanguage==='de'?'Kopie':currentLanguage==='pt'?'Cópia':'Copy';
   let candidate=`${base} ${suffix}`;
   let n=2;
   while(names.has(candidate)) candidate=`${base} ${suffix} ${n++}`;
@@ -2668,7 +3392,7 @@ function copyEvent(){
   toast(trBase('已复制事件'));
 }
 function deleteEvent(){
-  data.events=data.events.filter(x=>x.id!==selected.id);selected={type:'profile',id:null};render();toast(trBase('已删除'))
+  data.events=data.events.filter(x=>x.id!==selected.id);selected={type:'profile',id:null};persist();render();toast(trBase('已删除'))
 }
 
 function toggleMonthStats(){
@@ -2688,10 +3412,7 @@ function monthFullLabel(key){
   if(currentLanguage==='ja') return `${y}年${m}月`;
   return `${y}年${m}月`;
 }
-function monthShortLabel(month){
-  if(currentLanguage==='en') return new Date(2000,month-1,1).toLocaleDateString('en-US',{month:'short'});
-  return `${month}月`;
-}
+function monthShortLabel(month){return new Date(2000,month-1,1).toLocaleDateString(localeCode(),{month:'short'})}
 function emptyMonthStats(){
   return {totalIncome:0,totalExpense:0,net:0,profitRate:null,fixedIncome:0,fixedExpense:0,fixedNet:0,fixedProfitRate:null,temporaryIncome:0,temporaryExpense:0};
 }
@@ -2761,19 +3482,30 @@ function buildMonthSegments(timeline,x,p,h){
     };
   });
 }
+function chartTheme(){
+  const cs=getComputedStyle(document.body);
+  const v=(name,fallback)=>cs.getPropertyValue(name).trim()||fallback;
+  return {
+    grid:v('--chart-grid','#edf1f5'), axis:v('--chart-axis','#8792a2'), line:v('--chart-line','#526f91'), fill:v('--chart-fill','rgba(82,111,145,.10)'),
+    warning:v('--chart-warning','#d89b2b'), danger:v('--chart-danger','#d65f58'), ok:v('--chart-ok','#4f9b73'), node:v('--chart-node','#6c8198'), nodeBorder:v('--chart-node-border','#fff'),
+    today:v('--chart-today','#aab4c0'), month:v('--chart-month','rgba(82,111,145,.045)'), monthAlt:v('--chart-month-alt','rgba(82,111,145,.025)'), monthBorder:v('--chart-month-border','rgba(131,145,163,.24)'),
+    accent:v('--accent','#526f91'), muted:v('--muted','#8792a2'), chartBg:v('--theme-chart','#fff')
+  };
+}
 function drawMonthSegments(ctx,segments,p,h){
   if(!segments.length)return;
+  const tc=chartTheme();
   segments.forEach((seg,i)=>{
     const width=Math.max(1,seg.x2-seg.x1);
     ctx.save();
-    ctx.fillStyle=i%2===0?'rgba(79,124,172,.045)':'rgba(79,124,172,.028)';
+    ctx.fillStyle=i%2===0?tc.month:tc.monthAlt;
     ctx.fillRect(seg.x1,seg.y1,width,seg.y2-seg.y1);
-    ctx.strokeStyle='rgba(148,163,184,.28)';
+    ctx.strokeStyle=tc.monthBorder;
     ctx.lineWidth=1;
     ctx.beginPath();ctx.moveTo(seg.x1,seg.y1);ctx.lineTo(seg.x1,seg.y2);ctx.stroke();
     ctx.beginPath();ctx.moveTo(seg.x2,seg.y1);ctx.lineTo(seg.x2,seg.y2);ctx.stroke();
 
-    ctx.fillStyle='#8b96a6';
+    ctx.fillStyle=tc.axis;
     ctx.font='11px -apple-system,BlinkMacSystemFont,Segoe UI';
     ctx.fillText(seg.label,seg.x1+6,seg.y1+13);
 
@@ -2781,12 +3513,12 @@ function drawMonthSegments(ctx,segments,p,h){
   });
 }
 function highlightMonthSegment(seg){
-  const canvas=document.getElementById('chart'),ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1;
+  const canvas=document.getElementById('chart'),ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1,tc=chartTheme();
   ctx.setTransform(dpr,0,0,dpr,0,0);
   ctx.save();
-  ctx.fillStyle='rgba(79,124,172,.08)';
+  ctx.fillStyle=tc.fill;
   ctx.fillRect(seg.x1,seg.y1,seg.x2-seg.x1,seg.y2-seg.y1);
-  ctx.strokeStyle='rgba(79,124,172,.32)';
+  ctx.strokeStyle=tc.accent;
   ctx.lineWidth=1.2;
   ctx.strokeRect(seg.x1+.5,seg.y1+.5,Math.max(1,seg.x2-seg.x1-1),Math.max(1,seg.y2-seg.y1-1));
   ctx.restore();
@@ -2867,33 +3599,34 @@ function chartPointState(metric,point,index,timeline){
 }
 
 function drawStatusPoint(ctx,x,y,state){
+  const tc=chartTheme();
   ctx.save();
   if(state==='warning'){
-    ctx.fillStyle='#d59a2b';
-    ctx.strokeStyle='#fff';
+    ctx.fillStyle=tc.warning;
+    ctx.strokeStyle=tc.nodeBorder;
     ctx.lineWidth=2;
   }else if(state==='danger'){
-    ctx.fillStyle='#c85d57';
-    ctx.strokeStyle='#fff';
+    ctx.fillStyle=tc.danger;
+    ctx.strokeStyle=tc.nodeBorder;
     ctx.lineWidth=2;
   }else if(state==='cleared'){
-    ctx.fillStyle='#4f8066';
-    ctx.strokeStyle='#fff';
+    ctx.fillStyle=tc.ok;
+    ctx.strokeStyle=tc.nodeBorder;
     ctx.lineWidth=2;
   }else{
-    ctx.fillStyle='#6b8198';
+    ctx.fillStyle=tc.node;
     ctx.strokeStyle='transparent';
     ctx.lineWidth=0;
   }
   ctx.beginPath();
-  ctx.arc(x,y,state==='normal'?3.2:4.5,0,Math.PI*2);
+  ctx.arc(x,y,state==='normal'?3.5:5,0,Math.PI*2);
   ctx.fill();
   if(state!=='normal')ctx.stroke();
   ctx.restore();
 }
 
 function drawChart(timeline){
-  const canvas=document.getElementById('chart'),rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+  const canvas=document.getElementById('chart'),rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1,tc=chartTheme();
   canvas.width=Math.max(1,rect.width*dpr);canvas.height=Math.max(1,rect.height*dpr);
   const ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);
   const metric=['cash','debt','netWorth'].includes(chartMetric)?chartMetric:'cash';const metricMeta={cash:{label:trBase('现金'),title:trBase('现金预测')},debt:{label:trBase('负债'),title:trBase('负债预测')},netWorth:{label:trBase('净资产'),title:trBase('净资产预测')}}[metric];const title=document.getElementById('forecastTitle');if(title)title.textContent=metricMeta.title;document.querySelectorAll('#metricSwitch button').forEach(b=>b.classList.toggle('active',b.dataset.metric===metric));const w=rect.width,h=rect.height,p={l:52,r:18,t:20,b:28},vals=timeline.map(x=>Number(x[metric]??x.balance)),safe=Math.max(0,Number(data.cashSafetyThreshold||0));const scaleVals=metric==='cash'?[...vals,safe,0]:[...vals,0];
@@ -2901,7 +3634,7 @@ function drawChart(timeline){
   const pad=(mx-mn)*.12;mn-=pad;mx+=pad;
   const x=i=>p.l+(w-p.l-p.r)*(i/(timeline.length-1||1)),y=v=>p.t+(h-p.t-p.b)*(1-(v-mn)/(mx-mn));
   ctx.clearRect(0,0,w,h);
-  ctx.strokeStyle='#edf0f3';ctx.lineWidth=1;ctx.fillStyle='#858b94';ctx.font='12px -apple-system,BlinkMacSystemFont,Segoe UI';
+  ctx.strokeStyle=tc.grid;ctx.lineWidth=1;ctx.fillStyle=tc.axis;ctx.font='12px -apple-system,BlinkMacSystemFont,Segoe UI';
   for(let i=0;i<5;i++){const yy=p.t+(h-p.t-p.b)*i/4;ctx.beginPath();ctx.moveTo(p.l,yy);ctx.lineTo(w-p.r,yy);ctx.stroke();const v=mx-(mx-mn)*i/4;ctx.fillText(shortMoney(v),4,yy+4)}
   const monthSegments=showMonthStats?buildMonthSegments(timeline,x,p,h):[];
   if(showMonthStats) drawMonthSegments(ctx,monthSegments,p,h);
@@ -2909,17 +3642,17 @@ function drawChart(timeline){
     // Safety line belongs to cash only.
     ctx.save();
     ctx.setLineDash([5,5]);
-    ctx.strokeStyle='rgba(213,154,43,.72)';
+    ctx.strokeStyle=tc.warning;
     ctx.lineWidth=1;
     ctx.beginPath();ctx.moveTo(p.l,y(safe));ctx.lineTo(w-p.r,y(safe));ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle='rgba(169,121,50,.9)';
+    ctx.fillStyle=tc.warning;
     ctx.font='11px -apple-system,BlinkMacSystemFont,Segoe UI';
     ctx.fillText(`${trBase('安全资金')} ${shortMoney(safe)}`,p.l+6,Math.max(p.t+11,y(safe)-6));
     // Zero is the hard cash boundary.
     if(safe!==0){
       ctx.setLineDash([3,5]);
-      ctx.strokeStyle='rgba(200,93,87,.34)';
+      ctx.strokeStyle=tc.danger;
       ctx.beginPath();ctx.moveTo(p.l,y(0));ctx.lineTo(w-p.r,y(0));ctx.stroke();
     }
     ctx.restore();
@@ -2927,7 +3660,7 @@ function drawChart(timeline){
     // Debt and net worth use zero only as a reference line.
     ctx.save();
     ctx.setLineDash([4,5]);
-    ctx.strokeStyle='rgba(127,137,152,.42)';
+    ctx.strokeStyle=tc.axis;
     ctx.lineWidth=1;
     ctx.beginPath();ctx.moveTo(p.l,y(0));ctx.lineTo(w-p.r,y(0));ctx.stroke();
     ctx.restore();
@@ -2939,19 +3672,24 @@ function drawChart(timeline){
     const tx=x(todayIndex);
     ctx.save();
     ctx.setLineDash([3,4]);
-    ctx.strokeStyle='#b9c2cc';
+    ctx.strokeStyle=tc.today;
     ctx.lineWidth=1;
     ctx.beginPath();ctx.moveTo(tx,p.t);ctx.lineTo(tx,h-p.b);ctx.stroke();
     ctx.setLineDash([]);
-    ctx.fillStyle='#8a93a0';
+    ctx.fillStyle=tc.axis;
     ctx.font='11px -apple-system,BlinkMacSystemFont,Segoe UI';
     ctx.fillText(trBase('今天'),Math.min(w-32,tx+5),p.t+11);
     ctx.restore();
   }
 
-  ctx.strokeStyle='#52677f';ctx.lineWidth=2.4;ctx.beginPath();
   const pts=[];
-  timeline.forEach((pt,i)=>{const value=Number(pt[metric]??pt.balance),xx=x(i),yy=y(value);pts.push({x:xx,y:yy,data:pt,index:i,value});i?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy)});ctx.stroke();
+  timeline.forEach((pt,i)=>{const value=Number(pt[metric]??pt.balance),xx=x(i),yy=y(value);pts.push({x:xx,y:yy,data:pt,index:i,value});});
+  if(pts.length){
+    ctx.save();
+    ctx.beginPath();ctx.moveTo(pts[0].x,h-p.b);pts.forEach(pt=>ctx.lineTo(pt.x,pt.y));ctx.lineTo(pts[pts.length-1].x,h-p.b);ctx.closePath();ctx.fillStyle=tc.fill;ctx.fill();
+    ctx.restore();
+    ctx.strokeStyle=tc.line;ctx.lineWidth=document.body.dataset.theme==='candy'?3.2:2.7;ctx.lineJoin='round';ctx.lineCap='round';ctx.beginPath();pts.forEach((pt,i)=>i?ctx.lineTo(pt.x,pt.y):ctx.moveTo(pt.x,pt.y));ctx.stroke();
+  }
   timeline.forEach((pt,i)=>{
     const state=chartPointState(metric,pt,i,timeline);
     const hasEvent=Array.isArray(pt.events)&&pt.events.length>0;
@@ -2969,24 +3707,24 @@ function drawChart(timeline){
       ctx.save();
 
       // Soft outer halo.
-      ctx.shadowColor='rgba(79,124,172,.28)';
+      ctx.shadowColor=tc.accent;
       ctx.shadowBlur=10;
-      ctx.fillStyle='rgba(79,124,172,.16)';
+      ctx.fillStyle=tc.fill;
       ctx.beginPath();
       ctx.arc(xx,yy,9,0,Math.PI*2);
       ctx.fill();
 
       // Crisp focus ring.
       ctx.shadowBlur=0;
-      ctx.strokeStyle='rgba(79,124,172,.55)';
+      ctx.strokeStyle=tc.accent;
       ctx.lineWidth=2;
       ctx.beginPath();
       ctx.arc(xx,yy,7,0,Math.PI*2);
       ctx.stroke();
 
       // Main highlighted node.
-      ctx.fillStyle='#4f7cac';
-      ctx.strokeStyle='#ffffff';
+      ctx.fillStyle=tc.accent;
+      ctx.strokeStyle=tc.nodeBorder;
       ctx.lineWidth=2.4;
       ctx.beginPath();
       ctx.arc(xx,yy,5.4,0,Math.PI*2);
@@ -2997,7 +3735,7 @@ function drawChart(timeline){
     });
   }
 
-  ctx.fillStyle='#858b94';
+  ctx.fillStyle=tc.axis;
   const usableWidth=w-p.l-p.r;
   const targetSpacing=72;
   const maxLabels=Math.max(3,Math.floor(usableWidth/targetSpacing));
@@ -3031,7 +3769,7 @@ function drawChart(timeline){
   });
   chartState={timeline,points:pts,monthSegments,rect};
 }
-function shortMoney(n){const a=Math.abs(n);let s;if(currentLanguage==='en'){s=a>=1000000?(a/1000000).toFixed(a>=10000000?0:1)+'M':a>=1000?(a/1000).toFixed(a>=100000?0:1)+'K':Math.round(a)}else{s=a>=10000?(a/10000).toFixed(a>=100000?0:1)+'万':Math.round(a)}return (n<0?'-':'')+s}
+function shortMoney(n){const a=Math.abs(n);let s;if(['zh','zh-TW','ja'].includes(currentLanguage)){s=a>=10000?(a/10000).toFixed(a>=100000?0:1)+'万':Math.round(a)}else{s=a>=1000000?(a/1000000).toFixed(a>=10000000?0:1)+'M':a>=1000?(a/1000).toFixed(a>=100000?0:1)+'K':Math.round(a)}return (n<0?'-':'')+s}
 function nearestPoint(evt){
   const canvas=document.getElementById('chart'),r=canvas.getBoundingClientRect();
   const mx=evt.clientX-r.left,my=evt.clientY-r.top;
@@ -3061,27 +3799,27 @@ canvas.addEventListener('mousemove',e=>{
     return;
   }
   setLinkedEventHover((p.data.events||[]).map(ev=>ev.id));
-  const ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1;
+  const ctx=canvas.getContext('2d'),dpr=window.devicePixelRatio||1,tc=chartTheme();
   ctx.setTransform(dpr,0,0,dpr,0,0);
   ctx.save();
 
   // Same focus style as left-event hover.
-  ctx.shadowColor='rgba(79,124,172,.28)';
+  ctx.shadowColor=tc.accent;
   ctx.shadowBlur=10;
-  ctx.fillStyle='rgba(79,124,172,.16)';
+  ctx.fillStyle=tc.fill;
   ctx.beginPath();
   ctx.arc(p.x,p.y,9,0,Math.PI*2);
   ctx.fill();
 
   ctx.shadowBlur=0;
-  ctx.strokeStyle='rgba(79,124,172,.55)';
+  ctx.strokeStyle=tc.accent;
   ctx.lineWidth=2;
   ctx.beginPath();
   ctx.arc(p.x,p.y,7,0,Math.PI*2);
   ctx.stroke();
 
-  ctx.fillStyle='#4f7cac';
-  ctx.strokeStyle='#ffffff';
+  ctx.fillStyle=tc.accent;
+  ctx.strokeStyle=tc.nodeBorder;
   ctx.lineWidth=2.4;
   ctx.beginPath();
   ctx.arc(p.x,p.y,5.4,0,Math.PI*2);
@@ -3368,8 +4106,8 @@ function setMetadataView(mode){
     if(docBtn)docBtn.textContent=trBase('返回数据');
     if(formatBtn)formatBtn.style.display='none';
     if(applyBtn)applyBtn.style.display='none';
-    if(status){status.className='metadata-status metadata-doc-note';status.textContent=currentLanguage==='en'?'PFS v1 data guide · Copy this reference for AI':currentLanguage==='ja'?'PFS v1 データ説明 · AIへの参考としてコピーできます':'PFS v1 数据说明 · 可复制给 AI 参考';}
-    if(hint)hint.textContent=currentLanguage==='en'?'Read-only guide · Copy and give it to AI':currentLanguage==='ja'?'読み取り専用 · コピーしてAIに渡せます':'只读说明 · 可复制后交给 AI';
+    if(status){status.className='metadata-status metadata-doc-note';status.textContent=currentLanguage==='zh'?'PFS v1 数据说明 · 可复制给 AI 参考':currentLanguage==='zh-TW'?'PFS v1 資料說明 · 可複製給 AI 參考':currentLanguage==='ja'?'PFS v1 データ説明 · AIへの参考としてコピーできます':'PFS v1 data guide · Copy this reference for AI';}
+    if(hint)hint.textContent=currentLanguage==='zh'?'只读说明 · 可复制后交给 AI':currentLanguage==='zh-TW'?'唯讀說明 · 可複製後交給 AI':currentLanguage==='ja'?'読み取り専用 · コピーしてAIに渡せます':'Read-only guide · Copy and give it to AI';
   }else{
     ed.value=JSON.stringify(workspaceData(),null,2);
     ed.readOnly=false;ed.classList.remove('is-doc');
@@ -3435,6 +4173,7 @@ function applyMetadataJSON(){
     hoveredListEventId=null;
     collapseAllGroups();
     closeDayPop();
+    persist();
     render();
     ed.value=JSON.stringify(workspaceData(),null,2);
     updateMetadataStatus();
@@ -3445,7 +4184,40 @@ function applyMetadataJSON(){
     status.textContent=trBase('无法应用：')+e.message;
   }
 }
+
+function escapeGuideHtml(value){
+  return String(value??'')
+    .replaceAll('&','&amp;')
+    .replaceAll('<','&lt;')
+    .replaceAll('>','&gt;')
+    .replaceAll('"','&quot;')
+    .replaceAll("'",'&#39;');
+}
+function renderGuide(){
+  const content=GUIDE_CONTENT[currentLanguage]||GUIDE_CONTENT.en;
+  const title=document.getElementById('guideTitle');
+  const body=document.getElementById('guideBody');
+  if(title)title.textContent=content.title;
+  if(!body)return;
+  let html=`<p class="guide-intro">${escapeGuideHtml(content.intro)}</p>`;
+  for(const section of content.sections){
+    html+=`<section class="guide-section"><h4>${escapeGuideHtml(section[0])}</h4>`;
+    if(Array.isArray(section[1])){
+      html+=`<div class="guide-steps">${section[1].map(step=>`<div class="guide-step"><b>${escapeGuideHtml(step[0])}</b><span>${escapeGuideHtml(step[1])}</span></div>`).join('')}</div>`;
+    }else{
+      html+=`<p>${escapeGuideHtml(section[1])}</p>`;
+    }
+    html+=`</section>`;
+  }
+  body.innerHTML=html;
+  const closeText=trBase('关闭');
+  const bottom=document.getElementById('guideCloseBottom');if(bottom)bottom.textContent=closeText;
+}
+window.openGuideModal=function(){renderGuide();document.getElementById('guideModal')?.classList.add('show')};
+window.closeGuideModal=function(){document.getElementById('guideModal')?.classList.remove('show')};
+
 function openAboutModal(){
+  applyI18n(document.getElementById('aboutModal'));
   const app=document.getElementById('aboutAppVersion');
   const format=document.getElementById('aboutFormat');
   if(app) app.textContent='v'+APP_VERSION;
@@ -3501,9 +4273,9 @@ function shareHtml(includeData){
     }
     scopeMeta.setAttribute('content',newWorkspaceId());
 
-    let langMeta=exportDoc.querySelector('meta[name="pfs-language"]');
-    if(!langMeta){langMeta=exportDoc.createElement('meta');langMeta.setAttribute('name','pfs-language');exportDoc.head?.appendChild(langMeta)}
-    langMeta.setAttribute('content',currentLanguage);
+    // Language is intentionally not embedded in exported HTML.
+    // On first open, the page adapts to the viewer's browser/system language.
+    exportDoc.querySelector('meta[name="pfs-language"]')?.remove();
 
     embedded.textContent=includeData
       ? JSON.stringify(workspaceData())
@@ -3556,67 +4328,130 @@ document.addEventListener('keydown',e=>{
     cancelAppDialog();
     closeAboutModal();
     closeShareModal();
-    closePresetModal();
+    closeQuickAdd();
     closeMetadataModal();
   }
 });
 
-function isPortraitPhone(){
-  const portrait=window.matchMedia?.('(orientation: portrait)').matches ?? (window.innerHeight>window.innerWidth);
-  const narrow=Math.min(window.innerWidth||9999,screen?.width||9999)<=767;
-  const uaMobile=navigator.userAgentData?.mobile===true || /Android|iPhone|iPod|Windows Phone|Mobile/i.test(navigator.userAgent||'');
-  const touchMobile=(navigator.maxTouchPoints||0)>0 && Math.min(screen?.width||9999,screen?.height||9999)<=820;
-  return !!(portrait&&narrow&&(uaMobile||touchMobile));
+function isIPadDevice(){
+  const ua=navigator.userAgent||'';
+  const platform=navigator.platform||'';
+  const touchPoints=navigator.maxTouchPoints||0;
+  return /iPad/i.test(ua) || (platform==='MacIntel' && touchPoints>1);
+}
+function isTabletDevice(){
+  const ua=navigator.userAgent||'';
+  if(isIPadDevice()) return true;
+  // Android tablets normally omit the "Mobile" token.
+  return /Android/i.test(ua) && !/Mobile/i.test(ua);
+}
+function isPhoneDevice(){
+  const ua=navigator.userAgent||'';
+  const touchPoints=navigator.maxTouchPoints||0;
+  if(isTabletDevice()) return false;
+  const uaDataMobile=navigator.userAgentData?.mobile===true;
+  const phoneUA=/iPhone|iPod|Windows Phone|Android.*Mobile/i.test(ua);
+  const compactTouch=touchPoints>0 && Math.min(screen?.width||9999,screen?.height||9999)<=767;
+  return !!(uaDataMobile || phoneUA || compactTouch);
 }
 function mobileNoticeTexts(){
-  if(currentLanguage==='en') return {
-    full:'Personal Financial Simulation',title:'Personal Financial Simulation',
-    desc:'Simulate future cash, debt, and net worth from your current position and planned income and expense events.',
-    tip:'PFS can still be used on a phone, but a computer or tablet provides a more complete editing and charting experience.',
-    button:'Continue'
+  const map={
+    zh:{full:'个人财务模拟',title:'建议使用 PC 或平板电脑访问'},'zh-TW':{full:'個人財務模擬',title:'建議使用 PC 或平板電腦存取'},en:{full:'Personal Financial Simulation',title:'Please use a PC or tablet'},ja:{full:'個人財務シミュレーション',title:'PC またはタブレットでご利用ください'},ko:{full:'개인 재무 시뮬레이션',title:'PC 또는 태블릿에서 이용해 주세요'},es:{full:'Simulación Financiera Personal',title:'Utiliza un PC o una tableta'},fr:{full:'Simulation Financière Personnelle',title:'Utilisez un PC ou une tablette'},de:{full:'Persönliche Finanzsimulation',title:'Bitte PC oder Tablet verwenden'},pt:{full:'Simulação Financeira Pessoal',title:'Utilize um PC ou tablet'}
   };
-  if(currentLanguage==='ja') return {
-    full:'個人財務シミュレーション',title:'個人財務シミュレーション',
-    desc:'現在の現金・負債と将来の収支イベントから、現金・負債・純資産の変化をシミュレーションします。',
-    tip:'スマートフォンでも利用できますが、PCやタブレットなどの大画面では、編集やグラフをより快適に利用できます。',
-    button:'このまま使用'
-  };
-  return {
-    full:'个人财务模拟',title:'个人财务模拟',
-    desc:'通过当前现金、负债和未来收支事件，模拟未来的现金、负债与净资产变化。',
-    tip:'PFS 可在手机上继续使用，但在电脑或平板等大屏设备上可获得更完整、更优秀的编辑与图表体验。',
-    button:'继续使用'
-  };
+  return map[currentLanguage]||map.en;
 }
 function updateMobileNotice(){
   const el=document.getElementById('mobileNotice');if(!el)return;
+  const blocked=isPhoneDevice();
   const x=mobileNoticeTexts();
   document.getElementById('mobileNoticeFullName').textContent=x.full;
   document.getElementById('mobileNoticeTitle').textContent=x.title;
-  document.getElementById('mobileNoticeDesc').textContent=x.desc;
-  document.getElementById('mobileNoticeTip').textContent=x.tip;
-  document.getElementById('mobileNoticeContinue').textContent=x.button;
-  if(isPortraitPhone()&&!sessionStorage.getItem('pfs-mobile-notice-dismissed')) el.classList.add('show');
-  else el.classList.remove('show');
+  el.classList.toggle('show',blocked);
+  document.documentElement.style.overflow=blocked?'hidden':'';
+  document.body.style.overflow=blocked?'hidden':'';
 }
-function dismissMobileNotice(){
-  sessionStorage.setItem('pfs-mobile-notice-dismissed','1');
-  document.getElementById('mobileNotice')?.classList.remove('show');
-}
-window.addEventListener('resize',()=>updateMobileNotice());
-window.addEventListener('orientationchange',()=>setTimeout(updateMobileNotice,80));
 
 /* =========================================================
  * 13. BOOTSTRAP
  * ======================================================= */
-// Capture the untouched HTML shell before the first render. Exported HTML
-// always starts from this template and only replaces embedded data + scope.
-exportHtmlTemplate=document.documentElement.cloneNode(true).outerHTML;
-currentLanguage=loadLanguage();
-i18nObserver.observe(document.body,{childList:true,subtree:true});
-App.init();
-applyI18n(document.body);
-updateMobileNotice();
+// Wait until the document is fully parsed so the export template includes
+// every script and UI component, then capture the untouched shell before App.init().
+document.addEventListener('DOMContentLoaded',()=>{
+  exportHtmlTemplate=document.documentElement.cloneNode(true).outerHTML;
+  currentLanguage=loadLanguage();
+  i18nObserver.observe(document.body,{childList:true,subtree:true});
+  App.init();
+  applyI18n(document.body);
+  updateMobileNotice();
+},{once:true});
+</script>
+
+
+<script>
+(function(){
+
+window.toggleLanguageMenu=function(event){
+  event?.stopPropagation?.();
+  const menu=document.getElementById('languageMenu');
+  const trigger=document.getElementById('languageTrigger');
+  if(!menu||!trigger)return;
+  closeSettingsMenu?.();
+  const show=!menu.classList.contains('show');
+  menu.classList.toggle('show',show);
+  trigger.classList.toggle('open',show);
+  trigger.setAttribute('aria-expanded',show?'true':'false');
+};
+window.closeLanguageMenu=function(){
+  const menu=document.getElementById('languageMenu');
+  const trigger=document.getElementById('languageTrigger');
+  menu?.classList.remove('show');
+  trigger?.classList.remove('open');
+  trigger?.setAttribute('aria-expanded','false');
+};
+window.setLanguageFromMenu=function(lang){
+  setLanguage(lang);
+  closeLanguageMenu();
+};
+
+window.toggleSettingsMenu=function(event){
+  event?.stopPropagation?.();
+  closeLanguageMenu?.();
+  const menu=document.getElementById('settingsMenu');
+  const trigger=document.getElementById('settingsTrigger');
+  if(!menu||!trigger)return;
+  const show=!menu.classList.contains('show');
+  menu.classList.toggle('show',show);
+  trigger.classList.toggle('open',show);
+  trigger.setAttribute('aria-expanded',show?'true':'false');
+};
+window.closeSettingsMenu=function(){
+  const menu=document.getElementById('settingsMenu');
+  const trigger=document.getElementById('settingsTrigger');
+  menu?.classList.remove('show');
+  trigger?.classList.remove('open');
+  trigger?.setAttribute('aria-expanded','false');
+};
+document.addEventListener('click',e=>{
+  const settingsWrap=document.getElementById('settingsMenuWrap');
+  if(settingsWrap&&!settingsWrap.contains(e.target))closeSettingsMenu();
+  const languageWrap=document.getElementById('languageMenuWrap');
+  if(languageWrap&&!languageWrap.contains(e.target))closeLanguageMenu();
+});
+
+  var key='pfs-visual-theme';
+  var saved='light';
+  try{ saved=localStorage.getItem(key)||'light'; }catch(e){}
+  if(!['light','dark','candy','paper'].includes(saved)) saved='light';
+  document.body.setAttribute('data-theme',saved);
+  var picker=document.getElementById('themeSelect');
+  if(picker) picker.value=saved;
+  window.setVisualTheme=function(theme){
+    if(!['light','dark','candy','paper'].includes(theme)) return;
+    document.body.setAttribute('data-theme',theme);
+    try{ localStorage.setItem(key,theme); }catch(e){}
+    try{ if(window.chartState&&chartState.timeline&&chartState.timeline.length) drawChart(chartState.timeline); }catch(e){}
+  };
+})();
 </script>
 
 </body></html>
