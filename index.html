@@ -66,7 +66,7 @@ This is a source-available license, not an OSI open-source license.
    02. BASE & APP LAYOUT
    ========================================================= */
 *{box-sizing:border-box}
-html,body{height:100%;min-width:1120px;min-height:720px;overflow:auto}
+html,body{height:100%;overflow:auto}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--surface-page);color:var(--text)}
 button,input,select,textarea{font:inherit}
 button{cursor:pointer}
@@ -368,7 +368,12 @@ canvas{width:100%;height:100%;display:block}
 .mobile-notice-brand strong{font-size:30px;line-height:1;font-weight:900;letter-spacing:-.04em;color:var(--accent)}
 .mobile-notice-brand span{font-size:11px;color:var(--muted);font-weight:700;letter-spacing:.02em}
 .mobile-notice-title{max-width:340px;margin:0 auto;font-size:22px;line-height:1.45;font-weight:820;letter-spacing:-.02em;color:var(--text)}
-@media(max-width:420px){.mobile-notice{padding-left:20px;padding-right:20px}.mobile-notice-brand{margin-bottom:26px}.mobile-notice-title{font-size:21px}}
+@media(max-width:767px){
+  html,body{width:100%;min-width:0;min-height:0;overflow:hidden}
+  .mobile-notice{width:100vw;height:100dvh;min-height:100vh;padding:max(22px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(22px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left))}
+  .mobile-notice-card{width:min(380px,100%);padding:0}
+}
+@media(max-width:420px){.mobile-notice-brand{margin-bottom:24px}.mobile-notice-title{font-size:21px}}
 
 @media(max-width:1120px){
   .layout{grid-template-columns:250px 300px 1fr}
